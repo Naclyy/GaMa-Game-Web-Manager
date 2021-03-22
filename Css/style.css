@@ -1,0 +1,24 @@
+body{
+    background-color: rgb(204, 246, 255);
+}
+h2:hover {
+    color:darkgreen;
+}
+.titlul{
+    color: blueviolet;
+}
+.subtitlu{
+    color:cyan
+}
+#contact-us{
+    color:darkblue;
+}
+p {
+    color: red;
+}
+#link:link{
+    color:blue;
+}
+#link:visited{
+    color:chartreuse;
+}
