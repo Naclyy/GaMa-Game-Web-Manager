@@ -35,7 +35,7 @@
 
   .slidershow{
     width: 70%;
-    height: 40%;
+    height: 50%;
     overflow: hidden;
     margin-left:15%;
 }
@@ -81,7 +81,7 @@ input[name="r"]{
 }
 
 #r1:checked ~ .s1{
-    margin-left: -0%;
+  margin-left: 0;
 }
 #r2:checked ~ .s1{
     margin-left: -20%;
@@ -95,28 +95,23 @@ input[name="r"]{
 #r5:checked ~ .s1{
   margin-left: -80%;
 }
-#r6:checked ~ .s1{
-    margin-left: -100%;
-}
-#r7:checked ~ .s1{
-    margin-left: -120%;
-}
+
+
+
 
 .review{
     text-align: justify;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 30px 30px 0px 30px;
-  }
-  h2{
-    padding: 20px 0 20px 0;
-  }
-  h3{
-    padding: 10px 0px 10px 20px;
+    float:right;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    margin-right: 5%;
+    margin-top: 4%;
   }
 
 .rating{
     position:relative;
-    right:75%;
+    transform: translate(-50% -50%);
     transform: rotateY(180deg);
     display:flex;
 }
@@ -154,8 +149,51 @@ input[name="r"]{
 .rating input:checked ~ label:after{
     opacity: 1;
 }
+
+
+
+
+
 .commentBox{
+    justify-content: center;
     width: 600px;
     border: 2px solid #333;
     padding: 15px 10px;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+.commentBox h2{
+  text-align: center;
+  margin-bottom: 15px;
+}
+textarea{
+  height: 20px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #aaa;
+  background-color: transparent;
+  margin-bottom: 10px;
+  resize:none;
+  outline: none;
+}
+input[type="submit"],button
+{
+  padding: 10px 15px;
+  border:none;
+  outline: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+input[type="submit"]
+{
+  color:white;
+  background-color: #273c75;
+}
+button{
+  color:#333;
+  background-color: transparent;
 }
