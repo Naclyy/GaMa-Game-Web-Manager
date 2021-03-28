@@ -1,0 +1,161 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    background-color: rgb(173, 241, 241);
+  }
+  body{
+    font-family: montserrat;
+  }
+  img{
+      float: left;
+      width: 500px;
+      height: 300px;
+      padding: 30px 30px 0 30px;
+  }
+ .Game-Information{
+      text-align: justify;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      padding: 30px 30px 0px 30px;
+  }
+  .Gameplay{
+    text-align: justify;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 30px 30px 0px 30px;
+  }
+  h2{
+    padding: 20px 0 20px 0;
+  }
+  h3{
+    padding: 10px 0px 10px 20px;
+  }
+
+
+  .slidershow{
+    width: 70%;
+    height: 40%;
+    overflow: hidden;
+    margin-left:15%;
+}
+.navigation{
+    position:relative;
+    bottom: 10%;
+    left: 80%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.bar{
+    width: 50px;
+    height: 10px;
+    border: 2px solid #fff;
+    margin: 6px;
+    cursor: pointer;
+    transition:  0.4s;
+}
+.bar:hover{
+    background: #fff;
+}
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides{
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+.slide{
+    width: 20%;
+    transition: 0.6s;
+}
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+.slide video{
+    width:  100%;
+    height: 100%;
+}
+
+#r1:checked ~ .s1{
+    margin-left: -0%;
+}
+#r2:checked ~ .s1{
+    margin-left: -20%;
+}
+#r3:checked ~ .s1{
+  margin-left: -40%;
+}
+#r4:checked ~ .s1{
+  margin-left: -60%;
+}
+#r5:checked ~ .s1{
+  margin-left: -80%;
+}
+#r6:checked ~ .s1{
+    margin-left: -100%;
+}
+#r7:checked ~ .s1{
+    margin-left: -120%;
+}
+
+.review{
+    text-align: justify;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 30px 30px 0px 30px;
+  }
+  h2{
+    padding: 20px 0 20px 0;
+  }
+  h3{
+    padding: 10px 0px 10px 20px;
+  }
+
+.rating{
+    position:relative;
+    right:75%;
+    transform: rotateY(180deg);
+    display:flex;
+}
+.rating input{
+     display:none;
+}
+.rating label{
+    display:block;
+    cursor: pointer;
+    width: 50px;
+    background: rgb(173, 241, 241);
+}
+.rating label:before{
+    content: '\f005';
+    font-family: fontAwesome;
+    position:relative;
+    display: block;
+    font-size:50px;
+    color: #101010;
+}
+.rating label:after{
+    content: '\f005';
+    font-family: fontAwesome;
+    position:absolute;
+    display: block;
+    font-size:50px;
+    color: #1f9cff;
+    top: 0;
+    opacity: 0;
+    transition: .5s;
+    text-shadow: 0 2px 5px rgba(0,0,0,.5);
+}
+.rating label:hover:after,
+.rating label:hover ~ label:after,
+.rating input:checked ~ label:after{
+    opacity: 1;
+}
+.commentBox{
+    width: 600px;
+    border: 2px solid #333;
+    padding: 15px 10px;
+}
