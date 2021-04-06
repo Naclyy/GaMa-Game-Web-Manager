@@ -16,14 +16,55 @@
 </head>
 
 <body>
-<div class="disk disk_opened_right scroll">
-  <div class="content">
+<div class="disk disk_opened_right">
+  
   <div class="itemsbar">
     <div class="searchbox">
-      <form action="/action_page.php">
-        <input type="text" placeholder="Search.." name="search">
-        <button type="submit">s</button>
+      <input type="text" id="myInput" onkeyup="searchGameFilter()" placeholder="Search for game.." title="Type in a name">
     </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Filters</button>
+    <div class="dropdown-content">
+      <button class="btn active" onclick="filterSelection('all')"> ShowAll</button>
+      <button class="btn" onclick="filterSelection('cars')"> Shooters</button>
+      <button class="btn" onclick="filterSelection('animals')"> RPG</button>
+      <button class="btn" onclick="filterSelection('colors')"> Multyplayer</button>
+    </div>
+  </div>
+  </div>
+
+  <div class="content">
+    <div class="left_button">
+      <a href="../Html/next_page_play.html"><img id="image" src="../Poze/left_arrow.png"></a>
+   </div>
+  <div class="games_gallery" >
+    <div class="game">
+
+     <a href="Game_Information.html"><img src="../Poze/Slide_Show_LOL.jpg"></a> 
+    </div>
+    <div class="game">
+      <img src="../Poze/Slide_Show_Gta5.jpg">
+    </div>
+    <div class="game">
+      <img src="../Poze/Slide_Show_CSGO.jpg">
+    </div>
+    <div class="game">
+      <img src="../Poze/Slide_Show_Cyberpunk.jpg">
+    </div>
+    <div class="game">
+      <img src="../Poze/Slide_Show_LOL.jpg">
+    </div>
+    <div class="game">
+      <img src="../Poze/Slide_Show_Gta5.jpg">
+    </div>
+    <div class="game">
+      <img src="../Poze/Slide_Show_CSGO.jpg">
+    </div>
+    <div class="game">
+      <img src="../Poze/Slide_Show_Cyberpunk.jpg">
+    </div>
+    
   </div>
 </div>
 
