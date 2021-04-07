@@ -383,7 +383,7 @@ input:focus, textarea:focus, select:focus{
  @media screen and (max-width: 620px) {
   .disk
   {
-    transform: scale(0.4);
+    transform: scale(0.5);
   }
   
   .disk_opened_right
