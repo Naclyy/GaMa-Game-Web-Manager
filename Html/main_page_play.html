@@ -24,15 +24,105 @@
     </div>
 
     <div class="dropdown">
-      <button class="dropbtn">Filters</button>
+      <button class="dropbtn">Sort</button>
     <div class="dropdown-content">
-      <button class="btn active" onclick="filterSelection('all')"> ShowAll</button>
+      <button class="btn" onclick="sortByName(0)"> by name asc</button>
+      <button class="btn" onclick="sortByName(1)"> by name desc</button>
+      <button class="btn" onclick="sortByRating(0)"> by rating asc</button>
+      <button class="btn" onclick="sortByRating(1)"> by rating desc</button>
+    </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Category</button>
+    <div class="dropdown-content">
+      <button class="btn" onclick="filterSelection('all')"> ShowAll</button>
       <button class="btn" onclick="filterSelection('cars')"> Shooters</button>
       <button class="btn" onclick="filterSelection('animals')"> RPG</button>
       <button class="btn" onclick="filterSelection('colors')"> Multyplayer</button>
     </div>
   </div>
+  
+  <button id="myBtnToAllGames">Add Game</button>
+
+<!-- The Modal -->
+<div id="AllGames" class="AllGames">
+
+  <!-- Modal content -->
+  <div class="AllGames-content">
+    <span class="close">&times;</span>
+    <div class="itemsbar">
+      <div class="searchbox">
+        <input type="text" id="myInput" onkeyup="searchGameFilter()" placeholder="Search for game.." title="Type in a name">
+      </div>
+  
+      <div class="dropdown">
+        <button class="dropbtn">Sort</button>
+      <div class="dropdown-content">
+        <button class="btn" onclick="sortByName(0)"> by name asc</button>
+        <button class="btn" onclick="sortByName(1)"> by name desc</button>
+        <button class="btn" onclick="sortByRating(0)"> by rating asc</button>
+        <button class="btn" onclick="sortByRating(1)"> by rating desc</button>
+      </div>
+      </div>
+  
+      <div class="dropdown">
+        <button class="dropbtn">Category</button>
+      <div class="dropdown-content">
+        <button class="btn" onclick="filterSelection('all')"> ShowAll</button>
+        <button class="btn" onclick="filterSelection('cars')"> Shooters</button>
+        <button class="btn" onclick="filterSelection('animals')"> RPG</button>
+        <button class="btn" onclick="filterSelection('colors')"> Multyplayer</button>
+      </div>
+    </div>
+    </div>
+    <div class="games_gallery" >
+      <div class="game">
+  
+       <a href="/Html/league_information.html"><img src="../Poze/Slide_Show_LOL.jpg"></a> 
+      </div>
+      <div class="game">
+        <img src="../Poze/Slide_Show_Gta5.jpg">
+      </div>
+      <div class="game">
+        <img src="../Poze/Slide_Show_CSGO.jpg">s
+      </div>
+      <div class="game">
+        <img src="../Poze/Slide_Show_Cyberpunk.jpg">
+      </div>
+      <div class="game">
+        <img src="../Poze/Slide_Show_LOL.jpg">
+      </div>
+      <div class="game">
+        <img src="../Poze/Slide_Show_Gta5.jpg">
+      </div>
+      <div class="game">
+        <img src="../Poze/Slide_Show_CSGO.jpg">
+      </div>
+      <div class="game">
+        <img src="../Poze/Slide_Show_Cyberpunk.jpg">
+      </div>
+      <div class="game">
+        <img src="../Poze/Slide_Show_LOL.jpg">
+      </div>
+      <div class="game">
+        <img src="../Poze/Slide_Show_Gta5.jpg">
+      </div>
+      <div class="game">
+        <img src="../Poze/Slide_Show_CSGO.jpg">
+      </div>
+      <div class="game">
+        <img src="../Poze/Slide_Show_Cyberpunk.jpg">
+      </div>
+      
+    </div>
   </div>
+
+</div>
+  
+
+</div>
+  
 
   <div class="content">
     <div class="left_button">
@@ -41,7 +131,7 @@
   <div class="games_gallery" >
     <div class="game">
 
-     <a href="Game_Information.html"><img src="../Poze/Slide_Show_LOL.jpg"></a> 
+     <a href="/Html/league_information.html"><img src="../Poze/Slide_Show_LOL.jpg"></a> 
     </div>
     <div class="game">
       <img src="../Poze/Slide_Show_Gta5.jpg">
@@ -49,21 +139,7 @@
     <div class="game">
       <img src="../Poze/Slide_Show_CSGO.jpg">
     </div>
-    <div class="game">
-      <img src="../Poze/Slide_Show_Cyberpunk.jpg">
-    </div>
-    <div class="game">
-      <img src="../Poze/Slide_Show_LOL.jpg">
-    </div>
-    <div class="game">
-      <img src="../Poze/Slide_Show_Gta5.jpg">
-    </div>
-    <div class="game">
-      <img src="../Poze/Slide_Show_CSGO.jpg">
-    </div>
-    <div class="game">
-      <img src="../Poze/Slide_Show_Cyberpunk.jpg">
-    </div>
+    
     
   </div>
 </div>
@@ -77,7 +153,33 @@
 </div>
 
 
- 
+<script>
+  // Get the modal
+  var modal = document.getElementById("AllGames");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtnToAllGames");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
 
  
 </body>
