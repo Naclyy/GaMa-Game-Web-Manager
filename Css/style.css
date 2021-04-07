@@ -18,7 +18,11 @@
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #555; 
+  background: transparent; 
+}
+::-webkit-scrollbar-thumb:hover{
+  
+  border: 1px solid white;
 }
 
 
@@ -81,7 +85,7 @@
 .disk_opened_right .itemsbar .searchbox
 { 
   float: right;
-  padding-left: 200px;
+  
   padding-top: 10px;
 
 }
@@ -220,6 +224,149 @@ body {
 input:focus, textarea:focus, select:focus{
   outline: none;
 }
+
+
+
+.AllGames {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 0px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.AllGames-content {
+  background-color: black;
+  margin: auto;
+  padding: 20px 0px 10px 10px ;
+  width: 100%;
+  height:868px;
+}
+.AllGames-content .games_gallery
+{  
+  display: inline;
+  width: 90%;
+  float: right;
+  height: 700px;
+  overflow-y: scroll;
+ 
+
+}
+
+
+.AllGames-content .games_gallery .game
+{ 
+
+  margin: 15px;
+  float:left;
+  width: 256px;
+  height: 144px;
+
+}
+.AllGames-content .games_gallery .game img{
+  
+  opacity: 1;
+  width: 256px;
+  height: 144px;
+  cursor: pointer; 
+}
+.AllGames-content .games_gallery .game img:hover {
+  opacity: 0.8;
+}
+.AllGames-content .itemsbar
+{ 
+  list-style-type: none;
+  margin: 25px 16px 10px 10px;
+  padding: 5px 10px;
+  overflow: relative;
+  background-color: black;
+  
+
+
+}
+.AllGames-content .itemsbar .searchbox
+{ 
+  float: right;
+  
+  padding-top: 10px;
+
+}
+.AllGames-content .itemsbar .dropbtn {
+  float : left ;
+  background-color: black;
+  color: white;
+  padding: 16px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+.AllGames-content .itemsbar .dropdown {
+  position: relative;
+  display: inline-block;
+}
+.AllGames-content .itemsbar .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  margin-top: 60px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.AllGames-content .itemsbar .dropdown-content .btn {
+  color: white;
+  background-color:black ;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.AllGames-content .itemsbar .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.AllGames-content .itemsbar button {
+  float: left;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.AllGames-content .itemsbar button:hover {
+  background: grey;
+}
+.myBtnToAllGames{
+  background-color: #000;
+  color:white;
+  padding: 5px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  padding: 10px;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: gray;
+  text-decoration: none;
+  cursor: pointer;
+}
 @media only screen and (max-width: 700px) {
   .responsive {
     width: 49.99999%;
@@ -241,12 +388,12 @@ input:focus, textarea:focus, select:focus{
   
   .disk_opened_right
 {
-  transform: scale(0.3);
+  transform: scale(0.5);
 }
 .disk_opened_left
 {
-  transform: scale(0.3);
-  margin-left: -547px; /* Half the width */
+  transform: scale(0.5);
+  margin-left: -684px; /* Half the width */
 }
 
 }

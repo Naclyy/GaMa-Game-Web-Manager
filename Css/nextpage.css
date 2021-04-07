@@ -116,12 +116,12 @@ input:focus, textarea:focus, select:focus{
   
   .disk_opened_right
 {
-  transform: scale(0.3);
-  margin-left: -140px; 
+  transform: scale(0.5);
+  margin-left: -2px; 
 }
 .disk_opened_left
 {
-  transform: scale(0.3);
+  transform: scale(0.5);
   
 }
 
