@@ -1,0 +1,96 @@
+
+  .Game{
+    padding: 20px 30px 0px 30px;
+  }
+h2.d{
+    padding: 50px 0 40px 0;
+}
+h2.e{
+    padding: 50px 0 20px 0;
+}
+
+ul.b{
+    padding: 10px 30px 10px 30px; 
+}
+ul.c{
+    list-style-type:square;
+    padding: 10px 30px 10px 60px; 
+}
+ul.j{
+  float:left;
+  list-style-type:square;
+  padding: 10px 30px 10px 100px; 
+}
+ul.p{
+  float:right;
+  list-style-type:square;
+  padding: 10px 200px 10px 60px; 
+}
+ul.t{
+  list-style-type:square;
+  padding: 10px 30px 10px 800px; 
+}
+li{
+    padding: 5px 30px 5px 30px;
+}
+p{
+    padding: 5px 30px 5px 30px;
+}
+  h2{
+    color:rgba(181, 204, 226, 0.986);
+    padding: 10px 0 10px 0;
+  }
+  h3{
+    color:rgb(238, 219, 159);
+    padding: 10px 0px 10px 20px;
+  }
+  h3.Playzones{
+    padding: 300px 0px 10px 20px;
+  }
+  h4{
+    padding: 10px 0px 0px 40px;
+  }
+
+ p.d{
+     margin-left:80%
+ }
+.re{
+  float:right;
+  padding: 40px 440px 0px 40px;
+}
+.lp{
+  float:left;
+  padding: 20px 440px 0px 100px;
+}
+.Common{
+  color:rgb(185, 181, 181);
+}
+.Rare{
+  color:rgb(18, 188, 218);
+}
+.Uncommon{
+  color:rgb(13, 204, 13);
+}
+.PlayerLoadouts{
+  color:rgb(238, 81, 81);
+}
+.Epic{
+  color:rgb(175, 4, 175);
+}
+.Legendary{
+  color:rgb(240, 236, 11);
+}
+
+.slidershow{
+    margin-top: 1%;
+    width: 70%;
+    height: 50%;
+    overflow: hidden;
+    margin-left:20%;
+}
+
+
+.back{
+    color:rgb(243, 241, 241);
+    background: rgb(134, 133, 131);
+}

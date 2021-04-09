@@ -1,66 +1,8 @@
-*{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    box-sizing: border-box;
-    color: white;
-  }
-  body{
-    font-family: montserrat;
-    background: url("../Poze/background_first_page.png") ;
-  }
-  img{
-      float: left;
-      width: 500px;
-      height: 300px;
-      padding: 30px 30px 0 30px;
-  }
-  .Game-Information{
-    text-align: justify;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 30px 30px 0px 30px;
-  }
-  .Items{
-    text-align: justify;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 30px 30px 0px 30px;
-  }
-  .Legends{
-    text-align: justify;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 30px 30px 0px 30px;
-  }
- .Weapons{
-      text-align: justify;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      padding: 30px 30px 0px 30px;
-  }
-  .Gameplay{
-    text-align: justify;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 30px 30px 0px 30px;
-  }
- 
-  .ArmorHealth{
-    text-align: justify;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 30px 30px 0px 30px;
-  }
-  .Inventory{
-    text-align: justify;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 30px 30px 0px 30px;
-  }
- 
- a{
-     color:magenta;
- }
-ul{
-    padding: 10px 30px 10px 40px; 
-}
-ul.b{
-    list-style-type:square;
-    padding: 10px 30px 10px 30px; 
+
+ul.d{
+  float:left;
+  list-style-type:square;
+  padding: 10px 30px 10px 200px; 
 }
 li{
     padding: 5px 30px 5px 30px;
@@ -68,7 +10,14 @@ li{
 p{
     padding: 5px 30px 5px 30px;
 }
+h2.Gameplay{
+  padding: 20px 0px 10px 0px;
+}
+ul.b{
+  padding: 10px 30px 10px 1000px; 
+}
   h2{
+    color:rgb(212, 75, 75);
     padding: 0px 0 10px 0;
   }
   h3{
@@ -78,180 +27,7 @@ p{
     padding: 10px 0px 0px 0px;
   }
 
-
-  .slidershow{
-    margin-top: 1%;
-    width: 70%;
-    height: 50%;
-    overflow: hidden;
-    margin-left:20%;
-}
-.navigation{
-    position:relative;
-    bottom: 10%;
-    left: 80%;
-    transform: translateX(-50%);
-    display: flex;
-}
-.bar{
-    width: 50px;
-    height: 10px;
-    border: 2px solid #fff;
-    margin: 6px;
-    cursor: pointer;
-    transition:  0.4s;
-}
-.bar:hover{
-    background: #fff;
-}
-input[name="r"]{
-    position: absolute;
-    visibility: hidden;
-}
-
-.slides{
-    width: 500%;
-    height: 100%;
-    display: flex;
-}
-.slide{
-    width: 20%;
-    transition: 0.6s;
-}
-.slide img{
-    width: 100%;
-    height: 100%;
-}
-.slide video{
-    width:  100%;
-    height: 100%;
-}
-
-#r1:checked ~ .s1{
-  margin-left: 0;
-}
-#r2:checked ~ .s1{
-    margin-left: -20%;
-}
-#r3:checked ~ .s1{
-  margin-left: -40%;
-}
-#r4:checked ~ .s1{
-  margin-left: -60%;
-}
-#r5:checked ~ .s1{
-  margin-left: -80%;
-}
-
-
-
-
-.review{
-    text-align: justify;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    float:right;
-    margin-left: 5%;
-    margin-bottom: 5%;
-    margin-right: 5%;
-    margin-top: 4%;
-  }
-
-.rating{
-    position:relative;
-    transform: translate(-50% -50%);
-    transform: rotateY(180deg);
-    display:flex;
-}
-.rating input{
-     display:none;
-}
-.rating label{
-    display:block;
-    cursor: pointer;
-    width: 50px;
-    background: transparent;
-}
-.rating label:before{
-    content: '\f005';
-    font-family: fontAwesome;
-    position:relative;
-    display: block;
-    font-size:50px;
-    color: white;
-}
-.rating label:after{
-    content: '\f005';
-    font-family: fontAwesome;
-    position:absolute;
-    display: block;
-    font-size:50px;
-    color: #e7e411;
-    top: 0;
-    opacity: 0;
-    transition: .5s;
-    text-shadow: 0 2px 5px rgba(0,0,0,.5);
-}
-.rating label:hover:after,
-.rating label:hover ~ label:after,
-.rating input:checked ~ label:after{
-    opacity: 1;
-}
-
-
-
-
-
-.commentBox{
-    justify-content: center;
-    width: 600px;
-    border: 2px solid #333;
-    padding: 15px 10px;
-    margin-left: 5%;
-    margin-bottom: 5%;
-    margin-right: 5%;
-    margin-top: 5%;
-}
-.commentBox h2{
-  text-align: center;
-  margin-bottom: 15px;
-}
-textarea{
-  height: 20px;
-  width: 100%;
-  border: none;
-  border-bottom: 2px solid #aaa;
-  background-color: transparent;
-  margin-bottom: 10px;
-  resize:none;
-  outline: none;
-}
-input[type="submit"],button
-{
-  padding: 10px 15px;
-  border:none;
-  outline: none;
-  border-radius: 5px;
-  text-transform: uppercase;
-  font-weight: bold;
-  cursor: pointer;
-}
-input[type="submit"]
-{
-  color:white;
-  background-color: #2648a5;
-}
-button{
-  color:white;
-  background-color:rgb(63, 59, 65);
-}
 .back{
-    width: 100%;
-    padding: 8px 10px;
-    font-size: 15px;
-    border: 0;
     color:white;
-    cursor:pointer;
-    border-radius: 3px;
-    outline: none;
     background: rgb(187, 70, 70);
 }

@@ -2,16 +2,17 @@
 <html>
     <head>
         <link href = "../Game_Informations_CSS/apex_information.css" rel = "stylesheet">
+        <link href = "../Game_Informations_CSS/style.css" rel = "stylesheet">
+
+        
         <meta charset = "utf-8">
         <meta name = "author" content = "Zaharia Andrei-Lucian && Urma Tudor-Irinel" >
         <!-- It will show in the search engine the Author name.-->
-        <meta name = "description" content = "Steam wanna be">
-        <!-- It will show in the search engine a short description of the site.-->
         <link rel="shortcut icon" href="Icon.ico" type="image/x-icon">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-        
-        <title>Steam wanna be</title>
-
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <title>play? - Apex</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link href = "../Game_Informations_CSS/rating_test.css" rel = "stylesheet">
     </head>
 
 
@@ -23,9 +24,9 @@
             <!-- back button-->
         </header>
 
-        <div class = "container">
+        <div>
             <img src="../Poze/GamesLogo/Slide_Show_ApexLegends.jpg" alt="">
-            <div class = "Game-Information">
+            <div class = "Game">
                 <h2>
                     Description:
                 </h2>
@@ -36,11 +37,7 @@
                 <p>
                     The game is a part of the Titanfall universe. 
                 </p>
-            </div>
-            <div class = "Gameplay">
-                <h2>
-                    Gameplay:
-                </h2>
+                <h2 class ="Gameplay">Gameplay</h2>
                 <p>
                     Apex Legends is a first-person shooter, as the previous mainline games in the Titanfall series. 
                     Unlike the previous games, however, Apex Legends is an ongoing live service game with no single-player campaign or traditional multiplayer matchmaking. 
@@ -52,15 +49,13 @@
                     Standard matches in Apex Legends are played in squads of three, fighting against nineteen other squads for a total of twenty squads - 60 players - in any given match. 
                     The winners - the game's Apex Champions - are the last squad standing after all other squads are eliminated. 
                 </p>
-            </div>
-            <div class="Legends">
                 <h2>
                     Legends
                 </h2>
                 <p>
                     Before a game begins, the three members of the squad are placed in random order and given a few seconds apiece to pick their Legend for the game; Legend choice within the squad is first-come-first-serve, and duplicate Legends are not allowed (two teammates cannot pick the same character). 
                     The last player to pick their Legend is the designated "Jumpmaster," who ultimately decides where and when the fireteam drops onto the map as a single unit, though they can pass the role onto another player during the drop phase.
-                    <ul class="b">
+                    <ul class = "d">
                         <li>
                             Bloodhound - Technological Tracker (debut in pre-season)
                         </li>
@@ -85,6 +80,9 @@
                         <li>
                             Mirage - Holographic Trickster (debut in pre-season)
                         </li>
+                    </ul>
+                    <ul class="b">
+
                         <li>
                             Octane - High-Speed Daredevil (debut in season 1)
                         </li>
@@ -111,8 +109,6 @@
                         </li>
                     </ul> 
                 </p>
-                </div>
-            <div class ="Items">
                 <h2>
                     Items
                 </h2>
@@ -122,8 +118,6 @@
                     Items are laid out randomly across the map, so no two-item spawns will ever be the same between matches; that said, certain regions of the map are designated by what certain rarities of equipment they are likely to contain. Most items can be found lying out in the open, in supply bins, or in the rare Loot Tick hidden around the map. A couple of exceptional items, notably the gold-quality Kraber, Peacekeeper, and Prowler can only be initially found in a random supply drop. Items can also be scavenged from a defeated competitor's "death box," the remains of their inventory from the moment they were eliminated; a death box will glow the color of the highest rarity item in that box.
                     All deathboxes disappear if there is nothing left in them and have no respawn banner. 
                 </p>
-            </div>
-            <div class="Weapons">
                 <h2>
                     Weapons
                 </h2>
@@ -138,8 +132,6 @@
                 These mods include barrels to reduce muzzle rise and at level 4 flash, stocks to shorten transition from one weapon to the next, larger magazines to increase ammo capacity, scopes to improve a gun's iron sights capability, and Hop-Ups which can change handling of a weapon in some way. 
                 When swapping a weapon for another found in the field, the game will show which mods, if any, will carry over to the new weapon. 
                </p>
-            </div>
-            <div class="ArmorHealth">
                 <h2>
                     Armour and Health
                 </h2>
@@ -162,8 +154,6 @@
                     If all members of a squad are downed or killed at the same time, the squad is eliminated from the game, meaning their game is over entirely. 
                     The members can either spectate other players still in the game or exit the game and return to the main menu to start over. 
                 </p>
-            </div>
-            <div class="Inventory">
                 <h2>
                     Inventory
                 </h2>
@@ -173,7 +163,7 @@
                     They have one designated slot apiece for a helmet, body armour, knockdown shield and backpack - the latter expands their inventory by providing additional inventory slots. 
                     As mentioned previously, the aforementioned equipment types come in varying quality, with higher quality gear providing improved protection or carrying capacity, and the rarest gold-level equipment providing not only the best protection/capacity but also exclusive special abilities. Their inventory consists of discrete slots with which they can carry other miscellaneous items, like syringes and medkits, shield cells, various ammunition types, ordnance, and unequipped weapon mods. They cannot carry spare weapons or duplicate pieces of armour. 
                     Inventory management will be crucial to success, as a player will have to decide what items are more valuable to them at any given moment. 
-                </P>
+                </p>
             </div>
         
 
@@ -211,35 +201,49 @@
                 </div>
             </div>
 
-
-            <div class ="review">
-                <h2>
-                    Enter Rating:
-                </h2>
-                <div class = "rating">
-                    <input type = "radio" name = "star" id = "star1"><label for ="star1"></label>
-                    <input type = "radio" name = "star" id = "star2"><label for ="star2"></label>
-                    <input type = "radio" name = "star" id = "star3"><label for ="star3"></label>
-                    <input type = "radio" name = "star" id = "star4"><label for ="star4"></label>
-                    <input type = "radio" name = "star" id = "star5"><label for ="star5"></label>
-                </div>
-            </div>
-            
-            <div class="commentBox">
-                <h2>Leave Us a Comment</h2>
-                <form>
-                    <textarea placeholder='Add Your Comment'></textarea>
-                    <div class="btn">
-                        <input type = "submit" value='Comment'>
-                        <button>
-                            Cancel
-                        </button>
-                    </div>
+            <div class = "container">
+            <div class="post">
+                <div class="text">Thanks for rating us!</div>
+                <div class="edit">EDIT</div>
+              </div>
+              <div class="star-widget">
+                <input type="radio" name="rate" id="rate-5">
+                <label for="rate-5" class="fas fa-star"></label>
+                <input type="radio" name="rate" id="rate-4">
+                <label for="rate-4" class="fas fa-star"></label>
+                <input type="radio" name="rate" id="rate-3">
+                <label for="rate-3" class="fas fa-star"></label>
+                <input type="radio" name="rate" id="rate-2">
+                <label for="rate-2" class="fas fa-star"></label>
+                <input type="radio" name="rate" id="rate-1">
+                <label for="rate-1" class="fas fa-star"></label>
+                <form action="#">
+                  <header></header>
+                  <div class="textarea">
+                    <textarea cols="30" placeholder="Describe your experience.."></textarea>
+                  </div>
+                  <div class="btn">
+                    <button type="submit">Post</button>
+                  </div>
                 </form>
+              </div>
             </div>
-
-            
+            </div>
         </div>
-        
+        <script>
+            const btn = document.querySelector(".btn");
+            const post = document.querySelector(".post");
+            const widget = document.querySelector(".star-widget");
+            const editBtn = document.querySelector(".edit");
+            btn.onclick = ()=>{
+              widget.style.display = "none";
+              post.style.display = "block";
+            editBtn.onclick = ()=>{
+                widget.style.display = "block";
+                post.style.display = "none";
+              }
+              return false;
+            }
+          </script>
 </body>
 </html>

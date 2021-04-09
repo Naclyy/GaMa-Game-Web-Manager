@@ -1,0 +1,43 @@
+
+ul.b{
+    padding: 10px 30px 10px 30px; 
+}
+li{
+    padding: 5px 30px 5px 30px;
+}
+p{
+    padding: 5px 30px 5px 30px;
+}
+h2.Description{
+    padding: 20px 0 20px 0;
+}
+h2.Blocks{
+    padding: 80px 0 10px 0;
+}
+  h2{
+    color: rgb(73, 184, 22);
+    padding: 10px 0 10px 0;
+  }
+  h3{
+    color: rgb(175, 141, 112);
+    padding: 10px 0px 10px 20px;
+  }
+  h4{
+    padding: 10px 0px 0px 0px;
+  }
+
+ p.d{
+     margin-left:80%
+ }
+
+  .slidershow{
+    margin-top: 1%;
+    width: 70%;
+    height: 50%;
+    overflow: hidden;
+    margin-left:20%;
+}
+.back{
+    color:rgb(243, 241, 241);
+    background: rgb(43, 124, 6);
+}
