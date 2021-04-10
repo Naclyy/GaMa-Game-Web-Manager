@@ -83,3 +83,16 @@ p{
   font-size: 20px;
 }
 }
+@media screen and (max-width: 500px){
+  #myBtn {
+    padding: 9px;
+    font-size: 15px;
+    bottom: 10px;
+  }
+}
+#myBtn {
+  background-color: tomato;
+}
+#myBtn:hover {
+  background-color: rgb(156, 59, 41);
+}

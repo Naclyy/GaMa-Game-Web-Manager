@@ -81,3 +81,16 @@ p{
   font-size: 20px;
 }
 }
+@media screen and (max-width: 500px){
+  #myBtn {
+    padding: 9px;
+    font-size: 15px;
+    bottom: 10px;
+  }
+}
+#myBtn {
+  background-color: rgb(177, 174, 28);
+}
+#myBtn:hover {
+  background-color: rgb(10, 209, 209);
+}
