@@ -4,6 +4,14 @@ ul.d{
   list-style-type:square;
   padding: 10px 30px 10px 200px; 
 }
+ul.b{
+  float:right;
+}
+@media only screen and (max-width: 1586px) {
+  .responsive {
+    width: 100%;
+  }
+}
 li{
     padding: 5px 30px 5px 30px;
 }
@@ -31,3 +39,4 @@ ul.b{
     color:white;
     background: rgb(187, 70, 70);
 }
+
