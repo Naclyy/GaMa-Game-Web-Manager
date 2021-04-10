@@ -154,18 +154,7 @@ input:focus, textarea:focus, select:focus{
     color: white;
   }
   
-  .disk_opened_left  .topnav .login-container {
-    float: right;
-    margin-top: 5px;
-  }
-  
-  .disk_opened_left  .topnav input[type=text] {
-    padding: 6px;
-    margin-top: 8px;
-    font-size: 17px;
-    border: none;
-    width:120px;
-  }
+
   
   .disk_opened_left .topnav .login-container button {
     float: right;
@@ -183,6 +172,43 @@ input:focus, textarea:focus, select:focus{
     background-color: gray;
   }
   
+
+
+.disk_opened_left .content .tournament_gallery
+{  
+  margin-left: 25px;
+  margin-top: 20px;
+  width: 90%;
+  float: left;
+  height: 700px;
+  overflow-y: none;
+  /* overflow-y: scroll; */
  
+
+}
+
+
+.disk_opened_left .content .tournament_gallery .tournament
+{ 
+  position: relative;
+  margin: 10px;
+  margin-bottom: 30px;
+  float:left;
+  width: 256px;
+  height: 144px;
+
+}
+.disk_opened_left .content .tournament_gallery .tournament img{
+
+  opacity: 1;
+  width: 256px;
+  height: 144px;
+  cursor: pointer; 
+}
+
+.disk_opened_left .content .tournament_gallery .tournament:hover img {
+  opacity: 0.8;
+}
+
 
 
