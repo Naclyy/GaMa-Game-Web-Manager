@@ -1,0 +1,48 @@
+
+<html>
+  <head>
+    <link href = "../css/style.css" rel = "stylesheet">  
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawStuff);
+
+      function drawStuff() {
+        var data = new google.visualization.arrayToDataTable([
+          ['Name', 'Stars'],
+          ["Game1", 3],
+          ["Game2", 4],
+          ["Game3", 5],
+          ["Game4", 2.2],
+          ['Game6', 1],
+          ['Game7', 2],
+          ['Game8', 3.6],
+          ['Game9', 3.2],
+          ['Game10', 1.2],
+          ['Game11', 3.7],
+          ['Game12', 4.2],
+          ['Game13', 4.3]
+        ]);
+
+        var options = {
+          legend: { position: 'none' },
+          chart: {
+            title: 'Star Rating'},
+          axes: {
+            x: {
+              0: { side: 'bot', label: 'Name of the games'}
+            }
+          },
+          bar: { groupWidth: "50%" }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+        // Convert the Classic options to Material options.
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      };
+    </script>
+  </head>
+  <body>
+    <div id="top_x_div" style="width: 80%; height: 80%; position: relative; margin:auto; top:10%;"></div>
+  </body>
+</html>
