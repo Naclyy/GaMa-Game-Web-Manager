@@ -1,9 +1,5 @@
 
-ul.d{
-  float:left;
-  list-style-type:square;
-  padding: 10px 30px 10px 200px; 
-}
+
 li{
     padding: 5px 30px 5px 30px;
 }
@@ -13,12 +9,10 @@ p{
 h2.Gameplay{
   padding: 20px 0px 10px 0px;
 }
-ul.b{
-  padding: 10px 30px 10px 1000px; 
-}
+
   h2{
     color:rgb(212, 75, 75);
-    padding: 0px 0 10px 0;
+    padding: 0px 0 10px 0px;
   }
   h3{
     padding: 10px 0px 10px 20px;
@@ -30,4 +24,32 @@ ul.b{
 .back{
     color:white;
     background: rgb(187, 70, 70);
+}
+.lista{
+    position:relative;
+    margin-left: 10%;
+  
+
+}
+.lista ul.d{
+  width: 50%;
+  float: left;
+
+}
+.lista ul.b{
+  width: 50%;
+  float: right;
+}
+
+@media screen and (max-width: 750px) {
+  .lista ul.d{
+    width: 100%;
+    float: left;
+  
+  }
+  .lista ul.b{
+    width: 100%;
+    float: left;
+  }
+  
 }
