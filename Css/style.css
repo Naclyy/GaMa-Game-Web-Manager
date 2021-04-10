@@ -263,7 +263,7 @@ input:focus, textarea:focus, select:focus{
 
 .AllGames-content .games_gallery .game
 { 
-
+  position: relative;
   margin: 15px;
   float:left;
   width: 256px;
@@ -271,14 +271,49 @@ input:focus, textarea:focus, select:focus{
 
 }
 .AllGames-content .games_gallery .game img{
-  
+
   opacity: 1;
   width: 256px;
   height: 144px;
   cursor: pointer; 
 }
-.AllGames-content .games_gallery .game img:hover {
+.AllGames-content .games_gallery .game .infobtn{
+  position: absolute;
+  top:30%;
+  left: 10%;
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  display: none;
+}
+.AllGames-content .games_gallery .game .addbtn{
+  
+  position: absolute;
+  top:30%;
+  left: 60%;
+  background-color: green;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  display: none;
+}
+.AllGames-content .games_gallery .game:hover img {
   opacity: 0.8;
+}
+.AllGames-content .games_gallery .game:hover .addbtn {
+  display: block;
+}
+.AllGames-content .games_gallery .game:hover .infobtn {
+  display: block;
 }
 .AllGames-content .itemsbar
 { 

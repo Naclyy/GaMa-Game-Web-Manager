@@ -116,12 +116,12 @@ input:focus, textarea:focus, select:focus{
   
   .disk_opened_right
 {
-  transform: scale(0.3);
-  margin-left: -140px; 
+  transform: scale(0.5);
+  margin-left: -2px; 
 }
 .disk_opened_left
 {
-  transform: scale(0.3);
+  transform: scale(0.5);
   
 }
 
@@ -183,129 +183,24 @@ input:focus, textarea:focus, select:focus{
     background-color: gray;
   }
   
-
-
-
-
-  
- 
-  .wrapper{
-    
-    max-width:700px;
-    width: 100%;
-    background: black;
-    margin:100px 0px 0px 18px;
-    padding: 30px;
-    box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
-  }
-  
-  .wrapper .title h1{
+ .disk_opened_left .content .logoutbtn
+ {  background-color: blueviolet;
     color: white;
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 25px;
-  }
-  
-  .wrapper.form{
-    width:100%;
-  }
-  
-  .wrapper .form .input_field{
-    margin-bottom:15px;
-    display:flex;
-    align-items: center;
-  }
-  
-  .wrapper .form .input_field label{
-    
-    color:rgb(252, 252, 252);
-    margin-right:10px;
-    font-size:20px;
-  }
-.wrapper .form .input_field .input{
-  width: 50%;
-  outline: none;
-  background-color: black;
-  border: 1px solid white;
-  color: white;
-  font-size: 21px;
-  padding: 8px 10px;
-  transition:all 0.3s ease;
-}
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 10px 10px 10px 10px;
+    position: fixed;  
+    left: 40%;
+    top:90%; 
+    z-index: 100; 
+    outline: none;
+ }
+ .disk_opened_left .content .logoutbtn:hover
+ {  background-color: grey;
+    color: white;
+    cursor: pointer;
+   
+ }
 
-.wrapper .form .input_field .custom_select{
-  position: relative;
-  width: 100%;
-  height: 40px;
-}
-
-.wrapper .form .input_field .custom_select select{
-  -webkit-appearance: none;
-  appearance: none;
-  border:1px solid #d5dbd9;
-  background-color: black;
-  color: white;
-  width: 100%;
-  height: 100%;
-  padding:8px 10px;
-  border-radius: 3px;
-  outline: none;
-  font-size:21px;
-}
-
-.wrapper .form .input_field .custom_select:before{
-  content:"";
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  border:8px solid; 
-  border-color:tomato transparent transparent transparent;
-  pointer-events: none;
-}
-
-.wrapper .form .input_field p{
-  font-size: 18px;
-  color:#fff6f6;
-}
-.wrapper .form .input_field .check{
-  width:20px;
-  height: 20px;
-  position: relative;
-  display: block;
-  cursor: pointer;
-}
-
-.wrapper .form .input_field .btn{
-  width: 100%;
-  padding: 8px 10px;
-  font-size: 21px;
-  border: 0;
-  color:white;
-  cursor:pointer;
-  border-radius: 3px;
-  outline: none;
-  background: tomato;
-}
-
-.wrapper .form .input_field:last-child{
-  margin-bottom: 0;
-}
-
-.wrapper .form .input_field .btn:hover{
-  background: gray;
-}
-
-@media (max-width:420 px){
-  .wrapper .form .input_field{
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .wrapper .form .input_field label{
-    margin-bottom: 5px;
-  }
-  .wrapper .form .input_field.terms{
-    flex-direction: row;
-  }
-}
 
 
