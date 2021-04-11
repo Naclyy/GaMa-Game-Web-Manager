@@ -210,5 +210,124 @@ input:focus, textarea:focus, select:focus{
   opacity: 0.8;
 }
 
+.disk_opened_left .content .registerTournament input[type=text] ,input[type=tel]{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+.disk_opened_left .content .tournament_gallery .tournament .register{
+  position: absolute;
+  top:35%;
+  left:25%;
+  background-color: green;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px; 
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  display: none;
+}
+.disk_opened_left .content .tournament_gallery .tournament:hover .register {
+  display: block;
+}
+/* Add a background color when the inputs get focus */
+.disk_opened_left .content .registerTournament input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+.disk_opened_left .content .registerTournament button {
+  background-color: #262626;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.disk_opened_left .content .registerTournament button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.disk_opened_left .content .registerTournament .cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+.disk_opened_left .content .registerTournament .registerbtn {
+  background-color: green;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.disk_opened_left .content .registerTournament .cancelbtn, .registerbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.disk_opened_left .content .registerTournament .container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.disk_opened_left .content .registerTournament{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: -1px;
+  top: 0;
+  width: 686px; /* Full width */
+  height: 868px; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.disk_opened_left .content .registerTournament .modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+.disk_opened_left .content .registerTournament hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.disk_opened_left .content .registerTournament .close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.disk_opened_left .content .registerTournament .close:hover,
+.disk_opened_left .content .registerTournament .close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.disk_opened_left .content .registerTournament .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 
 
