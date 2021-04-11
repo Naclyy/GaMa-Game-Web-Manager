@@ -155,7 +155,7 @@
 }
 .disk_opened_right .content .left_button a #image:hover
 {
-  content: url("/Poze/left_arrow_hover.png");
+  content: url("../Poze/left_arrow_hover.png");
 }
 .disk_opened_right .content .games_gallery
 {  
