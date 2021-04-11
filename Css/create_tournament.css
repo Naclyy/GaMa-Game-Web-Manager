@@ -95,7 +95,7 @@
 }
 .disk_opened_left .right_button a #image:hover
 {
-  content: url("/Poze/right_arrow_hover.png");
+  content: url("../Poze/right_arrow_hover.png");
 }
 
 input:focus, textarea:focus, select:focus{
