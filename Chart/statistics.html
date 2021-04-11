@@ -1,7 +1,7 @@
 
 <html>
   <head>
-    <link href = "../css/style.css" rel = "stylesheet">  
+    <link href = "../Chart/chart.css" rel = "stylesheet">  
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['bar']});
@@ -36,13 +36,13 @@
           bar: { groupWidth: "50%" }
         };
 
-        var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+        var chart = new google.charts.Bar(document.getElementById('bot_x_div'));
         // Convert the Classic options to Material options.
         chart.draw(data, google.charts.Bar.convertOptions(options));
       };
     </script>
   </head>
   <body>
-    <div id="top_x_div" style="width: 80%; height: 80%; position: relative; margin:auto; top:10%;"></div>
+    <div id="bot_x_div" style="width: 80%; height: 80%; position: relative; margin:auto; top:10%;"></div>
   </body>
 </html>
