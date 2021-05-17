@@ -1,100 +1,86 @@
 <!DOCTYPE html>
 <html>
-<head>
+    <head>
 
-<title>play? - Tournamets</title>
+      <title>play? - Tournamets</title>
+      <meta charset="UTF-8" />
+      <link rel="icon" href="../Poze/logo.png" type="image/x-icon" sizes="16x16">
+      <link href='https://fonts.googleapis.com/css?family=Barrio' rel='stylesheet'>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href = "../css/nextpage.css" rel = "stylesheet">
+    </head>
 
-<link rel="icon" href="../Poze/logo.png" type="image" sizes="16x16">
-<link href='https://fonts.googleapis.com/css?family=Barrio' rel='stylesheet'>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href = "../css/nextpage.css" rel = "stylesheet">
-<style>
-   
+    <body>
 
+      <div class="disk disk_opened_right"></div>
 
-  </style>
-</head>
+      <div class="disk disk_opened_left">
+          <div class="topnav">
+              <a class="active" href="">Tournamets</a>
+              <a href="../Html/create_tournament.html">Create Tournamets</a>
+              <a href="../Html/account_page_play.html" style="float:right;">Account</a>
+          </div>
+          <div class="content">
+               <div class="tournament_gallery">
+                  <div class="tournament">
+                      <img src="../Poze/Tournaments/esports-most-popular-tournaments-worldwide-670px.jpg" alt = "Poze Turnament">
+                      <button class="register" onclick="document.getElementById('id01').style.display='block'">Register</button>
+                      <p style="color:white;text-align: center;">League Of Legends</p>
+                  </div>
 
-<body>
-
-<div class="disk disk_opened_right">
- 
-</div>
-
-</div>
-<div class="disk disk_opened_left">
-  <div class="topnav">
-    <a class="active" href="">Tournamets</a>
-    <a href="../Html/create_tournament.html">Create Tournamets</a>
-    <a href="../Html/account_page_play.html" style="float:right;">Account</a>
-
-    
-  </div>
-<div class="content">
-  
-    <div class="tournament_gallery">
-      <div class="tournament">
-        <img src="../Poze/Tournaments/esports-most-popular-tournaments-worldwide-670px.jpg">
-        <button class="register" onclick="document.getElementById('id01').style.display='block'">Register</button>
-        <p style="color:white;text-align: center;">League Of Legends</p>
-      </div>
-
-      <div class="tournament">
-        <img src="../Poze/Tournaments/fifa-21-tournament-mode.jpg">
-        <p style="color:white;text-align: center;">Fifa 21</p>
-        <button  class="register" onclick="document.getElementById('id01').style.display='block'" >Register</button>
-      </div>
+                  <div class="tournament">
+                      <img src="../Poze/Tournaments/fifa-21-tournament-mode.jpg" alt = "Fifa Tournament Picture">
+                      <p style="color:white;text-align: center;">Fifa 21</p>
+                      <button  class="register" onclick="document.getElementById('id01').style.display='block'" >Register</button>
+                  </div>
       
-      <div id="id01" class="registerTournament">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-        <form class="modal-content" action="/action_page.php">
-          <div class="container">
-            <h1>Register Tournament</h1>
-            <p>Please fill in this form to registerTournament.</p>
-            <hr>
+                  <div id="id01" class="registerTournament">
+                      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                      <form class="modal-content" action="/action_page.php">
+                          <div class="container">
+                              <h1>Register Tournament</h1>
+                              <p>Please fill in this form to registerTournament.</p>
+                              <hr>
            
-            <label for="Team Name"><b>Team Name</b></label>
+                              <label for="TeamName"><b>Team Name</b></label>
 
-            <input type="text" placeholder="Enter Team Name" name="Team Name" required>
+                              <input id = "TeamName" type="text" placeholder="Enter Team Name" name="TeamName" required>
 
-            <label for="IGN"><b>In game name</b></label>
+                              <label for="IGN"><b>In game name</b></label>
 
-            <input type="text" placeholder="Enter IGN" name="IGN" required>
+                              <input id = "IGN" type="text" placeholder="Enter IGN" name="IGN" required>
 
-            <label for="Rank"><b>Rank</b></label>
+                              <label for="Rank"><b>Rank</b></label>
 
-            <input type="text" placeholder="Enter Rank" name="Rank" required>
+                              <input id = "Rank" type="text" placeholder="Enter Rank" name="Rank" required>
 
-            <label for="phonenumber"><b>Phone Number</b></label>
+                              <label for="phonenumber"><b>Phone Number</b></label>
 
-            <input type="tel" id="phone" name="phone"
-       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-       required placeholder="Enter Phone Number">
-           <small>Nubmer Format: 123-456-7890</small>
-          <p>&nbsp;</p>          
+                              <input id = "phonenumber" type="tel" name="phone"
+                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                required placeholder="Enter Phone Number">
+                                <small>Nubmer Format: 123-456-7890</small>
+                                <p>&nbsp;</p>          
             
            
       
-            <p>By registering to this tournament you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                              <p>By registering to this tournament you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
       
-            <div class="clearfix">
-              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-              <button type="submit" class="registerbtn">Register</button>
-            </div>
+                                  <div class="clearfix">
+                                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                                        <button type="submit" class="registerbtn">Register</button>
+                                  </div>
+                            </div>
+                       </form>
+                  </div>
+                </div>
+
           </div>
-        </form>
+          <div class="right_button">
+              <a href="../Html/main_page_play.html"><img id="image" src="../Poze/right_arrow.png" alt = "Right Arrow"></a>
+          </div>
+
       </div>
-  </div>
-
-</div>
-<div class="right_button">
-<a href="../Html/main_page_play.html"><img id="image" src="../Poze/right_arrow.png"></a>
-</div>
-
-   
-
-</div>
-
 
 <script>
   // Get the modal
@@ -109,5 +95,5 @@
   </script>
 
  
-</body>
+    </body>
 </html>

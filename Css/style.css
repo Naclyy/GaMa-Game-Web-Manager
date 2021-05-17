@@ -221,6 +221,20 @@ body {
   margin-bottom: 12px;
   background-color: black;
 }
+
+#myInput2 {
+ 
+  width: 100%;
+  color: white;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 12px 20px 12px 40px;
+  border-radius: 15px 0px 0px 15px;
+  border: 2px solid white;
+  margin-bottom: 12px;
+  background-color: black;
+}
+
 input:focus, textarea:focus, select:focus{
   outline: none;
 }

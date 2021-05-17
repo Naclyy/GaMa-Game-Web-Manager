@@ -1,28 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
+    <head>
 
-<title>play?</title>
+      <title>play?</title>
+      <meta charset="UTF-8" />
+      <link rel="icon" href="../Poze/logo.png" type="image/x-icon" sizes="16x16">
+      <link href='https://fonts.googleapis.com/css?family=Barrio' rel='stylesheet'>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="icon" href="../../Poze/logo.png" type="image" sizes="16x16">
-<link href='https://fonts.googleapis.com/css?family=Barrio' rel='stylesheet'>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link href = "../../Css/adminpages.css" rel = "stylesheet">
-<style>
-   
-
-
-  </style>
-</head>
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link href = "../../Css/adminpages.css" rel = "stylesheet">
+  </head>
 
 <body>
 
-    <div class="content">
-        <div class="logo">
+  <div class="content">
+    <div class="logo">
 
-        </div>
+    </div>
     <div class="navbar">
         <ul>
             
@@ -63,10 +58,10 @@
             <h1>Add game</h1>
             <hr>
             <label for="game"><b>game name</b></label>
-            <input type="text" placeholder="Enter Game Name" name="Game" required>
+            <input id = "game" type="text" placeholder="Enter Game Name" name="Game" required>
 
             <label for="text"><b>game url</b></label>
-            <input type="text" placeholder="Enter Game Url" name="Url" required>
+            <input id = "text" type="text" placeholder="Enter Game Url" name="Url" required>
 
             <div class="clearfix">
               <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
@@ -74,13 +69,12 @@
             </div>
           </div>
         </form>
-      </div>
 
        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="addbtn" > Add game</button>
     
+      </div>
     </div>
-    </div>
-</div>
+  </div>
 
  
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="icon" href="../Poze/logo.png" type="image" sizes="16x16">
+        <link rel="icon" href="../Poze/logo.png" type="image/x-icon" sizes="16x16">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href = "../Game_Informations_CSS/style.css" rel = "stylesheet">
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -21,7 +21,7 @@
         <!-- Here is our main header that is used across all the pages of our website -->
 
         <header>
-            <a href="../Html/main_page_play.html"><button class="back" href="../Html/main_page_play.html">Back to inventory</button></a>
+            <button onclick = "location.href ='../Html/main_page_play.html'" class="back" >Back to inventory</button>
             <!-- back button-->
         </header>
 
@@ -111,6 +111,7 @@
                     <li>
                         Race - Compete against multiple racers on roads 
                     </li>
+                    <li style="list-style: none;">
                     <ul class = "b">
                         <li>
                             Circuit Race - Complete all laps and reach the finish line in first place.
@@ -119,9 +120,11 @@
                             Sprint Race - Pass through checkpoints and reach the finish line in first place.
                         </li>
                     </ul>
+                    </li>
                     <li>
                         Off-Road - Compete against multiple racers on off-road 
                     </li>
+                    <li style="list-style: none;">
                     <ul class = "b">
                         <li>
                             Off-Road Circuit Race - Complete all laps and reach the finish line in first place.
@@ -130,6 +133,7 @@
                             Off-Road Sprint Race - Pass through checkpoints and reach the finish line in first place.
                         </li>
                     </ul>
+                    </li>
                     <li>
                         Drift Trial - Beat the target score before reaching the finish line.
                     </li>
@@ -291,7 +295,6 @@
                 </form>
               </div>
             </div>
-            </div>
         </div>
         <script>
             const btn = document.querySelector(".btn");
@@ -310,7 +313,7 @@
           </script>
         
         
-</body>
+
 <button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
 <script>
     //Get the button
@@ -333,4 +336,5 @@
       document.documentElement.scrollTop = 0;
     }
     </script>
+    </body>
 </html>
