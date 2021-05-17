@@ -221,7 +221,6 @@ body {
   margin-bottom: 12px;
   background-color: black;
 }
-
 #myInput2 {
  
   width: 100%;
@@ -234,7 +233,6 @@ body {
   margin-bottom: 12px;
   background-color: black;
 }
-
 input:focus, textarea:focus, select:focus{
   outline: none;
 }
