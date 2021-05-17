@@ -96,6 +96,10 @@ body {
   float: right;
   padding-top: 16px;
 }
+.disk .borders span.password{
+  float: right;
+  padding-top: 16px;
+}
 
 /* Full-width input fields */
 .disk .borders .signupmodal input[type=text], input[type=password] {
