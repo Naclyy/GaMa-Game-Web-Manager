@@ -309,3 +309,23 @@ input:focus, textarea:focus, select:focus{
 }
 
 
+ @media screen and (max-width: 620px) {
+  .disk
+  {
+    transform: scale(0.4);
+  }
+  
+  .disk_opened_right
+{
+  transform: scale(0.45);
+  margin-left: -37px; 
+}
+.disk_opened_left
+{
+  transform: scale(0.45);
+  
+}
+
+}
+
+
