@@ -1,4 +1,5 @@
 *{
+    
     padding: 0;
     margin: 0;
     text-decoration: none;
@@ -7,6 +8,7 @@
     font-family: 'Courier New', Courier, monospace;
   }
   body {
+
     background-image: url("../Poze/background_first_page.png");
     background-color: #cccccc;
     background-size: 100%;
@@ -119,6 +121,7 @@ input:focus, textarea:focus, select:focus{
 {
   transform: scale(0.45);
   margin-left: -37px; 
+  position: fixed;
 }
 .disk_opened_left
 {
