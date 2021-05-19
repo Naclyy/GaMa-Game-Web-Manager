@@ -38,7 +38,7 @@
     </div>
   </div>
   
-  <button id="myBtnToAllGames">Add Game</button>
+  <button id="myBtnToAllGames" class="dropbtn">Add Game</button>
 
 <!-- The Modal -->
 <div id="AllGames" class="AllGames">
@@ -50,7 +50,9 @@
       <div class="searchbox">
         <input type="text" id="myInput2" onkeyup="searchGameFilter()" placeholder="Search for game.." title="Type in a name">
       </div>
-  
+      <div class="ranking">
+        <button onclick = "location.href ='../Chart/statistics.html'" class="dropbtn">Ranking</button>
+      </div>
       <div class="dropdown">
         <button class="dropbtn">Sort</button>
       <div class="dropdown-content">
@@ -60,7 +62,7 @@
         <button class="btn" onclick="sortByRating(1)"> by rating desc</button>
       </div>
       </div>
-  
+      
       <div class="dropdown">
         <button class="dropbtn">Category</button>
       <div class="dropdown-content">

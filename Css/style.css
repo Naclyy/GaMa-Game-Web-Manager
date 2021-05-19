@@ -4,7 +4,8 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
+    /* Nu incapea add game langa restul asa ca am scos font-ul
+    font-family: 'Courier New', Courier, monospace; */
   }
   /* width */
 ::-webkit-scrollbar {
@@ -63,8 +64,6 @@
 {
   background-image: url("../Poze/disk_opened_rightside_image.png");
  
-
-
 }
 .disk_opened_right .content
 {  
@@ -163,8 +162,10 @@
   width: 90%;
   float: right;
   height: 730px;
+
+  /* se vedea un scroll urat - Zaharia
   overflow-y: scroll;
- 
+ */
 
 }
 

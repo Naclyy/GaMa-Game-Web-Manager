@@ -224,7 +224,9 @@ input:focus, textarea:focus, select:focus{
   width: 50%;
   outline: none;
   background-color: black;
+  /* Era bugg la box si disparea linia la email box
   border: 1px solid white;
+  */
   color: white;
   font-size: 21px;
   padding: 8px 10px;
