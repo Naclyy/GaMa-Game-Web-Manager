@@ -155,35 +155,7 @@ input:focus, textarea:focus, select:focus{
     background-color: gray;
     color: white;
   }
-  
-  .disk_opened_left  .topnav .login-container {
-    float: right;
-    margin-top: 5px;
-  }
-  
-  .disk_opened_left  .topnav input[type=text] {
-    padding: 6px;
-    margin-top: 8px;
-    font-size: 17px;
-    border: none;
-    width:120px;
-  }
-  
-  .disk_opened_left .topnav .login-container button {
-    float: right;
-    padding: 6px 10px;
-    margin-top: 8px;
-    margin-right: 16px;
-    background-color: #555;
-    color: white;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .disk_opened_left .topnav .login-container button:hover {
-    background-color: gray;
-  }
+
   
  .disk_opened_left .content .logoutbtn
  {  background-color: blueviolet;
@@ -197,8 +169,20 @@ input:focus, textarea:focus, select:focus{
     z-index: 100; 
     outline: none;
  }
+
+ .disk_opened_left .content .accountinfo
+ { 
+  color:white;
+  font-size: 40px;
+  margin-left:40px;
+   
+  }
+  .disk_opened_left .content .accountinfo p{
+
+  }
+
  .disk_opened_left .content .logoutbtn:hover
- {  background-color: grey;
+ {  background-color: white;
     color: white;
     cursor: pointer;
    
