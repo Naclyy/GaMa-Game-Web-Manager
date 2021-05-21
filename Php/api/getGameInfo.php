@@ -20,7 +20,7 @@ $result = $game->getGameInfo($_POST["id"]);
 $num = $result->rowCount();
 
   
-  if($num = 1) {
+  if($num == 1) {
     
    
    

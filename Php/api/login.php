@@ -24,8 +24,15 @@ if($result)
     $_SESSION['user_firstname']=$user->getFirstname();
     $_SESSION['user_lastname']=$user->getLastname();
     $_SESSION['user_emailaddress']=$user->getEmailaddress();
+    if($_SESSION['user_id'] == 1)
+    {
+     header("Location: ../../Html/admin/admin_page.html", true, 301);
+    }
+    else{
+        
     header("Location: ../../Html/home_play.html", true, 301);
-    exit();
+    }
+    
 }
 else
 {

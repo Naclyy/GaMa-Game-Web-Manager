@@ -44,10 +44,6 @@ class User{
 
      
   }
-
-  // Turn to JSON & output
-  
-
 } 
 else {
   return false;

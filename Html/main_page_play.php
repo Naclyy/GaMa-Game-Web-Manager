@@ -104,66 +104,6 @@ include_once "../Php/HtmlParse/simple_html_dom.php";
       
     }
 ?>
-      <div class="game">
-        <img src="../Poze/GamesLogo/Slide_Show_ApexLegends.jpg" alt = "Apex Picture">
-        <button onclick = "location.href ='../Game_Informations_HTML/apex_information.html'" class="infobtn">Info</button>
-        <button class="addbtn">Add</button>
-      </div>
-      <div class="game">
-        <img src="../Poze/GamesLogo/Slide_Show_CodWarzone.jpg" alt = "CODWZ Picture">
-        <button onclick = "location.href ='../Game_Informations_HTML/codwz_information.html'" class="infobtn">Info</button>
-        <button class="addbtn">Add</button>
-      </div>
-      <div class="game">
-        <img src="../Poze/GamesLogo/Slide_Show_CSGO.jpg" alt = "CSGO Picture">
-        <button onclick = "location.href ='../Game_Informations_HTML/csgo_information.html'" class="infobtn">Info</button>
-        <button class="addbtn">Add</button>
-      </div>
-      <div class="game">
-        <img src="../Poze/GamesLogo/Slide_Show_Cyberpunk.jpg" alt = "Cyberpunk Picture">
-        <button onclick = "location.href ='../Game_Informations_HTML/cyberpunk_information.html'" class="infobtn">Info</button>
-        <button class="addbtn">Add</button>
-      </div>
-      <div class="game">
-        <img src="../Poze/GamesLogo/Slide_Show_Fortnite.jpg" alt = "Fortnite Picture">
-        <button onclick = "location.href ='../Game_Informations_HTML/fortnite_information.html'" class="infobtn">Info</button>
-        <button class="addbtn">Add</button>
-      </div>
-      <div class="game">
-        <img src="../Poze/GamesLogo/Slide_Show_Gta5.jpg" alt = "Gta5 Picture">
-        <button onclick = "location.href ='../Game_Informations_HTML/gta5_information.html'" class="infobtn">Info</button>
-        <button class="addbtn">Add</button>
-      </div>
-      <div class="game">
-        <img src="../Poze/GamesLogo/Slide_Show_LOL.jpg" alt = "LOL Picture">
-        <button onclick = "location.href ='../Game_Informations_HTML/league_information.html'" class="infobtn">Info</button>
-        <button class="addbtn">Add</button>
-      </div>
-      <div class="game">
-        <img src="../Poze/GamesLogo/Slide_Show_NeedForSpeedHeat.jpg" alt = "NFSHEAT Picture">
-        <button onclick = "location.href ='../Game_Informations_HTML/nfs_information.html'" class="infobtn">Info</button>
-        <button class="addbtn">Add</button>
-      </div>
-      <div class="game">
-        <img src="../Poze/GamesLogo/Slide_Show_PUBG.jpg" alt = "PUBG Picture">
-        <button onclick = "location.href ='../Game_Informations_HTML/pubg_information.html'" class="infobtn">Info</button>
-        <button class="addbtn">Add</button>
-      </div>
-      <div class="game">
-        <img src="../Poze/GamesLogo/Slide_Show_TheCrew2.jpg" alt = "TheCrew2 Picture">
-        <button onclick = "location.href ='../Game_Informations_HTML/thecrew2_information.html'" class="infobtn">Info</button>
-        <button class="addbtn">Add</button>
-      </div>
-      <div class="game">
-        <img src="../Poze/GamesLogo/Slide_Show_GtaSA.jpg" alt = "GtaSA Picture">
-        <button onclick = "location.href ='../Game_Informations_HTML/gtaSA_information.html'" class="infobtn">Info</button>
-        <button class="addbtn">Add</button>
-      </div>
-      <div class="game">
-        <img src="../Poze/GamesLogo/Slide_Show_Minecraft.jpg" alt = "Minecraft Picture">
-        <button onclick = "location.href ='../Game_Informations_HTML/minecraft_information.html'"  class="infobtn">Info</button>
-        <button class="addbtn">Add</button>
-      </div>
     </div>
   </div>
 

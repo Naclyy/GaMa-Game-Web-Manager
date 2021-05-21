@@ -1,5 +1,5 @@
 <?php
-exec ('../../Php/api/getGames.php');
+
 session_start();
 ?>
 <!DOCTYPE html>
