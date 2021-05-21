@@ -21,9 +21,7 @@ $num = $result->rowCount();
 
   // Check if any posts
   if($num > 0) {
-    // Post array
-    $posts_arr = array();
-    // $posts_arr['data'] = array();
+    $_SESSION['all_games']= array();
 
     while($row = $result->fetch(PDO::FETCH_ASSOC)) {
       extract($row);
@@ -34,18 +32,13 @@ $num = $result->rowCount();
         'url' => $url
       );
 
-    $html = file_get_html($url);
-
-    $postDiv=$html->find('.game_header_image_full',0);
-    $src=$postDiv->attr['src'];
-    echo "<img src='{$src}'>";
- 
-    
-
-      
+      array_push($_SESSION['all_games'],$post_item);
     }
+      
 
-    
+    $html = file_get_html($_SESSION['all_games'][0]['url']);
+
+    header("Location: ../../Html/main_page_play.php", true, 301);
 
   } else {
     // No Posts

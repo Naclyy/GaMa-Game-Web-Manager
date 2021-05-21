@@ -1,23 +1,8 @@
 <?php
-//Headers
 
 session_start();
+include_once "../Php/HtmlParse/simple_html_dom.php";
 
-
-include_once '../Php/config/database.php';
-include_once '../Php/models/game.php';
-include_once '../Php/HtmlParse/simple_html_dom.php';
-
-//instantiate DB and connect
-
-$database = new Database();
-$db = $database->connect();
-
-$game = new Game($db);
-
-$result = $game->getGames();
-
-$num = $result->rowCount();
 ?>
 <!DOCTYPE html>
 <html>
@@ -96,29 +81,20 @@ $num = $result->rowCount();
     </div>
     <div class="games_gallery" >
       <?php   
-  if($num > 0) {
-    // Post array
-    $posts_arr = array();
-    // $posts_arr['data'] = array();
+  
+    foreach($_SESSION['all_games'] as $game) {
 
-    while($row = $result->fetch(PDO::FETCH_ASSOC)) {
-      extract($row);
-
-      $post_item = array(
-        'id' => $id,
-        'title' => $title,
-        'url' => $url
-      );
-
-    $html = file_get_html($url);
-
+    
+    $html = file_get_html($game['url']);
     $postDiv=$html->find('.game_header_image_full',0);
     $src=$postDiv->attr['src'];
+    $title=$game['title'];
+    $id=$game['id'];
     echo '<div class="game">';
     echo "<img src='{$src}' alt = '{$title}'>";
-    echo '<form action="../Php/api/GameInfoScrape.php" method="post">';
+    echo '<form action="../Php/api/getGameInfo.php" method="post">';
     echo '<button value="' . $id . '" type="submit" name="id" class="infobtn">Info</button>';
-    echo '<form>';
+    echo '</form>';
     echo '<button class="addbtn">Add</button>';
     echo '</div>';
 
@@ -127,16 +103,6 @@ $num = $result->rowCount();
 
       
     }
-
-    
-
-  } else {
-    // No Posts
-    echo json_encode(
-      array('message' => 'No Games Found')
-    );
-
-}
 ?>
       <div class="game">
         <img src="../Poze/GamesLogo/Slide_Show_ApexLegends.jpg" alt = "Apex Picture">

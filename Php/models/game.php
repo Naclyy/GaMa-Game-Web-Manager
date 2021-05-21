@@ -27,7 +27,19 @@ class Game{
         return $stmt;
     }
 
-    public function getSingleGame($id){
+
+    public function addGame($title,$url)
+   {
+    if($title != null && $url != null)
+    $query="INSERT INTO " . $this->table . " (title,url) values('" . $title . "','" . $url . "')" ;
+
+    $stmt=$this->conn->prepare($query);
+
+    $stmt->execute();
+
+   }
+
+    public function getGameInfo($id){
         $query="SELECT * from " . $this->table . " WHERE id = " . $id;
 
         $stmt=$this->conn->prepare($query);
