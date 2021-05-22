@@ -1,6 +1,5 @@
 <?php
-
-session_start();
+include '../../Php/api/getGames.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -46,7 +45,7 @@ session_start();
 
         $title=$game['title'];
         $id=$game['id'];
-        echo "<li class='w3-display-container'>{$title} <span onclick='this.parentElement.style.display='none'' class='w3-button w3-transparent w3-display-right'>&times;</span></li>";
+        echo "<li class='w3-display-container'>{$title} <form action='../../Php/api/deleteGame.php' method='post'> <button type='submit' name='id' value='{$id}' class='w3-button w3-transparent w3-display-right'>&times;</button></form></li>";
 
         }
       ?>
@@ -56,7 +55,6 @@ session_start();
         <button onclick="document.getElementById('id01').style.display='block'" class="addbtn"> Add game</button>
 
        <div id="id01" class="addgameModal">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
         <form class="modal-content" action="../../Php/api/addGame.php" method="post">
           <div class="container">
             <h1>Add game</h1>

@@ -4,9 +4,9 @@
 session_start();
 
 
-include_once '../config/database.php';
-include_once '../models/game.php';
-include_once '../HtmlParse/simple_html_dom.php';
+include_once dirname(__FILE__) . '/../config/database.php';
+include_once dirname(__FILE__) . '/../models/game.php';
+include_once dirname(__FILE__) . '/../HtmlParse/simple_html_dom.php';
 
 //instantiate DB and connect
 

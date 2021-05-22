@@ -1,8 +1,6 @@
 <?php
 //Headers
 
-session_start();
-
 
 include_once dirname(__FILE__) . '/../config/database.php';
 include_once dirname(__FILE__) . '/../models/game.php';
@@ -15,25 +13,17 @@ $db = $database->connect();
 
 $game = new Game($db);
 
-$result = $game->getGames();
+$result=$game->getGamesCategories();
 
-$num = $result->rowCount();
+$num=$result->rowCount();
 
-  // Check if any posts
-  if($num > 0) {
-    $_SESSION['all_games']= array();
+if($num > 0) {
+    $_SESSION['all_categories']= array();
 
     while($row = $result->fetch(PDO::FETCH_ASSOC)) {
       extract($row);
 
-      $post_item = array(
-        'id' => $id,
-        'title' => $title,
-        'url' => $url,
-        'category' => $category
-      );
-
-      array_push($_SESSION['all_games'],$post_item);
+      array_push($_SESSION['all_categories'],$category);
     }
       
 
@@ -46,18 +36,6 @@ $num = $result->rowCount();
     );
 
 }
+
+
 ?>
-
-<!DOCTYPE html>
-<html>
-    <head>
-
-      <title>test</title>
-
-    </head>
-
-<body>
-
-</body>
-</html>
-

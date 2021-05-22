@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gazdă: 127.0.0.1
--- Timp de generare: mai 21, 2021 la 03:18 PM
+-- Timp de generare: mai 22, 2021 la 12:52 PM
 -- Versiune server: 10.4.17-MariaDB
 -- Versiune PHP: 8.0.2
 
@@ -30,18 +30,17 @@ SET time_zone = "+00:00";
 CREATE TABLE `game` (
   `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
-  `url` varchar(255) NOT NULL
+  `url` varchar(255) NOT NULL,
+  `category` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Eliminarea datelor din tabel `game`
 --
 
-INSERT INTO `game` (`id`, `title`, `url`) VALUES
-(1, 'Counter-Strike: Global Offensive', 'https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/'),
-(2, 'Arma 3', 'https://store.steampowered.com/app/107410/Arma_3/'),
-(4, 'Beyond The Wire', 'https://store.steampowered.com/app/1058650/Beyond_The_Wire/'),
-(5, 'Insurgency: Sandstorm', 'https://store.steampowered.com/app/581320/Insurgency_Sandstorm/');
+INSERT INTO `game` (`id`, `title`, `url`, `category`) VALUES
+(1, 'Counter-Strike: Global Offensive', 'https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/', 'FPS'),
+(4, 'Arma 3', 'https://store.steampowered.com/app/107410/Arma_3/', 'Action');
 
 -- --------------------------------------------------------
 
@@ -92,7 +91,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pentru tabele `game`
 --
 ALTER TABLE `game`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pentru tabele `user`

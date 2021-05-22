@@ -26,6 +26,9 @@
   border: 1px solid white;
 }
 
+.show {
+  display: block !important; 
+}
 
 .disk{
   background-image: url("../Poze/disk_image.png");
@@ -118,6 +121,18 @@
   display: block;
 }
 
+.disk_opened_right .itemsbar .dropdown-content .btn:hover{
+  background-color: white;
+  color : black;
+
+}
+
+.disk_opened_right .itemsbar .dropdown-content .btn.active{
+  background-color: white;
+  color : black;
+
+}
+
 .disk_opened_right .itemsbar .dropdown:hover .dropdown-content {
   display: block;
 }
@@ -177,8 +192,10 @@
   float:left;
   width: 256px;
   height: 144px;
+  display : none;
 
 }
+
 .disk_opened_right .content .games_gallery .game img{
   
   opacity: 0.8;
@@ -281,6 +298,7 @@ input:focus, textarea:focus, select:focus{
   float:left;
   width: 256px;
   height: 144px;
+  display: none;
 
 }
 .AllGames-content .games_gallery .game img{

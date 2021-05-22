@@ -13,14 +13,11 @@ $db = $database->connect();
 
 $game = new Game($db);
 
-$html=file_get_html($_POST['url']);
-$category=$html->find(".glance_tags.popular_tags",0)->first_child()->plaintext;
-$category = preg_replace("/\s+/", "", $category);
-$title = $html->find(".apphub_AppName",0)->plaintext;
-$url = str_replace(" ", "", $_POST["url"]);
+
+$id = $_POST["id"];
 
 
-$result = $game->addGame($title,$url,$category);
+$game->deleteGame($id);
 
 header('Location: ../../Html/admin/manage_games_page.php', true, 301);
 
