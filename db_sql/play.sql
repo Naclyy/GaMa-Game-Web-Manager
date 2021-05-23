@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gazdă: 127.0.0.1
--- Timp de generare: mai 22, 2021 la 12:52 PM
+-- Timp de generare: mai 23, 2021 la 02:01 PM
 -- Versiune server: 10.4.17-MariaDB
 -- Versiune PHP: 8.0.2
 
@@ -65,6 +65,25 @@ INSERT INTO `user` (`id`, `username`, `password`, `firstname`, `lastname`, `emai
 (1, 'admin', 'admin', 'admin', 'admin', 'admin@gmail.com'),
 (2, 'test', 'test', 'test', 'test', 'test@gmail.com');
 
+-- --------------------------------------------------------
+
+--
+-- Structură tabel pentru tabel `user_game`
+--
+
+CREATE TABLE `user_game` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `game_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Eliminarea datelor din tabel `user_game`
+--
+
+INSERT INTO `user_game` (`id`, `user_id`, `game_id`) VALUES
+(3, 2, 1);
+
 --
 -- Indexuri pentru tabele eliminate
 --
@@ -84,6 +103,14 @@ ALTER TABLE `user`
   ADD UNIQUE KEY `emailaddress` (`emailaddress`);
 
 --
+-- Indexuri pentru tabele `user_game`
+--
+ALTER TABLE `user_game`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_user_game_user_id` (`user_id`),
+  ADD KEY `fk_user_game_game_id` (`game_id`);
+
+--
 -- AUTO_INCREMENT pentru tabele eliminate
 --
 
@@ -98,6 +125,23 @@ ALTER TABLE `game`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT pentru tabele `user_game`
+--
+ALTER TABLE `user_game`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- Constrângeri pentru tabele eliminate
+--
+
+--
+-- Constrângeri pentru tabele `user_game`
+--
+ALTER TABLE `user_game`
+  ADD CONSTRAINT `fk_user_game_game_id` FOREIGN KEY (`game_id`) REFERENCES `game` (`id`),
+  ADD CONSTRAINT `fk_user_game_user_id` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

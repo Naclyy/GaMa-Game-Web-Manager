@@ -2,6 +2,7 @@
 
 include '../Php/api/getGames.php';
 include '../Php/api/getGamesCategories.php';
+include '../Php/api/getUserGames.php';
 include_once "../Php/HtmlParse/simple_html_dom.php";
 
 ?>
@@ -15,6 +16,7 @@ include_once "../Php/HtmlParse/simple_html_dom.php";
       <link href='https://fonts.googleapis.com/css?family=Barrio' rel='stylesheet'>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href = "../css/style.css" rel = "stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     </head>
 
 <body>
@@ -67,7 +69,7 @@ include_once "../Php/HtmlParse/simple_html_dom.php";
       <div class="dropdown">
         <button class="dropbtn">Sort</button>
       <div class="dropdown-content">
-        <button class="btn" onclick="sortByName(0)"> by name asc</button>
+        <button class="btn" onclick="sortbyName(0)"> by name asc</button>
         <button class="btn" onclick="sortByName(1)"> by name desc</button>
         <button class="btn" onclick="sortByRating(0)"> by rating asc</button>
         <button class="btn" onclick="sortByRating(1)"> by rating desc</button>
@@ -82,13 +84,14 @@ include_once "../Php/HtmlParse/simple_html_dom.php";
          <?php
          foreach($_SESSION['all_categories'] as $category) {
           echo "<button class='btn' onclick=\"filterSelection('{$category}')\">{$category}</button>";
+          echo nl2br("\n");
           }
          ?>
       
         </div>
       </div>
     </div>
-    <div class="games_gallery" >
+    <div class="games_gallery">
       <?php   
   
       foreach($_SESSION['all_games'] as $game) {
@@ -100,62 +103,67 @@ include_once "../Php/HtmlParse/simple_html_dom.php";
          $title=$game['title'];
         $id=$game['id'];
           $category=$game['category'];
-          echo "<div class='game allFilter {$category}'>";
+          echo "<div class='game allFilter {$category}' id='{$title}'>";
           echo "<img src='{$src}' alt = '{$title}'>";
           echo '<form action="../Php/api/getGameInfo.php" method="post">';
           echo '<button value="' . $id . '" type="submit" name="id" class="infobtn">Info</button>';
           echo '</form>';
-          echo '<button class="addbtn">Add</button>';
+          echo '<form action="../Php/api/addUserGame.php" method="post">';
+          echo '<button value="' . $id . '" type="submit" name="id" class="addbtn">Add</button>';
+          echo '</form>';
           echo '</div>'; 
          }
       ?>
     </div>
     
-    <script>
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("game allFilter");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
+      <script>
+          //category
+          filterSelection("all")
+          function filterSelection(c) {
+            var x, i;
+             x = document.getElementsByClassName("game allFilter");
+            if (c == "all") c = "";
+              for (i = 0; i < x.length; i++) {
+             w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+          }
 
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
+         function w3AddClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+          }
+          } 
 
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
-    }
-  }
-  element.className = arr1.join(" ");
-}
+          function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+             while (arr1.indexOf(arr2[i]) > -1) {
+               arr1.splice(arr1.indexOf(arr2[i]), 1);     
+             }
+            }
+            element.className = arr1.join(" ");
+           }
 
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("allcategories");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-</script>
-  </div>
+          // Add active class to the current button (highlight it)
+          var btnContainer = document.getElementById("allcategories");
+          var btns = btnContainer.getElementsByClassName("btn");
+          for (var i = 0; i < btns.length; i++) {
+           btns[i].addEventListener("click", function(){
+           var current = document.getElementsByClassName("active");
+           current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+           });
+          }
+
+        </script>
+      
+      </div>
 
 </div>
   
@@ -168,6 +176,30 @@ for (var i = 0; i < btns.length; i++) {
       <a href="../Html/next_page_play.html"><img id="image" src="../Poze/left_arrow.png" alt = "Left Arrow"></a>
    </div>
   <div class="games_gallery" >
+
+  <?php   
+  
+      foreach($_SESSION['all_user_games'] as $game) {
+
+        
+        $html = file_get_html($game['url']);
+        $postDiv=$html->find('.game_header_image_full',0);
+         $src=$postDiv->attr['src'];
+         $title=$game['title'];
+         $id=$game['id'];
+          $category=$game['category'];
+          echo "<div class='game allFilter {$category} show' id='{$title}'>";
+          echo "<img src='{$src}' alt = '{$title}'>";
+          echo '<form action="../Php/api/getGameInfo.php" method="post">';
+          echo '<button value="' . $id . '" type="submit" name="id" class="infobtn">Info</button>';
+          echo '</form>';
+          echo '<form action="../Php/api/deleteUserGame.php" method="post">';
+          echo '<button value="' . $id . '" type="submit" name="id" class="deletebtn">Delete</button>';
+          echo '</form>';
+          echo '</div>';
+         }
+      ?>
+
     <div class="game">
       <a href="../Game_Informations_HTML/csgo_information.html"><img src="../Poze/GamesLogo/Slide_Show_CSGO.jpg" alt = "CSGO Picture"></a>
     </div>
