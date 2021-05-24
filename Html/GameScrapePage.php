@@ -32,9 +32,6 @@
         <div>
             <img src="<?php echo $_SESSION['game_image_src'] ?>" alt="">
             <div class = "Game">
-                <h2>
-                    Description:
-                </h2>
                     <?php echo '</br>'; 
                           echo $_SESSION['game_info'];
                            echo '</br>';

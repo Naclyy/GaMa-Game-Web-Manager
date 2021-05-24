@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Gazdă: 127.0.0.1
--- Timp de generare: mai 23, 2021 la 02:01 PM
--- Versiune server: 10.4.17-MariaDB
--- Versiune PHP: 8.0.2
+-- Host: 127.0.0.1
+-- Generation Time: May 24, 2021 at 03:01 PM
+-- Server version: 10.4.19-MariaDB
+-- PHP Version: 8.0.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Bază de date: `play`
+-- Database: `play`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structură tabel pentru tabel `game`
+-- Table structure for table `game`
 --
 
 CREATE TABLE `game` (
@@ -35,7 +35,7 @@ CREATE TABLE `game` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Eliminarea datelor din tabel `game`
+-- Dumping data for table `game`
 --
 
 INSERT INTO `game` (`id`, `title`, `url`, `category`) VALUES
@@ -45,7 +45,30 @@ INSERT INTO `game` (`id`, `title`, `url`, `category`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structură tabel pentru tabel `user`
+-- Table structure for table `tournaments`
+--
+
+CREATE TABLE `tournaments` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `phone` varchar(15) NOT NULL,
+  `organizer` varchar(255) NOT NULL,
+  `begin_date` date NOT NULL,
+  `end_date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tournaments`
+--
+
+INSERT INTO `tournaments` (`id`, `name`, `email`, `phone`, `organizer`, `begin_date`, `end_date`) VALUES
+(1, 'marcel\'s league', 'marcel@marcel.com', '123421421', 'marcel', '2021-05-06', '2021-05-07');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -58,7 +81,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Eliminarea datelor din tabel `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `firstname`, `lastname`, `emailaddress`) VALUES
@@ -68,7 +91,7 @@ INSERT INTO `user` (`id`, `username`, `password`, `firstname`, `lastname`, `emai
 -- --------------------------------------------------------
 
 --
--- Structură tabel pentru tabel `user_game`
+-- Table structure for table `user_game`
 --
 
 CREATE TABLE `user_game` (
@@ -78,24 +101,31 @@ CREATE TABLE `user_game` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Eliminarea datelor din tabel `user_game`
+-- Dumping data for table `user_game`
 --
 
 INSERT INTO `user_game` (`id`, `user_id`, `game_id`) VALUES
-(3, 2, 1);
+(3, 2, 1),
+(4, 2, 4);
 
 --
--- Indexuri pentru tabele eliminate
+-- Indexes for dumped tables
 --
 
 --
--- Indexuri pentru tabele `game`
+-- Indexes for table `game`
 --
 ALTER TABLE `game`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexuri pentru tabele `user`
+-- Indexes for table `tournaments`
+--
+ALTER TABLE `tournaments`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`),
@@ -103,7 +133,7 @@ ALTER TABLE `user`
   ADD UNIQUE KEY `emailaddress` (`emailaddress`);
 
 --
--- Indexuri pentru tabele `user_game`
+-- Indexes for table `user_game`
 --
 ALTER TABLE `user_game`
   ADD PRIMARY KEY (`id`),
@@ -111,33 +141,39 @@ ALTER TABLE `user_game`
   ADD KEY `fk_user_game_game_id` (`game_id`);
 
 --
--- AUTO_INCREMENT pentru tabele eliminate
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pentru tabele `game`
+-- AUTO_INCREMENT for table `game`
 --
 ALTER TABLE `game`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT pentru tabele `user`
+-- AUTO_INCREMENT for table `tournaments`
+--
+ALTER TABLE `tournaments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT pentru tabele `user_game`
+-- AUTO_INCREMENT for table `user_game`
 --
 ALTER TABLE `user_game`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- Constrângeri pentru tabele eliminate
+-- Constraints for dumped tables
 --
 
 --
--- Constrângeri pentru tabele `user_game`
+-- Constraints for table `user_game`
 --
 ALTER TABLE `user_game`
   ADD CONSTRAINT `fk_user_game_game_id` FOREIGN KEY (`game_id`) REFERENCES `game` (`id`),
