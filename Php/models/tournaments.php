@@ -31,6 +31,17 @@ class Tournament{
  
         return $stmt;
     }
+
+    public function getTournamentInfo($id){
+
+        $query="SELECT * from " . $this->table . " WHERE id = " . $id;
+
+        $stmt=$this->conn->prepare($query);
+ 
+        $stmt->execute();
+ 
+        return $stmt; 
+    }
     public function deleteTournament($id)
    {
     $query="DELETE FROM " . $this->table . " WHERE id =" . $id;

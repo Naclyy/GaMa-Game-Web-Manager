@@ -21,7 +21,6 @@ include '../Php/api/getTournaments.php';
       <div class="disk disk_opened_left">
           <div class="topnav">
               <a class="active" href="">Tournamets</a>
-              <a href="../Html/create_tournament.html">Create Tournamets</a>
               <a href="../Html/account_page_play.php" style="float:right;">Account</a>
           </div>
           <div class="content">
@@ -39,27 +38,15 @@ include '../Php/api/getTournaments.php';
                   echo '<div class="tournament">';
                   echo "<img src='{$_SESSION['game_image_src']}'' alt = '{$name}'>";
                   echo '<button class="register" onclick="document.getElementById(\'id01\').style.display=\'block\'">Register</button>';
-                  echo '<button  class="infobtn" onclick="document.getElementById(\'id02\').style.display=\'block\'" >Info</button>';
+                  echo '<form action="../Html/TournamentScrapePage.php" method="post">';
+                  echo "<button  class='infobtn' value='{$id}' name='tournament_id'>Info</button>";
+                  echo '</form>';
                   echo '<p style="color:white;text-align: center;">League Of Legends</p>';
                   echo '</div>';
           
                   }
 
                  ?>
-                  <div class="tournament">
-                      <img src="../Poze/Tournaments/esports-most-popular-tournaments-worldwide-670px.jpg" alt = "Poze Turnament">
-                      <button class="register" onclick="document.getElementById('id01').style.display='block'">Register</button>
-                      <button  class="infobtn" onclick="document.getElementById('id02').style.display='block'" >Info</button>
-                      <p style="color:white;text-align: center;">League Of Legends</p>
-                  </div>
-
-                  <div class="tournament">
-                      <img src="../Poze/Tournaments/fifa-21-tournament-mode.jpg" alt = "Fifa Tournament Picture">
-                      <p style="color:white;text-align: center;">Fifa 21</p>
-                      <button  class="register" onclick="document.getElementById('id01').style.display='block'" >Register</button>
-                      <button class="infobtn">Info</button>
-                  </div>
-      
                   <div id="id01" class="registerTournament">
                       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                       <form class="modal-content" action="/action_page.php">
@@ -99,82 +86,6 @@ include '../Php/api/getTournaments.php';
                             </div>
                        </form>
                   </div>
-
-
-                  <div id="id02" class="infoTournament">
-                    <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-                    <form class="modal-content" action="/action_page.php">
-                        <div class="content">
-                          <h2>Marcelin's League Tournament</h2>
-                            <ul class="firstUl">
-                              <li>
-                                <span>
-                                  Tournament Informations
-                                </span>
-                              </li>
-                              
-                              <li> Tournament Begins: 17.05.2021 </li>
-                              <li>Tournament Ends: 17.06.2021 </li>
-                              <li>Tournament Organizer: Marcelin </li>
-                              <li>Email: admin@admin.com </li>
-                              <li>Phone: 07734652541</li>
-                            </ul>
-                          <ul class="ulContent">
-                            <li class="teamSetting">
-                              <span class = "teamNumber">Rank</span>
-                              <span class = "teamName">Team's Name</span>
-                              <span class = "points">Score</span>
-                            </li>
-                            <li>
-                              <span class = "number">1</span>
-                              <span class = "name">Marcelin's Team</span>
-                              <span class = "points">95</span>
-                            </li>
-                            <li>
-                              <span class = "number">2</span>
-                              <span class = "name">Marcelin's Team2</span>
-                              <span class = "points">3</span>
-                            </li>
-                            <li>
-                              <span class = "number">3</span>
-                              <span class = "name">Marcelin's Team3</span>
-                              <span class = "points">5</span>
-                            </li>
-                            <li>
-                              <span class = "number">3</span>
-                              <span class = "name">Marcelin's Team3</span>
-                              <span class = "points">5</span>
-                            </li>
-                            <li>
-                              <span class = "number">3</span>
-                              <span class = "name">Marcelin's Team3</span>
-                              <span class = "points">5</span>
-                            </li>
-                            <li>
-                              <span class = "number">3</span>
-                              <span class = "name">Marcelin's Team3</span>
-                              <span class = "points">5</span>
-                            </li>
-                            <li>
-                              <span class = "number">3</span>
-                              <span class = "name">Marcelin's Team3</span>
-                              <span class = "points">5</span>
-                            </li>
-                            <li>
-                              <span class = "number">3</span>
-                              <span class = "name">Marcelin's Team3</span>
-                              <span class = "points">5</span>
-                            </li>
-                            <li>
-                              <span class = "number">3</span>
-                              <span class = "name">Marcelin's Team3</span>
-                              <span class = "points">5</span>
-                            </li>
-                          </ul>
-                        </div>
-                     </form>
-                </div>
-
 
 
 
