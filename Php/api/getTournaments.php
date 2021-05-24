@@ -1,7 +1,10 @@
 <?php
 //Headers
 
-session_start();
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+} 
 
 
 include_once dirname(__FILE__) . '/../config/database.php';
@@ -33,7 +36,8 @@ $num = $result->rowCount();
         'phone' => $phone,
         'organizer' => $organizer,
         'begin_date' => $begin_date,
-        'end_date' => $end_date
+        'end_date' => $end_date,
+        'game_id' => $game_id
       );
 
       array_push($_SESSION['all_tournaments'],$post_item);

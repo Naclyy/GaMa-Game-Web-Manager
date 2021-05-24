@@ -1,7 +1,10 @@
 <?php
 //Headers
 
-session_start();
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+} 
 
 
 include_once dirname(__FILE__) . '/../config/database.php';

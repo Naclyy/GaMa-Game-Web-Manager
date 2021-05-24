@@ -12,6 +12,7 @@ class Tournament{
     public $organizer;
     public $begin_date;
     public $end_date;
+    public $game_id;
 
 
     public function __construct($db) {
@@ -37,10 +38,10 @@ class Tournament{
 
     $stmt->execute();
    }
-   public function addTournament($name,$email,$phone,$organizer,$begin_date,$end_date)
+   public function addTournament($name,$email,$phone,$organizer,$begin_date,$end_date,$game_id)
    {
-    if($name != null && $email != null && $phone != null && $organizer != null && $begin_date != null && $end_date != null )
-    $query="INSERT INTO " . $this->table . " (name,email,phone,organizer,begin_date,end_date) values('" . $name . "','" . $email . "','" . $phone . "','" . $organizer . "','" . $begin_date . "','" . $end_date . "')";
+    if($name != null && $email != null && $phone != null && $organizer != null && $begin_date != null && $end_date != null && $game_id != null )
+    $query="INSERT INTO " . $this->table . " (name,email,phone,organizer,begin_date,end_date,game_id) values('" . $name . "','" . $email . "','" . $phone . "','" . $organizer . "','" . $begin_date . "','" . $end_date . "','" . $game_id . "')";
 
     $stmt=$this->conn->prepare($query);
 

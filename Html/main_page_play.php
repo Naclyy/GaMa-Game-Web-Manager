@@ -39,12 +39,12 @@ include_once "../Php/HtmlParse/simple_html_dom.php";
 
     <div class="dropdown">
       <button class="dropbtn">Category</button>
-    <div class="dropdown-content categories">
+    <div id="categories" class="dropdown-content categories">
       <button class="btn active" onclick="filterSelection('all')"> ShowAll</button>
 
       <?php
       foreach($_SESSION['all_categories'] as $category) {
-          echo "<button class='btn' onclick='filterSelection('{$category}')'>{$category}</button>";
+        echo "<button class='btn' onclick=\"filterSelection('{$category}')\">{$category}</button>";
         }
       ?>
 
@@ -79,11 +79,11 @@ include_once "../Php/HtmlParse/simple_html_dom.php";
       <div class="dropdown">
         <button class="dropbtn">Category</button>
         <div id="allcategories" class="dropdown-content">
-         <button class="btn" onclick="filterSelection('all')"> ShowAll</button>
+         <button class="btn" onclick="filterSelectionAll('all')"> ShowAll</button>
 
          <?php
          foreach($_SESSION['all_categories'] as $category) {
-          echo "<button class='btn' onclick=\"filterSelection('{$category}')\">{$category}</button>";
+          echo "<button class='btn' onclick=\"filterSelectionAll('{$category}')\">{$category}</button>";
           echo nl2br("\n");
           }
          ?>
@@ -105,7 +105,7 @@ include_once "../Php/HtmlParse/simple_html_dom.php";
           $category=$game['category'];
           echo "<div class='game allFilter {$category}' id='{$title}'>";
           echo "<img src='{$src}' alt = '{$title}'>";
-          echo '<form action="../Php/api/getGameInfo.php" method="post">';
+          echo '<form action="../Html/GameScrapePage.php" method="post">';
           echo '<button value="' . $id . '" type="submit" name="id" class="infobtn">Info</button>';
           echo '</form>';
           echo '<form action="../Php/api/addUserGame.php" method="post">';
@@ -118,8 +118,8 @@ include_once "../Php/HtmlParse/simple_html_dom.php";
     
       <script>
           //category
-          filterSelection("all")
-          function filterSelection(c) {
+          filterSelectionAll("all")
+          function filterSelectionAll(c) {
             var x, i;
              x = document.getElementsByClassName("game allFilter");
             if (c == "all") c = "";
@@ -173,7 +173,7 @@ include_once "../Php/HtmlParse/simple_html_dom.php";
 
   <div class="content">
     <div class="left_button">
-      <a href="../Html/next_page_play.html"><img id="image" src="../Poze/left_arrow.png" alt = "Left Arrow"></a>
+      <a href="../Html/next_page_play.php"><img id="image" src="../Poze/left_arrow.png" alt = "Left Arrow"></a>
    </div>
   <div class="games_gallery" >
 
@@ -188,9 +188,9 @@ include_once "../Php/HtmlParse/simple_html_dom.php";
          $title=$game['title'];
          $id=$game['id'];
           $category=$game['category'];
-          echo "<div class='game allFilter {$category} show' id='{$title}'>";
+          echo "<div class='game Filter {$category}' id='{$title}'>";
           echo "<img src='{$src}' alt = '{$title}'>";
-          echo '<form action="../Php/api/getGameInfo.php" method="post">';
+          echo '<form action="../Html/GameScrapePage.php" method="post">';
           echo '<button value="' . $id . '" type="submit" name="id" class="infobtn">Info</button>';
           echo '</form>';
           echo '<form action="../Php/api/deleteUserGame.php" method="post">';
@@ -200,18 +200,57 @@ include_once "../Php/HtmlParse/simple_html_dom.php";
          }
       ?>
 
-    <div class="game">
-      <a href="../Game_Informations_HTML/csgo_information.html"><img src="../Poze/GamesLogo/Slide_Show_CSGO.jpg" alt = "CSGO Picture"></a>
-    </div>
-    <div class="game">
-      <a href="../Game_Informations_HTML/cyberpunk_information.html"><img src="../Poze/GamesLogo/Slide_Show_Cyberpunk.jpg" alt = "CyberPunk Picture"></a>
-    </div>
-    <div class="game">
-      <a href="../Game_Informations_HTML/league_information.html"><img src="../Poze/GamesLogo/Slide_Show_LOL.jpg" alt = "LOL Picture"></a>
-    </div>
     
     
   </div>
+
+  <script>
+          //category
+          filterSelection("all")
+          function filterSelection(c) {
+            var x, i;
+             x = document.getElementsByClassName("game Filter");
+            if (c == "all") c = "";
+              for (i = 0; i < x.length; i++) {
+             w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+          }
+
+         function w3AddClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+          }
+          } 
+
+          function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+             while (arr1.indexOf(arr2[i]) > -1) {
+               arr1.splice(arr1.indexOf(arr2[i]), 1);     
+             }
+            }
+            element.className = arr1.join(" ");
+           }
+
+          // Add active class to the current button (highlight it)
+          var btnContainer = document.getElementById("categories");
+          var btns = btnContainer.getElementsByClassName("btn");
+          for (var i = 0; i < btns.length; i++) {
+           btns[i].addEventListener("click", function(){
+           var current = document.getElementsByClassName("active");
+           current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+           });
+          }
+
+        </script>
+
 </div>
 
 </div>

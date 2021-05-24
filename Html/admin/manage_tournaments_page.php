@@ -1,6 +1,7 @@
 
 <?php
 include '../../Php/api/getTournaments.php';
+include '../../Php/api/getGames.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -80,18 +81,26 @@ include '../../Php/api/getTournaments.php';
             <input id = "tournament_organizer" type="text" placeholder="Enter Tournament Organizer" name="tournament_organizer" required>
 
             <label for="tournament_begin"><b>Tournament Begins</b></label>
+            <p> format : year-month-day </p>
             <input id = "tournament_begin" type="text" placeholder="Enter Tournament Begin" name="tournament_begin" required>
 
-            <label for="tournament_end"><b>Tournament Ends</b></label>
+            <label for="lala"><b>Tournament Ends</b></label>
+            <p> format : year-month-day </p>
             <input id = "tournament_end" type="text" placeholder="Enter Tournament End" name="tournament_end" required>
-
+            
             <label for="game"><b>Select The Game</b></label>
             <div class="custom_select">
-              <select required> 
-                <option value="">Select</option>
-                <option value="fortnite">Fortnite</option>
-                <option value="csgo">CSGO</option>
-                <option value="lol">League of Legends</option>
+              <select required name="game_id"> 
+              <option value="">Select</option>
+                <?php
+                  foreach($_SESSION['all_games'] as $game)
+                  { $title=$game['title'];
+                    $id = $game['id'];
+                     echo "<option value='{$id}'>{$title}</option>";
+                  }
+
+                  ?>
+             
               </select>
             </div>
 

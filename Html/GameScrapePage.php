@@ -1,5 +1,11 @@
 <?php
-  session_start();
+ 
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+} 
+
+  include "../Php/api/getGameInfo.php";
   ?>
 
 <!DOCTYPE html>

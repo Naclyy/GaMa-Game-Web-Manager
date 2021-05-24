@@ -1,3 +1,7 @@
+<?php 
+include '../Php/api/getTournaments.php';
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,6 +26,26 @@
           </div>
           <div class="content">
                <div class="tournament_gallery">
+
+                 <?php
+                 foreach($_SESSION['all_tournaments'] as $tournament) {
+
+                  $name=$tournament['name'];
+                  $id=$tournament['id'];
+                  $email=$tournament['email'];
+                  $_POST['id']=$tournament['game_id'];
+                  include "../Php/api/getGameInfo.php";
+
+                  echo '<div class="tournament">';
+                  echo "<img src='{$_SESSION['game_image_src']}'' alt = '{$name}'>";
+                  echo '<button class="register" onclick="document.getElementById(\'id01\').style.display=\'block\'">Register</button>';
+                  echo '<button  class="infobtn" onclick="document.getElementById(\'id02\').style.display=\'block\'" >Info</button>';
+                  echo '<p style="color:white;text-align: center;">League Of Legends</p>';
+                  echo '</div>';
+          
+                  }
+
+                 ?>
                   <div class="tournament">
                       <img src="../Poze/Tournaments/esports-most-popular-tournaments-worldwide-670px.jpg" alt = "Poze Turnament">
                       <button class="register" onclick="document.getElementById('id01').style.display='block'">Register</button>
