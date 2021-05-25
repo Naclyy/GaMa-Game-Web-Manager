@@ -45,7 +45,7 @@ $num = $result->rowCount();
     $info=$html->find('#game_area_description',0)->innertext;
     $system=$html->find('.game_page_autocollapse.sys_req',0)->innertext;
     $video=$html->find('.highlight_player_item.highlight_movie',0)->attr['data-mp4-hd-source'];
-
+    $_SESSION['game_id'] = $_POST["id"];
     $_SESSION['game_title'] = $title ;
     $_SESSION['game_image_src'] = $src;
     $_SESSION['game_info'] = $info;
