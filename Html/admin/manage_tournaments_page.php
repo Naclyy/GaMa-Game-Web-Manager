@@ -33,7 +33,7 @@ include '../../Php/api/getGames.php';
             <li><a href="../admin/admin_page.html">Home</a></li>
             <li><a href="../admin/manage_games_page.php">Manage Games</a></li>
             <li><a class="active"  href="../admin/manage_tournaments_page.php">Manage Tournaments</a></li>
-            <li><a href="../admin/manage_users_page.html">Manage Users</a></li>
+            <li><a href="../admin/manage_users_page.php">Manage Users</a></li>
             <li><a href="../admin/dashboard.php">Dashboard</a></li>
             
           </ul>

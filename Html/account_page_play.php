@@ -41,7 +41,7 @@ session_start();
           
 
             <div class="right_button">
-                <a href="../Html/main_page_play.html"><img id="image" src="../Poze/right_arrow.png" alt = "Right Arrow"></a>
+                <a href="../Html/main_page_play.php"><img id="image" src="../Poze/right_arrow.png" alt = "Right Arrow"></a>
             </div>
 
 
