@@ -93,5 +93,14 @@ else {
    {
      return $this->emailaddress;
    }
+   public function getUsers(){
 
+    $query="SELECT * from " . $this->table;
+
+    $stmt=$this->conn->prepare($query);
+
+    $stmt->execute();
+
+    return $stmt;
+}
 }

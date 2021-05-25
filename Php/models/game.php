@@ -68,21 +68,13 @@ class Game{
  
         return $stmt;
     }
-    public function updateGameRating($id, $rating)
+    public function updateGameRating($id, $rating, $ratingNO)
     {
-        $sql_db="SELECT rating from " . $this->table . " Where id =" . $id;
 
-        $stmt=$this->conn->prepare($sql_db);
- 
-        $stmt->execute();
+        $sql = "UPDATE game SET rating=" .$rating. ", rating_no= ". $ratingNO . " WHERE id = " .$id;
 
-        $sql = "UPDATE game SET rating=" .$rating. ", rating_no= 1 WHERE id = " .$id;
-
-        if ($this->conn->query($sql) === TRUE) {
-          echo "Record updated successfully";
-        } else {
-          echo "Error updating record: " . $conn->error;
-        }
+       $this->conn->query($sql);
+    
 
     }
 }

@@ -30,12 +30,6 @@ $num = $result->rowCount();
 
     while($row = $result->fetch(PDO::FETCH_ASSOC)) {
       extract($row);
-
-      $post_item = array(
-        'id' => $id,
-        'title' => $title,
-        'url' => $url
-      );
     }
 
     $html = file_get_html($url);
@@ -46,6 +40,8 @@ $num = $result->rowCount();
     $system=$html->find('.game_page_autocollapse.sys_req',0)->innertext;
     $video=$html->find('.highlight_player_item.highlight_movie',0)->attr['data-mp4-hd-source'];
     $_SESSION['game_id'] = $_POST["id"];
+    $_SESSION['rating'] = $rating;
+    $_SESSION['rating_no'] = $rating_no;
     $_SESSION['game_title'] = $title ;
     $_SESSION['game_image_src'] = $src;
     $_SESSION['game_info'] = $info;

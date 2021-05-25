@@ -28,6 +28,16 @@ class Comment{
     $stmt->execute();
 
    }
+   public function getComments(){
+
+    $query="SELECT * from " . $this->table;
+
+    $stmt=$this->conn->prepare($query);
+
+    $stmt->execute();
+
+    return $stmt;
+}
 
 }
 
