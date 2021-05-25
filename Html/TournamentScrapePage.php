@@ -29,7 +29,7 @@
               <h1> <?php echo $_SESSION['tournament'][0]['name']?></h1>
           </div>
           <div class="tournament_info">
-              <?php echo "<img src='{$_SESSION['game_image_src']}'' alt = '{$_SESSION['tournament'][0]['name']}'>" ?> </p>
+              <?php echo "<img src='{$_SESSION['game_image_src']}'' alt = '{$_SESSION['tournament'][0]['name']}'>" ?>
               <p> email : <?php echo $_SESSION['tournament'][0]['email']?> </p>
               <p> phone : <?php echo $_SESSION['tournament'][0]['phone']?> </p>
               <p> organizer : <?php echo $_SESSION['tournament'][0]['organizer']?> </p>
@@ -37,11 +37,69 @@
               <p> end_date : <?php echo $_SESSION['tournament'][0]['end_date']?> </p>
               
           </div>
-            
+
+          <div class="tournament_ranking">
+          <h1> Tournament Ranking </h1>
+          <ul>
+                    <li class="place1">Team 1<p>score :</p></li>
+                    <li class="place2">Team 2<p>score :</p></li>
+                    <li class="place3">Team 3<p>score :</p></li>
+                    <li >Team 4 <p>score : </p></li>
+           </ul> 
+          </div>
+          <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Register</button>
         </div>
+
+       
+        
+        <div id="id01" class="registerTournament">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                      <form class="modal-content" action="/action_page.php">
+                          <div class="container">
+                              <h1>Register Tournament</h1>
+                              <p>Please fill in this form to register Tournament.</p>
+                              <hr>
+           
+                              <label for="TeamName"><b>Team Name</b></label>
+
+                              <input id = "TeamName" type="text" placeholder="Enter Team Name" name="TeamName" required>
+
+                              <label for="IGN"><b>In game name</b></label>
+
+                              <input id = "IGN" type="text" placeholder="Enter IGN" name="IGN" required>
+
+                              <label for="Rank"><b>Rank</b></label>
+
+                              <input id = "Rank" type="text" placeholder="Enter Rank" name="Rank" required>
+
+                              <label for="phonenumber"><b>Phone Number</b></label>
+
+                              <input id = "phonenumber" type="phonenumber" name="phone"
+                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                required placeholder="Enter Phone Number">
+                                <small>Nubmer Format: 123-456-7890</small>
+                                <p>&nbsp;</p>         
+      
+                                  <div class="clearfix">
+                                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                                        <button type="submit" class="registerbtn">Register</button>
+                                  </div>
+                            </div>
+                       </form>
+
     </div>
 
-
+    <script>
+  // Get the modal
+  var modal = document.getElementById('id01');
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
  
 </body>
 </html>

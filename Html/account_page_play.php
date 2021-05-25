@@ -21,8 +21,7 @@ session_start();
         <div class="disk disk_opened_left">
 
             <div class="topnav">
-                <a href="../Html/next_page_play.html">Tournamets</a>
-                <a href="../Html/create_tournament.html">Create Tournamets</a>
+                <a href="../Html/next_page_play.php">Tournamets</a>
                 <a class="active" href="" style="float:right;">Account</a>
             </div>
            
