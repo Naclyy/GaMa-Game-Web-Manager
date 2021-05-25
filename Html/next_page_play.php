@@ -40,7 +40,7 @@ include '../Php/api/getTournaments.php';
                   echo '<form action="../Html/TournamentScrapePage.php" method="post">';
                   echo "<button  class='openbtn' value='{$id}' name='tournament_id'>open</button>";
                   echo '</form>';
-                  echo '<p style="color:white;text-align: center;">League Of Legends</p>';
+                  echo "<p style='color:white;text-align: center;'>{$name}</p>";
                   echo '</div>';
           
                   }

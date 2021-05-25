@@ -27,6 +27,6 @@ $score=0;
 
 $result = $user_tournament->addTournamentTeam($user_id,$tournament_id,$user_team_name,$user_ign,$user_rank,$user_phone_number,$score);
 
-header('Location: ../../Html/next_page_play.html', true, 301);
+header('Location: ../../Html/next_page_play.php', true, 301);
 
 ?>
