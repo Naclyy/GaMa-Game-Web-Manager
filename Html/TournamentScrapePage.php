@@ -3,6 +3,7 @@
  include "../Php/api/getTournamentInfo.php";
  $_POST['id']=$_SESSION['tournament'][0]['game_id'];
  include "../Php/api/getGameInfo.php";
+ include "../Php/api/getTournamentTeams.php";
  ?>
 <!DOCTYPE html>
 <html>
@@ -41,10 +42,36 @@
           <div class="tournament_ranking">
           <h1> Tournament Ranking </h1>
           <ul>
-                    <li class="place1">Team 1<p>score :</p></li>
-                    <li class="place2">Team 2<p>score :</p></li>
-                    <li class="place3">Team 3<p>score :</p></li>
-                    <li >Team 4 <p>score : </p></li>
+          <?php
+               for($id = 0 ; $id < sizeof($_SESSION['teams']);$id++)
+               {
+                 $team_name=$_SESSION['teams'][$id]['user_team_name'];
+                 $score = $_SESSION['teams'][$id]['score'];
+                  if( $id == 0)
+                  {
+                          echo "<li class='place1'> {$team_name}<p> score : {$score} </p> </li>";
+                  }
+                  else { if( $id == 1)
+                        {
+                          echo "<li class='place2'> {$team_name}<p> score : {$score} </p> </li>";
+                        }
+                        else
+                        { if( $id == 2)
+                          {
+                            echo "<li class='place3'> {$team_name}<p> score : {$score} </p> </li>";
+                          }
+                          else{
+                            echo "<li> {$team_name}<p> score : {$score} </p> </li>";
+ 
+                          }
+
+                        }
+
+                  }
+                  
+                  
+               }
+        ?>
            </ul> 
           </div>
           <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Register</button>
@@ -54,12 +81,12 @@
         
         <div id="id01" class="registerTournament">
         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                      <form class="modal-content" action="/action_page.php">
+                      <form class="modal-content" action="../Php/api/addTournamentTeam.php" method="post">
                           <div class="container">
                               <h1>Register Tournament</h1>
                               <p>Please fill in this form to register Tournament.</p>
                               <hr>
-           
+                              
                               <label for="TeamName"><b>Team Name</b></label>
 
                               <input id = "TeamName" type="text" placeholder="Enter Team Name" name="TeamName" required>
@@ -74,7 +101,7 @@
 
                               <label for="phonenumber"><b>Phone Number</b></label>
 
-                              <input id = "phonenumber" type="phonenumber" name="phone"
+                              <input id = "phonenumber" type="phonenumber" name="phonenumber"
                                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                                 required placeholder="Enter Phone Number">
                                 <small>Nubmer Format: 123-456-7890</small>
