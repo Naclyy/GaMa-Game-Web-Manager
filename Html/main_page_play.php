@@ -149,8 +149,7 @@ include_once "../Php/HtmlParse/simple_html_dom.php";
             }
             element.className = arr1.join(" ");
            }
-
-          // Add active class to the current button (highlight it)
+          
           var btnContainer = document.getElementById("allcategories");
           var btns = btnContainer.getElementsByClassName("btn");
           for (var i = 0; i < btns.length; i++) {

@@ -33,7 +33,7 @@ $_SESSION['all_users']= array();
         'id' => $id,
         'username' => $username,
         'password' => $password,
-        'firstname' => $category,
+        'firstname' => $firstname,
         'lastname' => $lastname,
         'emailaddress' => $emailaddress
       );
