@@ -18,7 +18,7 @@ class Game{
 
     public function getGames(){
 
-        $query="SELECT * from " . $this->table;
+        $query="SELECT * from " . $this->table ." order by rating desc";
 
         $stmt=$this->conn->prepare($query);
  

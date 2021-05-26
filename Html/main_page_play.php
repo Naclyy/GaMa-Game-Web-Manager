@@ -64,7 +64,7 @@ include_once "../Php/HtmlParse/simple_html_dom.php";
         <input type="text" id="myInput2" onkeyup="searchGameFilter()" placeholder="Search for game.." title="Type in a name">
       </div>
       <div class="ranking">
-        <button onclick = "location.href ='../Chart/statistics.html'" class="dropbtn">Ranking</button>
+        <button onclick = "location.href ='../Html/statistics/game_rankings.php'" class="dropbtn">Statistics</button>
       </div>
       <div class="dropdown">
         <button class="dropbtn">Sort</button>

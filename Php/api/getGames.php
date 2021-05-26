@@ -33,7 +33,9 @@ $_SESSION['all_games']= array();
         'id' => $id,
         'title' => $title,
         'url' => $url,
-        'category' => $category
+        'category' => $category,
+        'rating_no' => $rating_no,
+        'rating' => $rating
       );
 
       array_push($_SESSION['all_games'],$post_item);
