@@ -72,7 +72,7 @@ $num = $result->rowCount();
   } else {
     // No Posts
     echo json_encode(
-      array('message' => 'No Games Found')
+      array('message' => 'No info')
     );
 
 }

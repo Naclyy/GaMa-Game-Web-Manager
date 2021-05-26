@@ -21,10 +21,10 @@ $tournament = new Tournament($db);
 $result = $tournament->getTournamentInfo($_POST['tournament_id']);
 
 $num = $result->rowCount();
-
+$_SESSION['tournament']= array();
   // Check if any posts
   if($num > 0) {
-    $_SESSION['tournament']= array();
+   
 
     while($row = $result->fetch(PDO::FETCH_ASSOC)) {
       extract($row);
@@ -46,25 +46,8 @@ $num = $result->rowCount();
 
     // header("Location: ../../Html/main_page_play.php", true, 301);
 
-  } else {
-    // No Posts
-    echo json_encode(
-      array('message' => 'No Tournaments Found')
-    );
+  } 
 
-}
 ?>
 
-<!DOCTYPE html>
-<html>
-    <head>
-
-      <title>test2</title>
-
-    </head>
-
-<body>
-
-</body>
-</html>
 

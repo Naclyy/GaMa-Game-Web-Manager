@@ -42,25 +42,8 @@ $num = $result->rowCount();
 
     // header("Location: ../../Html/main_page_play.php", true, 301);
 
-  } else {
-    // No Posts
-    echo json_encode(
-      array('message' => 'No Games Found')
-    );
+  } 
 
-}
 ?>
 
-<!DOCTYPE html>
-<html>
-    <head>
-
-      <title>test</title>
-
-    </head>
-
-<body>
-
-</body>
-</html>
 

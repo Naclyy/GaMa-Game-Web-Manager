@@ -33,13 +33,7 @@ $games=array();
       array_push($games,$game_id);
     }
 
-  } else {
-    // No Posts
-    echo json_encode(
-      array('message' => 'No Games Found')
-    );
-
-}
+  } 
 
 
 $_SESSION['all_user_games']= array();
@@ -67,31 +61,12 @@ $_SESSION['all_user_games']= array();
     
        
     
-      } else {
-        // No Posts
-        echo json_encode(
-          array('message' => 'No Games Found')
-        );
+      } 
          
        
-  }
+  
 }
 
 
-
-
 ?>
-
-<!DOCTYPE html>
-<html>
-    <head>
-
-      <title>test</title>
-
-    </head>
-
-<body>
-
-</body>
-</html>
 

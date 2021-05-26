@@ -38,7 +38,7 @@ include '../Php/api/getTournaments.php';
                   echo '<div class="tournament">';
                   echo "<img src='{$_SESSION['game_image_src']}'' alt = '{$name}'>";
                   echo '<form action="../Html/TournamentScrapePage.php" method="post">';
-                  echo "<button  class='openbtn' value='{$id}' name='tournament_id'>open</button>";
+                  echo "<button  class='openbtn' value='{$tournament['id']}' name='tournament_id'>open</button>";
                   echo '</form>';
                   echo "<p style='color:white;text-align: center;'>{$name}</p>";
                   echo '</div>';
