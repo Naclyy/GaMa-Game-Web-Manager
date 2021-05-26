@@ -1,7 +1,10 @@
 <?php
 //Headers
 
-session_start();
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+} 
 header('Acces-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
@@ -16,5 +19,5 @@ $db = $database->connect();
 $user = new User($db);
 
 $user->logout();
-
+session_destroy();
   ?>

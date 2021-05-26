@@ -21,10 +21,10 @@ $game = new Game($db);
 $result = $game->getGames();
 
 $num = $result->rowCount();
-
+$_SESSION['all_games']= array();
   // Check if any posts
   if($num > 0) {
-    $_SESSION['all_games']= array();
+   
 
     while($row = $result->fetch(PDO::FETCH_ASSOC)) {
       extract($row);
@@ -40,7 +40,7 @@ $num = $result->rowCount();
     }
       
 
-    // header("Location: ../../Html/main_page_play.php", true, 301);
+ 
 
   } 
 

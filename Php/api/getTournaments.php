@@ -21,10 +21,10 @@ $tournament = new Tournament($db);
 $result = $tournament->getTournaments();
 
 $num = $result->rowCount();
-
+$_SESSION['all_tournaments']= array();
   // Check if any posts
   if($num > 0) {
-    $_SESSION['all_tournaments']= array();
+    
 
     while($row = $result->fetch(PDO::FETCH_ASSOC)) {
       extract($row);

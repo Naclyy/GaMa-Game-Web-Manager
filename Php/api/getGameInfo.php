@@ -69,11 +69,6 @@ $num = $result->rowCount();
 
     
 
-  } else {
-    // No Posts
-    echo json_encode(
-      array('message' => 'No info')
-    );
+  } 
 
-}
   ?>

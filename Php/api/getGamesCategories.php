@@ -19,9 +19,9 @@ $game = new Game($db);
 $result=$game->getGamesCategories();
 
 $num=$result->rowCount();
-
+$_SESSION['all_categories']= array();
 if($num > 0) {
-    $_SESSION['all_categories']= array();
+   
 
     while($row = $result->fetch(PDO::FETCH_ASSOC)) {
       extract($row);
@@ -32,13 +32,7 @@ if($num > 0) {
 
     // header("Location: ../../Html/main_page_play.php", true, 301);
 
-  } else {
-    // No Posts
-    echo json_encode(
-      array('message' => 'No Games Found')
-    );
-
-}
+  }
 
 
 ?>

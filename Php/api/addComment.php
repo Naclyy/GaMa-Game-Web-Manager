@@ -28,6 +28,6 @@ $result = $comment->addComment($gameid,$userid,$rate,$text);
 
 include "../api/updateGameRating.php";
 
-header('Location: ../../Html/main_page_play.php', true, 301);
+header('Location: ../../Html/GameScrapePage.php', true, 301);
 
 ?>
