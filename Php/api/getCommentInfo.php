@@ -1,5 +1,6 @@
 <?php
 //Headers
+
 if(!isset($_SESSION)) 
 { 
     session_start(); 
@@ -17,16 +18,23 @@ $db = $database->connect();
 
 $comment = new Comment($db);
 
+$result = $comment->getCommentInfo($_SESSION["game_id"]);
 
-$text = $_POST['comment'];
-$rate = $_POST['rate'];
-$userid = $_SESSION['user_id'];
-$gameid = $_SESSION['game_id'];
+$num = $result->rowCount();
 
-$result = $comment->addComment($gameid,$userid,$rate,$text);
+  
+  if($num == 1) {
+    
+   
+   
 
-include "../api/updateGameRating.php";
+    while($row = $result->fetch(PDO::FETCH_ASSOC)) {
+      extract($row);
+    }
 
-header('Location: ../../Html/main_page_play.php', true, 301);
+    
+    $_SESSION['comments'] = $comment;
 
-?>
+  } 
+
+  ?>

@@ -6,6 +6,7 @@ if(!isset($_SESSION))
 } 
 
   include "../Php/api/getGameInfo.php";
+  include "../Php/api/getComments.php"
   ?>
 
 <!DOCTYPE html>
@@ -14,7 +15,7 @@ if(!isset($_SESSION))
         <meta charset="UTF-8" />
         <link rel="icon" href="../Poze/logo.png" type="image/x-icon" sizes="16x16">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href = "../Game_Informations_CSS/style.css" rel = "stylesheet">
+        <link href = "../Css/GameScrapePage.css" rel ="stylesheet">
 
         
         <meta name = "author" content = "Zaharia Andrei-Lucian && Urma Tudor-Irinel" >
@@ -23,7 +24,7 @@ if(!isset($_SESSION))
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
         <title>play? - Apex</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-        <link href = "../Game_Informations_CSS/game_scrape_page.css" rel = "stylesheet">
+
     </head>
 
 
@@ -35,58 +36,82 @@ if(!isset($_SESSION))
             <!-- back button-->
         </header>
 
-        <div>
             <img src="<?php echo $_SESSION['game_image_src'] ?>" alt="">
-            <div class = "Game">
-                    <?php echo '</br>'; 
-                          echo $_SESSION['game_info'];
-                           echo '</br>';
-                           echo '</br>';
-                           echo '</br>';
-                           echo '</br>';
-                           echo '</br>';
-                    ?> 
-                   
-                    <?php  echo $_SESSION['game_system_req']?> 
-                
-                <h2>
-                    SlideShow:
-                </h2>
-            <div class = "slidershow">
-            
-                <div class = "slides">
-                    <input type = "radio" name ="r" id ="r1" checked>
-                    <input type = "radio" name ="r" id ="r2">
-                    <input type = "radio" name ="r" id ="r3">
-                    <input type = "radio" name ="r" id ="r4">
-                    <input type = "radio" name ="r" id ="r5">
-    
-                    <div class="slide s1">
-                        <img src="<?php echo $_SESSION['game_screenshots_src'][0] ?>" alt = "">
-                    </div>
-                    <div class="slide">
-                        <img src="<?php echo $_SESSION['game_screenshots_src'][1] ?>" alt = "">
-                    </div>
-                    <div class="slide">
-                        <img src="<?php echo $_SESSION['game_screenshots_src'][2] ?>" alt = "">
-                    </div>
-                    <div class="slide">
-                        <img src="<?php echo $_SESSION['game_screenshots_src'][3] ?>" alt = "">
-                    </div>
-                    <div class="slide">
-                        <video src="<?php echo $_SESSION['game_video_src'] ?>" controls></video>
-                    </div>
-                </div>
-                <div class="navigation">
-                    <label for="r1" class ="bar"></label>
-                    <label for="r2" class ="bar"></label>
-                    <label for="r3" class ="bar"></label>
-                    <label for="r4" class ="bar"></label>
-                    <label for="r5" class ="bar"></label>
-                </div>
-            </div>
 
+                    <div class = "Game">
+                                  <?php echo '</br>'; 
+                                        echo $_SESSION['game_info'];
+                                        echo '</br>';
+                                        echo '</br>';
+                                        echo '</br>';
+                                        echo '</br>';
+                                        echo '</br>';
+                                  ?> 
+                                
+                                  <?php  echo $_SESSION['game_system_req']?> 
+                              
+                              <h2>
+                                  SlideShow:
+                              </h2>
+                          <div class = "slidershow">
+                          
+                              <div class = "slides">
+                                  <input type = "radio" name ="r" id ="r1" checked>
+                                  <input type = "radio" name ="r" id ="r2">
+                                  <input type = "radio" name ="r" id ="r3">
+                                  <input type = "radio" name ="r" id ="r4">
+                                  <input type = "radio" name ="r" id ="r5">
+                  
+                                  <div class="slide s1">
+                                      <img src="<?php echo $_SESSION['game_screenshots_src'][0] ?>" alt = "">
+                                  </div>
+                                  <div class="slide">
+                                      <img src="<?php echo $_SESSION['game_screenshots_src'][1] ?>" alt = "">
+                                  </div>
+                                  <div class="slide">
+                                      <img src="<?php echo $_SESSION['game_screenshots_src'][2] ?>" alt = "">
+                                  </div>
+                                  <div class="slide">
+                                      <img src="<?php echo $_SESSION['game_screenshots_src'][3] ?>" alt = "">
+                                  </div>
+                                  <div class="slide">
+                                      <video src="<?php echo $_SESSION['game_video_src'] ?>" controls></video>
+                                  </div>
+                              </div>
+                              <div class="navigation">
+                                  <label for="r1" class ="bar"></label>
+                                  <label for="r2" class ="bar"></label>
+                                  <label for="r3" class ="bar"></label>
+                                  <label for="r4" class ="bar"></label>
+                                  <label for="r5" class ="bar"></label>
+                              </div>
+                          </div>
+                      </div>
+            <br>
+          <h2 class = "Rating"> Comments from Users </h2>
+          <div class = "box">
+            <ul>
+              <?php 
+                $number = 0;  
+                foreach($_SESSION['all_comments'] as $com){
 
+                  $game_id = $com['game_id']; 
+                  $comment = $com['comment'];
+                  if($game_id == $_SESSION["game_id"] && $comment != NULL)
+                  {
+                    $number = 1;
+                    echo "<li>  {$comment}</li>";
+                  }
+                }
+                if($number == 0)
+                {
+                  echo "<li>There are no comments yet</li>";
+                }
+                  ?>
+              </ul>
+          </div>
+
+              <br>
             <h2 class = "Rating">Give a rating</h2>
             <div class = "container">
               <form action="../Php/api/addComment.php" method="post"> 
@@ -103,7 +128,7 @@ if(!isset($_SESSION))
                 <label for="rate-1" class="fas fa-star"></label>
                   <header></header>
                   <div class="textarea">
-                    <textarea id="comment" name="comment" cols="30" placeholder="Describe your experience.."></textarea>
+                    <textarea id="comment" name="comment" required cols="30" placeholder="Describe your experience.."></textarea>
                     
                   </div>
                   <div class="btn">
@@ -112,24 +137,9 @@ if(!isset($_SESSION))
                   </form>
               </div>
             </div>
-        <script>
-            const btn = document.querySelector(".btn");
-            const posts = document.querySelector(".posts");
-            const widget = document.querySelector(".star-widget");
-            const editBtn = document.querySelector(".edit");
-            btn.onclick = ()=>{
-              widget.style.display = "none";
-              posts.style.display = "block";
-            editBtn.onclick = ()=>{
-                widget.style.display = "block";
-                posts.style.display = "none";
-              }
-              return false;
-            }
-          </script>
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
-
+            
 <script>
     //Get the button
     var mybutton = document.getElementById("myBtn");
@@ -151,5 +161,6 @@ if(!isset($_SESSION))
       document.documentElement.scrollTop = 0;
     }
     </script>
+
     </body>
 </html>

@@ -115,7 +115,7 @@ outline: none;
 
 .container{
   position: relative;
-  width: 400px;
+  width: 500px;
   margin:auto;
   background: #111;
   padding: 20px 30px;
@@ -228,7 +228,7 @@ form .btn button:hover{
 
 .box{
   position: relative;
-  width: 400px;
+  width: 500px;
   margin:auto;
   background: #111;
   padding: 20px 30px;
@@ -239,3 +239,131 @@ form .btn button:hover{
   justify-content: center;
   flex-direction: column;
 }
+
+li{
+    padding: 5px 30px 5px 30px;
+}
+p{
+    padding: 5px 30px 5px 30px;
+}
+h2.Gameplay{
+  padding: 20px 0px 10px 0px;
+}
+
+  h2{
+    color:rgb(212, 75, 75);
+    padding: 0px 0 10px 0px;
+  }
+  h3{
+    padding: 10px 0px 10px 20px;
+  }
+  h4{
+    padding: 10px 0px 0px 0px;
+  }
+
+.back{
+    color:white;
+    background: rgb(187, 70, 70);
+}
+.lista{
+    position:relative;
+    margin-left: 10%;
+  
+
+}
+
+.lista ul.d{
+  width: 50%;
+  float: left;
+
+}
+.lista ul.b{
+  width: 50%;
+  float: right;
+}
+
+@media screen and (max-width: 750px) {
+  .lista ul.d{
+    width: 100%;
+    float: left;
+  
+  }
+  p{
+    padding: 0 0 0 0;
+    font-size: 14px;
+  }
+  
+  ul{
+    padding: 0 0 0 0;
+    font-size: 13px;
+  }
+  .lista ul.b{
+    width: 100%;
+    float: left;
+  }
+  img{
+    width: 100%;
+    height: 30%;
+    padding: 0px 0px 0 0px;
+  }
+  .slidershow{
+    width: 100%;
+    margin-left:0%;
+    padding: 10px 0 10px 0;
+  }
+  .navigation{
+    left:53%;
+  }
+
+}
+@media screen and (max-width: 400px){
+  .container{
+    width:100%;
+    margin:auto;
+  }
+  .box{
+    width:100%;
+    margin:auto;
+  }
+  .star-widget label{
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 374px){
+.star-widget label{
+  font-size: 20px;
+}
+}
+@media screen and (max-width: 500px){
+  #myBtn {
+    padding: 9px;
+    font-size: 15px;
+    bottom: 10px;
+  }
+}
+#myBtn {
+  background-color: red;
+}
+#myBtn:hover {
+  background-color: rgb(231, 176, 23);
+}
+.box ul{
+    width:100%;
+}
+.box li{
+    list-style: none;
+    height: 100%;
+  width: 100%;
+  outline: none;
+  color: #eee;  
+  border: 1px solid #333;
+  background: #222;
+  font-size: 18px;
+  resize: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+

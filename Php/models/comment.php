@@ -20,13 +20,13 @@ class Comment{
     
     public function addComment($game_id,$user_id,$rating,$comment)
    {
-    if($game_id != null && $user_id != null && $rating != null && $comment != null)
-    $query="INSERT INTO " . $this->table . " (game_id,user_id,rating,comment) values('" . $game_id . "','" . $user_id . "','" . $rating . "','" . $comment  . "')";
+    if($game_id != null && $user_id != null && $rating != null && $comment != null){
+        $query="INSERT INTO " . $this->table . " (game_id,user_id,rating,comment) values('" . $game_id . "','" . $user_id . "','" . $rating . "','" . $comment  . "')";
 
     $stmt=$this->conn->prepare($query);
 
     $stmt->execute();
-
+    }
    }
    public function getComments(){
 
