@@ -1,6 +1,10 @@
 <?php
 //Headers
 
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+}
 
 include_once dirname(__FILE__) . '/../config/database.php';
 include_once dirname(__FILE__) . '/../models/user_game.php';
