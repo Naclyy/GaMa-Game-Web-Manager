@@ -300,3 +300,28 @@ body {
     border-color:tomato transparent transparent transparent;
     pointer-events: none;
   }
+
+  .content .everything .w3-container input[type=text]{
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .content .everything .w3-container input[type=submit] {
+    width: 20%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .content .everything .w3-container input[type=submit]:hover {
+    background-color: #45a049;
+  }

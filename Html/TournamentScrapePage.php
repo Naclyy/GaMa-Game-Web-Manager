@@ -1,6 +1,8 @@
 <?php
  session_start();
  include "../Php/api/getTournamentInfo.php";
+ $_SESSION['alreadyregistered']=0;
+ include "../Php/api/alreadyRegistered.php";
  $_POST['id']=$_SESSION['tournament'][0]['game_id'];
  include "../Php/api/getGameInfo.php";
  include "../Php/api/getTournamentTeams.php";
@@ -74,7 +76,16 @@
         ?>
            </ul> 
           </div>
-          <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Register</button>
+          <?php
+             if($_SESSION['alreadyregistered'] == 0) 
+             {
+            echo '<button onclick="document.getElementById(\'id01\').style.display=\'block\'" style="width:auto;">Register</button>';
+             }
+             else{
+              echo '<button style="background-color:grey;color:black;width:auto;">Already Registered</button>';
+             }
+
+            ?>
         </div>
 
        

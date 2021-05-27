@@ -39,7 +39,7 @@ include '../../Php/api/getGames.php';
           </ul>
     </div>
 
-    <div class="everything">
+    
       <div class="everything">
         <p style="text-align: center;font-size: 50px;">Tournaments</p>
 
@@ -53,7 +53,7 @@ include '../../Php/api/getGames.php';
         $name=$tournament['name'];
         $id=$tournament['id'];
         $email=$tournament['email'];
-        echo "<li class='w3-display-container'>{$name} <form action='../../Php/api/deleteTournament.php' method='post'> <button type='submit' name='id' value='{$id}' class='w3-button w3-transparent w3-display-right'>&times;</button></form></li>";
+        echo "<li class='w3-display-container'>{$name} <form action='../../Html/admin/setTeamScore.php' method='post'> <button type='submit' name='id' value='{$id}' class='w3-button w3-transparent w3-display-right' style='margin-right:35px'>Set Scores</button></form> <form action='../../Php/api/deleteTournament.php' method='post'> <button type='submit' name='id' value='{$id}' class='w3-button w3-transparent w3-display-right'>&times;</button></form></li>";
 
         }
       ?>
