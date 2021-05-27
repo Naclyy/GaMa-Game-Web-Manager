@@ -50,7 +50,7 @@ include '../../Php/api/getUsersByScore.php';
           foreach($_SESSION['all_users_score'] as $game) {
 
         $title = $game['user_team_name'];
-        $rating = $game['score'];
+        $rating = $game['scores'];
         if($rating == NULL)
         $rating = 0;
         echo "<li class='w3-display-container'>{$title} <p class='w3-button w3-transparent w3-display-right'>{$rating}</p></li>";
