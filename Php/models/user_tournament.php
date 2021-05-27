@@ -34,7 +34,7 @@ class User_tournament{
 
     public function getUsersScore(){
 
-        $query="SELECT * from " . $this->table ." order by score desc";
+        $query="SELECT user_team_name, SUM(score) as scores from " . $this->table ." group by user_team_name order by scores desc";
 
         $stmt=$this->conn->prepare($query);
  

@@ -30,14 +30,8 @@ $_SESSION['all_users_score']= array();
       extract($row);
 
       $post_item = array(
-        'id' => $id,
-        'user_id' => $user_id,
-        'tournament_id' => $tournament_id,
         'user_team_name' => $user_team_name,
-        'user_ign' => $user_ign,
-        'user_rank' =>  $user_rank,
-        'user_phone_number' => $user_phone_number,
-        'score' => $score
+        'scores' => $scores
       );
 
       array_push($_SESSION['all_users_score'],$post_item);
