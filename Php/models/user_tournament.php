@@ -31,6 +31,17 @@ class User_tournament{
  
         return $stmt;
     }
+
+    public function getUsersScore(){
+
+        $query="SELECT * from " . $this->table ." order by score desc";
+
+        $stmt=$this->conn->prepare($query);
+ 
+        $stmt->execute();
+ 
+        return $stmt;
+    }
    
     public function exists($user_id,$tournament_id)
     {

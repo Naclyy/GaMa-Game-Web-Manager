@@ -100,7 +100,7 @@ if(!isset($_SESSION))
                   if($game_id == $_SESSION["game_id"] && $comment != NULL)
                   {
                     $number = 1;
-                    echo "<li>  {$comment}</li>";
+                    echo "<li>{$comment}</li>";
                   }
                 }
                 if($number == 0)

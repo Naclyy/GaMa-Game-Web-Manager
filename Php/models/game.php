@@ -18,7 +18,40 @@ class Game{
 
     public function getGames(){
 
+        $query="SELECT * from " . $this->table;
+
+        $stmt=$this->conn->prepare($query);
+ 
+        $stmt->execute();
+ 
+        return $stmt;
+    }
+    public function getGamesByRanking(){
+
         $query="SELECT * from " . $this->table ." order by rating desc";
+
+        $stmt=$this->conn->prepare($query);
+ 
+        $stmt->execute();
+ 
+        return $stmt;
+    }
+
+    public function getMostPopularGame(){
+
+        $query="Select title, count(game_id) as number  from game JOIN user_game ON game.id = user_game.game_id group by game_id order by number desc";
+
+        $stmt=$this->conn->prepare($query);
+ 
+        $stmt->execute();
+ 
+        return $stmt;
+    }
+
+
+    public function getGamesByRatingNumber(){
+
+        $query="SELECT * from " . $this->table ." order by rating_no desc";
 
         $stmt=$this->conn->prepare($query);
  
