@@ -20,6 +20,13 @@ include_once "../Php/HtmlParse/simple_html_dom.php";
     </head>
 
 <body>
+
+<div class="preload">
+</div>
+
+<div class="beforeload">
+
+
 <div class="disk disk_opened_right">
   
   <div class="itemsbar">
@@ -292,7 +299,15 @@ include_once "../Php/HtmlParse/simple_html_dom.php";
 
 
   </script>
+</div>
+<script>
 
+$(function() {
+    $(".preload").fadeOut(2000, function() {
+        $(".beforeload").fadeIn(1000);        
+    });
+});
+</script>
  
 </body>
 </html>
