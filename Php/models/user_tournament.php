@@ -42,6 +42,16 @@ class User_tournament{
  
         return $stmt;
     }
+
+    public function updateTeamScore($id,$score)
+    {  
+         $query="UPDATE " . $this->table . " SET score = " . $score . " WHERE id = " . $id;
+
+        $stmt=$this->conn->prepare($query);
+    
+        $stmt->execute();
+
+    }
    
     public function exists($user_id,$tournament_id)
     {
