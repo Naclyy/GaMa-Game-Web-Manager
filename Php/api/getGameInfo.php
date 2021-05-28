@@ -6,6 +6,8 @@ if(!isset($_SESSION))
     session_start(); 
 } 
 
+header('Acces-Control-Allow-Origin: *');
+header('Content-Type: application/json');
 
 include_once dirname(__FILE__) . '/../config/database.php';
 include_once dirname(__FILE__) . '/../models/game.php';
@@ -17,7 +19,6 @@ $database = new Database();
 $db = $database->connect();
 
 $game = new Game($db);
-
 $result = $game->getGameInfo($_POST["id"]);
 
 $num = $result->rowCount();
@@ -28,9 +29,9 @@ $num = $result->rowCount();
    
    
 
-    while($row = $result->fetch(PDO::FETCH_ASSOC)) {
-      extract($row);
-    }
+    $row = $result->fetch(PDO::FETCH_ASSOC);
+    extract($row);
+    
 
     $html = file_get_html($url);
     
@@ -49,24 +50,28 @@ $num = $result->rowCount();
     $_SESSION['game_system_req'] = $system;
     $_SESSION['game_screenshots_src'] = array();
 
-
-  
-  
- 
-    
     foreach($html->find('.highlight_player_item.highlight_screenshot') as $a)
     {
       $img=$a->find('.screenshot_holder',0)->find('.highlight_screenshot_link',0)->attr['href'];
       array_push($_SESSION['game_screenshots_src'],$img);
     }
  
+
+
+    $game_info= array(
+    'game_id' => $_POST["id"],
+    'rating'=> $rating,
+    'rating_no' => $rating_no,
+    'game_title' => $title,
+    'game_image_src' => $src,
+    'game_info' => $info,
+    'game_video_src' => $video,
+    'game_system_req' => $system,
+    'game_screenshots_src' =>  $_SESSION['game_screenshots_src']
+    );
   
-
-    
  
-      
-    
-
+    echo json_encode($game_info);
     
 
   } 

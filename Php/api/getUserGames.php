@@ -5,6 +5,8 @@ if(!isset($_SESSION))
 { 
     session_start(); 
 } 
+header('Acces-Control-Allow-Origin: *');
+header('Content-Type: application/json');
 
 include_once dirname(__FILE__) . '/../config/database.php';
 include_once dirname(__FILE__) . '/../models/game.php';
@@ -36,7 +38,7 @@ $games=array();
   } 
 
 
-$_SESSION['all_user_games']= array();
+$all_user_games= array();
 
   foreach($games as $game_id)
   {
@@ -48,14 +50,20 @@ $_SESSION['all_user_games']= array();
         while($row = $result->fetch(PDO::FETCH_ASSOC)) {
           extract($row);
     
+          $html = file_get_html($url);
+          $postDiv=$html->find('.game_header_image_full',0);
+          $src=$postDiv->attr['src'];
           $post_item = array(
             'id' => $id,
             'title' => $title,
             'url' => $url,
-            'category' => $category
+            'category' => $category,
+            'rating_no' => $rating_no,
+            'rating' => $rating,
+            'image_src' => $src
           );
     
-          array_push($_SESSION['all_user_games'],$post_item);
+          array_push($all_user_games,$post_item);
         }
           
     
@@ -66,6 +74,8 @@ $_SESSION['all_user_games']= array();
        
   
 }
+
+echo json_encode($all_user_games);
 
 
 ?>

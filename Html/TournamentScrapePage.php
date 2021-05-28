@@ -1,12 +1,10 @@
 <?php
- session_start();
- include "../Php/api/getTournamentInfo.php";
- $_SESSION['alreadyregistered']=0;
- include "../Php/api/alreadyRegistered.php";
- $_POST['id']=$_SESSION['tournament'][0]['game_id'];
- include "../Php/api/getGameInfo.php";
- include "../Php/api/getTournamentTeams.php";
- ?>
+   if(!isset($_SESSION)) 
+  { 
+    session_start(); 
+  }
+  $_SESSION['tournament_id']=$_POST['tournament_id'];
+  ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -25,74 +23,32 @@
 
     <div class="disk disk_opened_left">
       <div class="topnav">
-        <a href="../Html/next_page_play.php">Go Back</a>
-       </div>
+        <a href="../Html/next_page_play.html">Go Back</a>
+      </div>
+
         <div class="content">
           <div class="title"> 
-              <h1> <?php echo $_SESSION['tournament'][0]['name']?></h1>
+             
           </div>
           <div class="tournament_info">
-              <?php echo "<img src='{$_SESSION['game_image_src']}'' alt = '{$_SESSION['tournament'][0]['name']}'>" ?>
-              <p> email : <?php echo $_SESSION['tournament'][0]['email']?> </p>
-              <p> phone : <?php echo $_SESSION['tournament'][0]['phone']?> </p>
-              <p> organizer : <?php echo $_SESSION['tournament'][0]['organizer']?> </p>
-              <p> begin_date : <?php echo $_SESSION['tournament'][0]['begin_date']?> </p>
-              <p> end_date : <?php echo $_SESSION['tournament'][0]['end_date']?> </p>
+     
               
           </div>
 
           <div class="tournament_ranking">
           <h1> Tournament Ranking </h1>
-          <ul>
-          <?php
-               for($id = 0 ; $id < sizeof($_SESSION['teams']);$id++)
-               {
-                 $team_name=$_SESSION['teams'][$id]['user_team_name'];
-                 $score = $_SESSION['teams'][$id]['score'];
-                  if( $id == 0)
-                  {
-                          echo "<li class='place1'> {$team_name}<p> score : {$score} </p> </li>";
-                  }
-                  else { if( $id == 1)
-                        {
-                          echo "<li class='place2'> {$team_name}<p> score : {$score} </p> </li>";
-                        }
-                        else
-                        { if( $id == 2)
-                          {
-                            echo "<li class='place3'> {$team_name}<p> score : {$score} </p> </li>";
-                          }
-                          else{
-                            echo "<li> {$team_name}<p> score : {$score} </p> </li>";
- 
-                          }
-
-                        }
-
-                  }
-                  
-                  
-               }
-        ?>
+          <ul id = "teams_list">
+          
            </ul> 
           </div>
-          <?php
-             if($_SESSION['alreadyregistered'] == 0) 
-             {
-            echo '<button onclick="document.getElementById(\'id01\').style.display=\'block\'" style="width:auto;">Register</button>';
-             }
-             else{
-              echo '<button style="background-color:grey;color:black;width:auto;">Already Registered</button>';
-             }
-
-            ?>
+          
         </div>
 
        
         
         <div id="id01" class="registerTournament">
         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                      <form class="modal-content" action="../Php/api/addTournamentTeam.php" method="post">
+                      <form class="modal-content register" action="../Php/api/addTournamentTeam.php" method="post">
                           <div class="container">
                               <h1>Register Tournament</h1>
                               <p>Please fill in this form to register Tournament.</p>
@@ -138,6 +94,14 @@
     }
   }
   </script>
- 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../Js/tournamentscrapepage.js"></script>
+ <script>
+   getTournamentInfo(<?php echo $_POST['tournament_id'] ?>);
+   getTournamentTeams(<?php echo $_POST['tournament_id'] ?>);
+   alreadyRegistered(<?php echo $_POST['tournament_id'] ?>);
+
+  </script>
 </body>
 </html>

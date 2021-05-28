@@ -5,7 +5,8 @@ if(!isset($_SESSION))
 { 
     session_start(); 
 } 
-
+header('Acces-Control-Allow-Origin: *');
+header('Content-Type: application/json');
 
 include_once dirname(__FILE__) . '/../config/database.php';
 include_once dirname(__FILE__) . '/../models/tournaments.php';
@@ -17,11 +18,10 @@ $database = new Database();
 $db = $database->connect();
 
 $tournament = new Tournament($db);
-
 $result = $tournament->getTournamentInfo($_POST['tournament_id']);
 
 $num = $result->rowCount();
-$_SESSION['tournament']= array();
+$_tournament= array();
   // Check if any posts
   if($num > 0) {
    
@@ -29,7 +29,7 @@ $_SESSION['tournament']= array();
     while($row = $result->fetch(PDO::FETCH_ASSOC)) {
       extract($row);
 
-      $post_item = array(
+      $tournament = array(
         'id' => $id,
         'name' => $name,
         'email' => $email,
@@ -40,11 +40,11 @@ $_SESSION['tournament']= array();
         'game_id' => $game_id
       );
 
-      array_push($_SESSION['tournament'],$post_item);
+    
     }
       
 
-    // header("Location: ../../Html/main_page_play.php", true, 301);
+   echo json_encode($tournament);
 
   } 
 

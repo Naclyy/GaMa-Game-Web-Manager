@@ -66,12 +66,15 @@ class User_tournament{
 
     public function addTournamentTeam($user_id,$tournament_id,$user_team_name,$user_ign,$user_rank,$user_phone_number,$score)
    {
-    
-    $query="INSERT INTO " . $this->table . " (user_id,tournament_id,user_team_name,user_ign,user_rank,user_phone_number,score) values('{$user_id}','{$tournament_id}','{$user_team_name}','{$user_ign}','{$user_rank}','{$user_phone_number}','{$score}')";
+    if($user_id !=null && $tournament_id !=null && $user_team_name !=null && $user_ign !=null && $user_rank !=null && $user_phone_number !=null)
+    {$query="INSERT INTO " . $this->table . " (user_id,tournament_id,user_team_name,user_ign,user_rank,user_phone_number,score) values('{$user_id}','{$tournament_id}','{$user_team_name}','{$user_ign}','{$user_rank}','{$user_phone_number}','{$score}')";
 
     $stmt=$this->conn->prepare($query);
 
     $stmt->execute();
+      return 1;
+    }
+      return 0;
 
    }
 
