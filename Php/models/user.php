@@ -53,11 +53,17 @@ else {
    public function createaccount($username,$password,$firstname,$lastname,$emailaddress)
    {
     if($username != null && $password != null && $firstname != null && $lastname != null && $emailaddress != null)
-    $query="INSERT INTO " . $this->table . " (username,password,firstname,lastname,emailaddress) values('" . $username . "','" . $password . "','" . $firstname . "','" . $lastname . "','" . $emailaddress . "')" ;
+    {$query="INSERT INTO " . $this->table . " (username,password,firstname,lastname,emailaddress) values('" . $username . "','" . $password . "','" . $firstname . "','" . $lastname . "','" . $emailaddress . "')" ;
 
     $stmt=$this->conn->prepare($query);
 
     $stmt->execute();
+    return true;
+    }
+    else
+    {
+    return false;
+    }
 
    }
 

@@ -17,6 +17,13 @@ $user = new User($db);
 
 $result = $user->createaccount($_POST["username"],$_POST["password"],$_POST["firstname"],$_POST["lastname"],$_POST["email"]);
 
-header("Location: ../../Html/login_play.html", true, 301);
+if($result)
+{
+    echo true;
+}
+else 
+{
+    echo false;
+}
 
 ?>

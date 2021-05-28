@@ -1,12 +1,9 @@
 <?php
 //Headers
-
 if(!isset($_SESSION)) 
 { 
     session_start(); 
 } 
-header('Acces-Control-Allow-Origin: *');
-header('Content-Type: application/json');
 
 include_once dirname(__FILE__) . '/../config/database.php';
 include_once dirname(__FILE__) . '/../models/user.php';
@@ -27,19 +24,13 @@ if($result)
     $_SESSION['user_firstname']=$user->getFirstname();
     $_SESSION['user_lastname']=$user->getLastname();
     $_SESSION['user_emailaddress']=$user->getEmailaddress();
-    if($_SESSION['user_id'] == 1)
-    {
-     header("Location: ../../Html/admin/admin_page.html", true, 301);
-    }
-    else{
-        
-    header("Location: ../../Html/home_play.html", true, 301);
-    }
-    
+
+   echo $_SESSION['user_id'];
+ 
 }
 else
 {
-    echo "Invalid User or Password";
+    echo false;
 }
 
 
