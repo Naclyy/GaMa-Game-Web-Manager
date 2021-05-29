@@ -5,7 +5,8 @@ if(!isset($_SESSION))
 { 
     session_start(); 
 } 
-
+header('Acces-Control-Allow-Origin: *');
+header('Content-Type: application/json');
 
 include_once dirname(__FILE__) . '/../config/database.php';
 include_once dirname(__FILE__) . '/../models/user.php';
@@ -21,9 +22,9 @@ $user = new User($db);
 $result = $user->getUsers();
 
 $num = $result->rowCount();
-$_SESSION['all_users']= array();
+$all_users= array();
   // Check if any posts
-  if($num > 0) {
+if($num > 0) {
     
 
     while($row = $result->fetch(PDO::FETCH_ASSOC)) {
@@ -38,11 +39,11 @@ $_SESSION['all_users']= array();
         'emailaddress' => $emailaddress
       );
 
-      array_push($_SESSION['all_users'],$post_item);
+      array_push($all_users,$post_item);
     }
       
 
-    // header("Location: ../../Html/main_page_play.php", true, 301);
+    echo json_encode($all_users);
 
   } 
 ?>

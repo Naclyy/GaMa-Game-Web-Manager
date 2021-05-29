@@ -112,9 +112,15 @@ else {
 
 public function deleteUser($id)
    {
+    
     $query="DELETE FROM " . $this->table . " WHERE id =" . $id;
     $stmt=$this->conn->prepare($query);
+    if( $stmt->execute())
+    {
+      return true;
+    }
+    return false;
+   
 
-    $stmt->execute();
    }
 }

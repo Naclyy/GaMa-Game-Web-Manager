@@ -21,6 +21,6 @@ $num = $result -> rowCount();
 if($num == 0)
 $user_game->addGame($user_id,$game_id);
 
-header('Location: ../../Html/main_page_play.php', true, 301);
+header('Location: ../../Html/main_page_play.html', true, 301);
 
 ?>

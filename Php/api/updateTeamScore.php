@@ -20,8 +20,6 @@ $user_tournament = new User_tournament($db);
 
 $user_tournament->updateTeamScore($_SESSION['team_id'],$_POST['score']);
 
-$_POST['id']=$_POST['tournament_id'];
-
 header("Location: ../../Html/admin/setTeamScore.php", true, 301);
 
 

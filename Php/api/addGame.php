@@ -1,7 +1,8 @@
 <?php
 //Headers
 
-
+header('Acces-Control-Allow-Origin: *');
+header('Content-Type: application/json');
 include_once dirname(__FILE__) . '/../config/database.php';
 include_once dirname(__FILE__) . '/../models/game.php';
 include_once dirname(__FILE__) . '/../HtmlParse/simple_html_dom.php';
@@ -22,6 +23,6 @@ $url = str_replace(" ", "", $_POST["url"]);
 
 $result = $game->addGame($title,$url,$category);
 
-header('Location: ../../Html/admin/manage_games_page.php', true, 301);
+echo json_encode($result);
 
 ?>

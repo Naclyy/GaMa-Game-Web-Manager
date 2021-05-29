@@ -64,11 +64,18 @@ class Game{
     public function addGame($title,$url,$category)
    {
     if($title != null && $url != null)
+    {
     $query="INSERT INTO " . $this->table . " (title,url,category) values('" . $title . "','" . $url . "','" . $category . "')";
 
     $stmt=$this->conn->prepare($query);
 
     $stmt->execute();
+    return true;
+    }
+
+    return false;
+
+
 
    }
 
