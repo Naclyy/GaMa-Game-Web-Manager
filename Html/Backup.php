@@ -6,7 +6,7 @@ if(!isset($_SESSION))
 } 
 
   include "../Php/api/getGameInfo.php";
-  include "../Php/api/getComments.php"
+  include "../Php/api/getComments.php";
   ?>
 
 <!DOCTYPE html>

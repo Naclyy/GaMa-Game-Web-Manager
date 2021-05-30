@@ -3,7 +3,7 @@
   { 
     session_start(); 
   }
-  include "../Php/api/getGameInfo.php";
+  $_SESSION['game_id'] = $_POST['id'];
   ?>
 <!DOCTYPE html>
 <html>
@@ -32,7 +32,63 @@
             <!-- back button-->
         </header>
 
+        <div class = "poza" id = "poza"> </div>
+                  
+                    <div class = "Game" id = "test">
+                                
+                              
+                            
+                      </div>
+
+
+                      <div class = "slidershow">
+                          
+                              <div class = "slides">
+                                  <input type = "radio" name ="r" id ="r1" checked>
+                                  <input type = "radio" name ="r" id ="r2">
+                                  <input type = "radio" name ="r" id ="r3">
+                                  <input type = "radio" name ="r" id ="r4">
+                                  <input type = "radio" name ="r" id ="r5">
+                  
+                                  <div class="slide s1" id = "slide1">
+                                      
+                                  </div>
+                                  <div class="slide" id = "slide2">
+                                      
+                                  </div>
+                                  <div class="slide" id = "slide3">
+                                      
+                                  </div>
+                                  <div class="slide" id = "slide4">
+                                      
+                                  </div>
+                                  <div class="slide" id = "slide5">
+                                      
+                                  </div>
+                              </div>
+                              <div class="navigation">
+                                  <label for="r1" class ="bar"></label>
+                                  <label for="r2" class ="bar"></label>
+                                  <label for="r3" class ="bar"></label>
+                                  <label for="r4" class ="bar"></label>
+                                  <label for="r5" class ="bar"></label>
+                              </div>
+                          </div>
+                
+
+
+
+
+
            
+
+
+
+
+
+
+
+
             <br>
           <h2 class = "Rating"> Comments from Users </h2>
           <div class = "box">
@@ -94,7 +150,13 @@
 <script src="../Js/GameScrapePage.js"></script>
  <script>
    getComments(<?php echo $_SESSION['game_id'] ?>);
-
+   getGameInfo(<?php echo $_SESSION['game_id'] ?>);
+   getGameSlide1(<?php echo $_SESSION['game_id'] ?>);
+   getGameSlide2(<?php echo $_SESSION['game_id'] ?>);
+   getGameSlide3(<?php echo $_SESSION['game_id'] ?>);
+   getGameSlide4(<?php echo $_SESSION['game_id'] ?>);
+   getGameSlide5(<?php echo $_SESSION['game_id'] ?>);
+   getPoza(<?php echo $_SESSION['game_id'] ?>);  
   </script>
     </body>
 </html>
