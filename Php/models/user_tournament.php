@@ -49,7 +49,14 @@ class User_tournament{
 
         $stmt=$this->conn->prepare($query);
     
-        $stmt->execute();
+        if($stmt->execute())
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
 
     }
    

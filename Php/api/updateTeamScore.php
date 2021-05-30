@@ -18,9 +18,7 @@ $db = $database->connect();
 
 $user_tournament = new User_tournament($db);
 
-$user_tournament->updateTeamScore($_SESSION['team_id'],$_POST['score']);
+$result=$user_tournament->updateTeamScore($_POST['team_id'],$_POST['score']);
 
-header("Location: ../../Html/admin/setTeamScore.php", true, 301);
-
-
+echo json_encode($result);
 ?>

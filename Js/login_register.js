@@ -23,20 +23,24 @@ $('form.login').on('submit',function(){
                 window.location.href = "../Html/admin/admin_page.html";
                 }
                 else{
-                    window.location.href = "../Html/home_play.html";
+                window.location.href = "../Html/home_play.html";
                 }
             } 
             else {
                 var test = document.getElementsByClassName("errormessage")[0];
                 if( test == null)
                 {
-                var form = document.getElementById("loginform").getElementsByClassName("container")[0];
+                var disk = document.getElementsByClassName("borders")[0];
                 var err = document.createElement("P");
                 err.classList.add("errormessage");
-                err.style.color="red";
-                var text = document.createTextNode("Invalid credentials");
+                err.style.backgroundColor="red";
+                err.style.color="white";
+                err.style.padding="20px";
+                err.style.borderRadius="4px";
+                err.style.marginBottom="5px";
+                var text = document.createTextNode("Sorry the credentials you are using are invalid");
                 err.appendChild(text);
-                form.appendChild(err);
+                disk.insertBefore(err,disk.firstChild);
                 }
             }
 

@@ -30,7 +30,7 @@ class User{
      $num = $stmt->rowCount();
 
 
-   if($num = 1) {
+   if($num == 1) {
   
     while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     extract($row);

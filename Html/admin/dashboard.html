@@ -1,10 +1,3 @@
-
-<?php
-include '../../Php/api/getTournaments.php';
-include '../../Php/api/getGames.php';
-include '../../Php/api/getComments.php';
-include '../../Php/api/getUsers.php';
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,7 +25,7 @@ include '../../Php/api/getUsers.php';
             <li><a href="../admin/manage_games_page.html">Manage Games</a></li>
             <li><a href="../admin/manage_tournaments_page.php">Manage Tournaments</a></li>
             <li><a href="../admin/manage_users_page.html">Manage Users</a></li>
-            <li><a class="active" href="../admin/dashboard.php">Dashboard</a></li>
+            <li><a class="active" href="../admin/dashboard.html">Dashboard</a></li>
           </ul>
     </div>
 
@@ -40,15 +33,7 @@ include '../../Php/api/getUsers.php';
         <div class = "cardBox">
             <div class = "card">
                 <div>
-                    <div class="numbers">
-                    <?php
-                            $number = 0;
-                            foreach($_SESSION['all_users'] as $users) {
-                                $number = $number + 1;
-                            }
-                                echo "{$number}";
-                                
-                            ?>
+                    <div class="numbers" id="user_number">
                     </div>
                     <div class="cardName">Users</div>
                 </div>
@@ -58,15 +43,7 @@ include '../../Php/api/getUsers.php';
             </div>
             <div class = "card">
                 <div>
-                <div class="numbers">
-                <?php
-                            $number = 0;
-                            foreach($_SESSION['all_games'] as $games) {
-                                $number = $number + 1;
-                            }
-                                echo "{$number}";
-                                
-                            ?>
+                <div class="numbers" id="game_number">
                 </div>
                 <div class="cardName">Games</div>
             </div>
@@ -77,15 +54,7 @@ include '../../Php/api/getUsers.php';
             <div class = "card">
                 <div>
 
-                <div class="numbers">
-                <?php
-                            $number = 0;
-                            foreach($_SESSION['all_tournaments'] as $tournament) {
-                                $number = $number + 1;
-                            }
-                                echo "{$number}";
-                                
-                            ?>
+                <div class="numbers" id="tournament_number">
                 </div>
                 <div class="cardName">Tournaments</div>
             </div>
@@ -119,7 +88,8 @@ include '../../Php/api/getUsers.php';
     </div>
 </div>
 
- 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../../Js/dashboard.js"></script>
 
 
 </body>
