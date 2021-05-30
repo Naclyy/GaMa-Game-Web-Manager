@@ -5,7 +5,8 @@ if(!isset($_SESSION))
 { 
     session_start(); 
 } 
-
+header('Acces-Control-Allow-Origin: *');
+header('Content-Type: application/json');
 
 include_once dirname(__FILE__) . '/../config/database.php';
 include_once dirname(__FILE__) . '/../models/comment.php';
@@ -21,7 +22,7 @@ $comment = new Comment($db);
 $result = $comment->getComments();
 
 $num = $result->rowCount();
-$_SESSION['all_comments']= array();
+$comments= array();
   // Check if any posts
   if($num > 0) {
     
@@ -37,11 +38,11 @@ $_SESSION['all_comments']= array();
         'comment' => $comment
       );
 
-      array_push($_SESSION['all_comments'],$post_item);
+      array_push($comments,$post_item);
     }
       
 
-    // header("Location: ../../Html/main_page_play.php", true, 301);
+    echo json_encode($comments);
 
   } 
 ?>

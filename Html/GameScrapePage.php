@@ -1,14 +1,10 @@
 <?php
- 
-if(!isset($_SESSION)) 
-{ 
+   if(!isset($_SESSION)) 
+  { 
     session_start(); 
-} 
-
+  }
   include "../Php/api/getGameInfo.php";
-  include "../Php/api/getComments.php"
   ?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -32,82 +28,15 @@ if(!isset($_SESSION))
         <!-- Here is our main header that is used across all the pages of our website -->
 
         <header>
-            <button onclick = "location.href ='../Html/main_page_play.php'" class="back" >Back to inventory</button>
+            <button onclick = "location.href ='../Html/main_page_play.html'" class="back" >Back to inventory</button>
             <!-- back button-->
         </header>
 
-            <img src="<?php echo $_SESSION['game_image_src'] ?>" alt="">
-
-                    <div class = "Game">
-                                  <?php echo '</br>'; 
-                                        echo $_SESSION['game_info'];
-                                        echo '</br>';
-                                        echo '</br>';
-                                        echo '</br>';
-                                        echo '</br>';
-                                        echo '</br>';
-                                  ?> 
-                                
-                                  <?php  echo $_SESSION['game_system_req']?> 
-                              
-                              <h2>
-                                  SlideShow:
-                              </h2>
-                          <div class = "slidershow">
-                          
-                              <div class = "slides">
-                                  <input type = "radio" name ="r" id ="r1" checked>
-                                  <input type = "radio" name ="r" id ="r2">
-                                  <input type = "radio" name ="r" id ="r3">
-                                  <input type = "radio" name ="r" id ="r4">
-                                  <input type = "radio" name ="r" id ="r5">
-                  
-                                  <div class="slide s1">
-                                      <img src="<?php echo $_SESSION['game_screenshots_src'][0] ?>" alt = "">
-                                  </div>
-                                  <div class="slide">
-                                      <img src="<?php echo $_SESSION['game_screenshots_src'][1] ?>" alt = "">
-                                  </div>
-                                  <div class="slide">
-                                      <img src="<?php echo $_SESSION['game_screenshots_src'][2] ?>" alt = "">
-                                  </div>
-                                  <div class="slide">
-                                      <img src="<?php echo $_SESSION['game_screenshots_src'][3] ?>" alt = "">
-                                  </div>
-                                  <div class="slide">
-                                      <video src="<?php echo $_SESSION['game_video_src'] ?>" controls></video>
-                                  </div>
-                              </div>
-                              <div class="navigation">
-                                  <label for="r1" class ="bar"></label>
-                                  <label for="r2" class ="bar"></label>
-                                  <label for="r3" class ="bar"></label>
-                                  <label for="r4" class ="bar"></label>
-                                  <label for="r5" class ="bar"></label>
-                              </div>
-                          </div>
-                      </div>
+           
             <br>
           <h2 class = "Rating"> Comments from Users </h2>
           <div class = "box">
-            <ul>
-              <?php 
-                $number = 0;  
-                foreach($_SESSION['all_comments'] as $com){
-
-                  $game_id = $com['game_id']; 
-                  $comment = $com['comment'];
-                  if($game_id == $_SESSION["game_id"] && $comment != NULL)
-                  {
-                    $number = 1;
-                    echo "<li>{$comment}</li>";
-                  }
-                }
-                if($number == 0)
-                {
-                  echo "<li>There are no comments yet</li>";
-                }
-                  ?>
+            <ul id ="commentslist">
               </ul>
           </div>
 
@@ -161,6 +90,11 @@ if(!isset($_SESSION))
       document.documentElement.scrollTop = 0;
     }
     </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../Js/GameScrapePage.js"></script>
+ <script>
+   getComments(<?php echo $_SESSION['game_id'] ?>);
 
+  </script>
     </body>
 </html>
