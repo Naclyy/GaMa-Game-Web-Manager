@@ -17,21 +17,30 @@ $user = new User($db);
 
 $result = $user->login($_POST["username"],$_POST["password"]);
 
-if($result)
-{   $_SESSION['user_id']=$user->getId();
-    $_SESSION['user_username']=$user->getUsername();
-    $_SESSION['user_password']=$user->getPassword();
-    $_SESSION['user_firstname']=$user->getFirstname();
-    $_SESSION['user_lastname']=$user->getLastname();
-    $_SESSION['user_emailaddress']=$user->getEmailaddress();
+$num = $result->rowCount();
 
-   echo $_SESSION['user_id'];
- 
-}
-else
-{
-    echo false;
-}
+
+if($num == 1) {
+      
+        while($row = $result->fetch(PDO::FETCH_ASSOC)) {
+        extract($row);
+        $_SESSION['user_id']=$id;
+        $_SESSION['user_username']=$username;
+        $_SESSION['user_password']=$password;
+        $_SESSION['user_firstname']=$firstname;
+        $_SESSION['user_lastname']=$lastname;
+        $_SESSION['user_emailaddress']=$emailaddress;
+
+   
+    
+         
+      }
+
+      echo $_SESSION['user_id'];
+    } 
+    else {
+      return false;
+    }
 
 
   ?>

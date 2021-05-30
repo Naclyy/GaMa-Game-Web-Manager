@@ -25,29 +25,7 @@ class User{
        $stmt=$this->conn->prepare($query);
 
        $stmt->execute();
-
-       // Get row count
-     $num = $stmt->rowCount();
-
-
-   if($num == 1) {
-  
-    while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-    extract($row);
-    $this->id = $id;
-    $this->username = $username;
-    $this->password = $password;
-    $this->firstname = $firstname;
-    $this->lastname = $lastname;
-    $this->emailaddress = $emailaddress;
-    return true;
-
-     
-  }
-} 
-else {
-  return false;
-}
+       return $stmt;
    }
 
    public function createaccount($username,$password,$firstname,$lastname,$emailaddress)
@@ -123,4 +101,44 @@ public function deleteUser($id)
    
 
    }
+
+public function getUserInfo($id)
+{
+
+  $query="SELECT * from " . $this->table . " WHERE id=" . $id;
+
+  $stmt=$this->conn->prepare($query);
+
+  $stmt->execute();
+  
+  return $stmt;
+
+}
+
+public function verify($id,$password)
+{
+  if($password != NULL)
+  {
+  $query = "SELECT * FROM " . $this->table . " WHERE id= " . $id . " and password = '" . $password . "'" ;
+  if($stmt=$this->conn->prepare($query)){
+    if($stmt->execute())
+    return $stmt;
+  }
+ 
+  }
+  return false;
+}
+
+public function changePass($id,$newpassword)
+{
+  $query="UPDATE " . $this->table . 
+  " SET password = '" . $newpassword .  
+  "' WHERE id = " . $id;
+
+  $stmt=$this->conn->prepare($query);
+
+  $stmt->execute();
+  
+  return $stmt;
+}
 }
