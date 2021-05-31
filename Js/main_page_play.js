@@ -290,3 +290,4 @@ getGamesCategories();
 getGamesAge();
 filterSelectionAll("all");
 filterSelection("all");  
+

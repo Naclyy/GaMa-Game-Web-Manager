@@ -13,14 +13,15 @@
 
 <body>
 
-<div class="preload">
-</div>
 
-<div class="beforeload">
 
 
 <div class="disk disk_opened_right">
   
+<div class="preload" id="preload">
+</div>
+
+<div class="beforeload" id="beforeload">
   <div class="itemsbar">
     <div class="searchbox">
       <input type="text" id="myInput" onkeyup="searchGameFilter()" placeholder="Search for game.." title="Type in a name">
@@ -96,8 +97,9 @@
   <div class="games_gallery">
   </div>
 </div>
-
 </div>
+</div>
+
 <div class="disk disk_opened_left">
   
     
@@ -106,13 +108,15 @@
 </div>
 
 
+
 <script>
-$(function() {
-    $(".preload").fadeOut(2000, function() {
-        $(".beforeload").fadeIn(1000);        
-    });
-});
+// $(function() {
+//     $(".preload").fadeOut(2000, function() {
+//         $(".beforeload").fadeIn(1000);        
+//     });
+// });
   // Get the modal
+
   var modal = document.getElementById("AllGames");
   
   // Get the button that opens the modal
@@ -141,5 +145,14 @@ $(function() {
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="../Js/main_page_play.js"></script>
+<script>
+  // Wait for window load
+  $(window).ready(function() {
+    // Animate loader off screen
+    $("#preload").fadeOut(7000,function(){
+      $('#beforeload').fadeIn(1000);
+    });
+  });
+</script>
 </body>
 </html>

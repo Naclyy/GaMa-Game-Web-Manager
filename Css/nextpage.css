@@ -29,7 +29,25 @@
   background: #555; 
 }
 
+.beforeload{
+  display:none;
+}
+.preload { 
+  background-image : url("../Poze/loading.gif");
+  
+  position: absolute;
+  top: 50%; /* IMPORTANT */
+  left: 50%; /* IMPORTANT */
+  display: block;
+   width: 800px;
+   height: 600px;
+   margin-top: -300px; /* Half the height */
+   margin-left: -400px; /* Half the width */
+   transform : scale(0.25);
+   background-repeat: no-repeat;
 
+  }
+  
 .disk{
   background-image: url("../Poze/disk_image.png");
   position: absolute;
