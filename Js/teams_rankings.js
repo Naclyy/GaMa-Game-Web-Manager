@@ -1,3 +1,4 @@
+var csvFileData="'\u0022'";
 function getGameRank()
 {  
     var ajax = new XMLHttpRequest();
@@ -18,6 +19,14 @@ function getGameRank()
             for(var i=0;i< all_users_score.length;i++){
                 var team_name = all_users_score[i].user_team_name;
                 var score = all_users_score[i].scores;
+
+                if(i == 0){
+                    csvFileData = '\u0022' + team_name + '\u0022' + "," + score;
+                }
+                else {
+                     csvFileData = csvFileData + "," + '\u0022' + team_name + '\u0022' + "," + score;
+                }
+
              var li = document.createElement("li");
              li.classList.add("w3-display-container");
              li.innerHTML=team_name;
@@ -31,4 +40,15 @@ function getGameRank()
         }
     }
 }
+function csvFunction() {  
+  
+    //define the heading for each row of the data  
+    var hiddenElement = document.createElement('a');  
+    hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csvFileData);  
+    hiddenElement.target = '_blank';
+     
+    //provide the name for the CSV file to be downloaded  
+    hiddenElement.download = 'sample.csv';  
+    hiddenElement.click();  
+}  
 getGameRank();
