@@ -437,11 +437,11 @@ body {
     display: table;
   }
  .button{
-    width: 80%;
+    width: 100%;
     color:bisque;
     background-color: #555;
     position: relative;
-    margin-left: 9%;
+    margin-top: 3%;
     font-size: 20px;
     cursor: pointer;
   }

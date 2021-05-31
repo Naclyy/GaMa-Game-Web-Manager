@@ -1,5 +1,5 @@
 var csvFileData = "";
-
+var xmlFileData = "";
 function getUsers(){
     var ajax = new XMLHttpRequest();
     var method = "GET";
@@ -19,6 +19,8 @@ function getUsers(){
             var number = users.length;
 
             csvFileData = csvFileData + "Users," + number + ",";
+
+            xmlFileData = xmlFileData + "Users number: " + number + "\n";
 
             var there = document.getElementById("user_number");
 
@@ -46,6 +48,8 @@ function getTournaments(){
 
             csvFileData = csvFileData + "Tournaments," + number + ",";
 
+            xmlFileData = xmlFileData + "Tournaments number: " + number + "\n";
+
             var there = document.getElementById("tournament_number");
 
             there.innerHTML=number;
@@ -71,6 +75,8 @@ function getGames(){
             var number =games.length;
 
             csvFileData = csvFileData + "Games," + number + ",";
+
+            xmlFileData = xmlFileData + "Games number: " + number + "\n";
 
             var there = document.getElementById("game_number");
 
@@ -100,6 +106,8 @@ function getComments(){
 
             csvFileData = csvFileData + "Comments," + number;
 
+            xmlFileData = xmlFileData + "Comments number: " + number;
+
             var there = document.getElementById("comment_number");
 
             there.innerHTML = number;
@@ -118,8 +126,20 @@ function csvFunction() {
      
     //provide the name for the CSV file to be downloaded  
     hiddenElement.download = 'sample.csv';  
-    hiddenElement.click();  
+    hiddenElement.click();      
 }  
+
+
+function docBookFunction(){
+     //define the heading for each row of the data  
+     var hiddenElement = document.createElement('a');  
+     hiddenElement.href = 'data:xml;charset=utf-8,' + encodeURI(xmlFileData);  
+     hiddenElement.target = '_blank';
+      
+     //provide the name for the CSV file to be downloaded  
+     hiddenElement.download = 'sample.xml';  
+     hiddenElement.click();  
+}
 
 getUsers();
 getTournaments();
