@@ -119,6 +119,17 @@ class Game{
  
         return $stmt;
     }
+    
+    public function getGamesAge()
+    {
+        $query="SELECT DISTINCT pegi_age from " . $this->table;
+
+        $stmt=$this->conn->prepare($query);
+ 
+        $stmt->execute();
+ 
+        return $stmt;
+    }
     public function updateGameRating($id, $rating, $ratingNO)
     {
 

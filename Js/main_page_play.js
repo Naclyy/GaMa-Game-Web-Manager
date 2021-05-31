@@ -1,4 +1,3 @@
-
 function getGamesCategories(){
 var ajax = new XMLHttpRequest();
 var method = "GET";
@@ -38,6 +37,47 @@ ajax.onreadystatechange = function(){
 }
 
 }
+function getGamesAge(){
+  var ajax = new XMLHttpRequest();
+  var method = "GET";
+  var url="../Php/api/getGamesAge.php";
+  var asynchronous = true;
+  
+  ajax.open(method,url,asynchronous);
+  
+  ajax.send();
+  
+  ajax.onreadystatechange = function(){
+  
+      if(this.readyState==4 && this.status==200)
+      {   
+          var ages = JSON.parse(this.responseText);
+          for(var i=0;i< ages.length;i++)
+          { 
+           var age=ages[i];
+           if(age==0)
+           age="ForEveryone";
+           var ageDropdownAll=document.getElementById("all_pegi_age");
+           var ageDropdownUser=document.getElementById("user_pegi_age");
+  
+           var butonAll=document.createElement("button");
+           butonAll.classList.add("btn");
+           butonAll.innerHTML=age;
+           butonAll.setAttribute("onclick","filterAgeAll('" + age + "')");
+           var butonUser=document.createElement("button");
+           butonUser.classList.add("btn");
+           butonUser.innerHTML=age;
+           butonUser.setAttribute("onclick","filterAge('" + age + "')");
+  
+           ageDropdownAll.appendChild(butonAll);
+           ageDropdownUser.appendChild(butonUser);
+  
+  
+          }
+      }
+  }
+  
+  }
 
 
 function getUserGames(){
@@ -59,12 +99,15 @@ ajax.onreadystatechange = function(){
         { 
          var title = games[i].title;
          var id = games[i].id;
-         var category = games[i].category
+         var category = games[i].category;
+         var age = games[i].pegi_age;
          var image_src = games[i].image_src;
          var gallery = document.getElementById("usergames").getElementsByClassName("games_gallery")[0];
 
+         if(age==0)
+         age="ForEveryone";
          var div = document.createElement("div");
-         div.classList.add("game", "Filter" , category,"show");
+         div.classList.add("game", "Filter" , age, category,"show");
          div.setAttribute("id",title);
 
          var image = document.createElement("img");
@@ -127,12 +170,14 @@ ajax.onreadystatechange = function(){
         { 
          var title = games[i].title;
          var id = games[i].id;
-         var category = games[i].category
+         var category = games[i].category;
+         var age = games[i].pegi_age;
          var image_src = games[i].image_src;
          var gallery = document.getElementById("AllGames").getElementsByClassName("AllGames-content")[0].getElementsByClassName("games_gallery")[0];
-
+         if(age==0)
+         age="ForEveryone";
          var div = document.createElement("div");
-         div.classList.add("game", "allFilter" , category,"show");
+         div.classList.add("game", "allFilter" ,age , category,"show");
          div.setAttribute("id",title);
 
          var image = document.createElement("img");
@@ -208,9 +253,6 @@ function w3RemoveClass(element, name) {
   element.className = arr1.join(" ");
  }
 
-
-
-
 function filterSelection(c) {
 var x, i;
  x = document.getElementsByClassName("game Filter");
@@ -221,31 +263,30 @@ if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
 }
 }
 
-function w3AddClass(element, name) {
-var i, arr1, arr2;
-arr1 = element.className.split(" ");
-arr2 = name.split(" ");
-for (i = 0; i < arr2.length; i++) {
-if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-}
-} 
-
-function w3RemoveClass(element, name) {
-var i, arr1, arr2;
-arr1 = element.className.split(" ");
-arr2 = name.split(" ");
-for (i = 0; i < arr2.length; i++) {
-while (arr1.indexOf(arr2[i]) > -1) {
-arr1.splice(arr1.indexOf(arr2[i]), 1);     
-}
-}
-element.className = arr1.join(" ");
+function filterAgeAll(c) {
+  var x, i;
+   x = document.getElementsByClassName("game allFilter");
+  if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+   w3RemoveClass(x[i], "show");
+  if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
 }
 
+function filterAge(c) {
+  var x, i;
+   x = document.getElementsByClassName("game Filter");
+  if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+   w3RemoveClass(x[i], "show");
+  if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
 
 
 getGames();
 getUserGames();
 getGamesCategories();
+getGamesAge();
 filterSelectionAll("all");
 filterSelection("all");  

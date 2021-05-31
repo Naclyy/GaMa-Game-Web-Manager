@@ -53,6 +53,8 @@ $all_user_games= array();
           $html = file_get_html($url);
           $postDiv=$html->find('.game_header_image_full',0);
           $src=$postDiv->attr['src'];
+          if($pegi_age==null)
+          $pegi_age="0";
           $post_item = array(
             'id' => $id,
             'title' => $title,
@@ -60,7 +62,8 @@ $all_user_games= array();
             'category' => $category,
             'rating_no' => $rating_no,
             'rating' => $rating,
-            'image_src' => $src
+            'image_src' => $src,
+            'pegi_age' => $pegi_age
           );
     
           array_push($all_user_games,$post_item);
