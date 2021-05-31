@@ -5,7 +5,8 @@ if(!isset($_SESSION))
 { 
     session_start(); 
 } 
-
+header('Acces-Control-Allow-Origin: *');
+header('Content-Type: application/json');
 
 include_once dirname(__FILE__) . '/../config/database.php';
 include_once dirname(__FILE__) . '/../models/game.php';
@@ -21,7 +22,7 @@ $game = new Game($db);
 $result = $game->getGamesByRanking();
 
 $num = $result->rowCount();
-$_SESSION['all_games']= array();
+$all_games= array();
   // Check if any posts
   if($num > 0) {
    
@@ -38,10 +39,10 @@ $_SESSION['all_games']= array();
         'rating' => $rating
       );
 
-      array_push($_SESSION['all_games'],$post_item);
+      array_push($all_games,$post_item);
     }
       
-
+    echo json_encode($all_games);
  
 
   } 

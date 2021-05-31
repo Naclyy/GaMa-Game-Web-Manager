@@ -5,7 +5,8 @@ if(!isset($_SESSION))
 { 
     session_start(); 
 } 
-
+header('Acces-Control-Allow-Origin: *');
+header('Content-Type: application/json');
 
 include_once dirname(__FILE__) . '/../config/database.php';
 include_once dirname(__FILE__) . '/../models/game.php';
@@ -21,7 +22,7 @@ $game = new Game($db);
 $result = $game->getMostPopularGame();
 
 $num = $result->rowCount();
-$_SESSION['popular_games']= array();
+$popular_games= array();
   // Check if any posts
   if($num > 0) {
    
@@ -35,11 +36,11 @@ $_SESSION['popular_games']= array();
         
       );
 
-      array_push($_SESSION['popular_games'],$post_item);
+      array_push($popular_games,$post_item);
     }
       
 
- 
+    echo json_encode($popular_games);
 
   } 
 

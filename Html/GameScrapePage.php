@@ -3,7 +3,10 @@
   { 
     session_start(); 
   }
+  if(!isset($_SESSION['game_id']))
+  {
   $_SESSION['game_id'] = $_POST['id'];
+  }
   ?>
 <!DOCTYPE html>
 <html>
