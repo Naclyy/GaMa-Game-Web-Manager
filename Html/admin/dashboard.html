@@ -11,9 +11,10 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
+
+
 </head>
 <body>
-
     <div class="content">
         <div class="logo">
 
@@ -30,7 +31,7 @@
           </ul>
     </div>
 
-    <div class="everything">
+    <div class="everything" id="pdf">
         <div class = "cardBox">
             <div class = "card">
                 <div>
@@ -75,11 +76,19 @@
         </div>
         </div>
         <div>
-            <button class="button" >Download Statistics</button>
+            <button class="button" onclick="screenshot()">Download Statistics PDF</button>
                 <!-- download button-->
         </div>
     </div>
 </div>
+
+<!-- download statistics pdf-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js" integrity="sha512-OqcrADJLG261FZjar4Z6c4CfLqd861A3yPNMb+vRQ2JwzFT49WT4lozrh3bcKxHxtDTgNiqgYbEUStzvZQRfgQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="../../Js/downloadPDFSS_DashBoard.js"></script>
+
+<!-- download statistics text, must add saveDiv('pdf','Title') instead of screenshot() -->
+<script src="../../Js/downloadPDFText.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="../../Js/dashboard.js"></script>
