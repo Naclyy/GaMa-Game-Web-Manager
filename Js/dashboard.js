@@ -1,3 +1,5 @@
+var csvFileData = "";
+
 function getUsers(){
     var ajax = new XMLHttpRequest();
     var method = "GET";
@@ -15,6 +17,8 @@ function getUsers(){
             var users = JSON.parse(this.responseText);
             
             var number = users.length;
+
+            csvFileData = csvFileData + "Users," + number + ",";
 
             var there = document.getElementById("user_number");
 
@@ -40,6 +44,8 @@ function getTournaments(){
             
             var number = tournaments.length;
 
+            csvFileData = csvFileData + "Tournaments," + number + ",";
+
             var there = document.getElementById("tournament_number");
 
             there.innerHTML=number;
@@ -63,6 +69,8 @@ function getGames(){
         {   var games = JSON.parse(this.responseText);
             
             var number =games.length;
+
+            csvFileData = csvFileData + "Games," + number + ",";
 
             var there = document.getElementById("game_number");
 
@@ -90,6 +98,8 @@ function getComments(){
             
             var number =comments.length;
 
+            csvFileData = csvFileData + "Comments," + number;
+
             var there = document.getElementById("comment_number");
 
             there.innerHTML = number;
@@ -99,6 +109,17 @@ function getComments(){
     }
 }
 
+function csvFunction() {  
+  
+    //define the heading for each row of the data  
+    var hiddenElement = document.createElement('a');  
+    hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csvFileData);  
+    hiddenElement.target = '_blank';
+     
+    //provide the name for the CSV file to be downloaded  
+    hiddenElement.download = 'sample.csv';  
+    hiddenElement.click();  
+}  
 
 getUsers();
 getTournaments();
