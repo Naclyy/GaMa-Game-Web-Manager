@@ -141,4 +141,16 @@ public function changePass($id,$newpassword)
   
   return $stmt;
 }
+
+public function updateUser($id)
+    {  
+         $query="UPDATE " . $this->table . " SET admin = 1 WHERE id = " . $id;
+
+        $stmt=$this->conn->prepare($query);
+    
+        $stmt->execute();
+  
+        return $stmt;
+    }
+
 }

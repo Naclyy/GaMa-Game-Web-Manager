@@ -34,6 +34,7 @@ function getGameRank()
                 else{
                     xmlFileData = xmlFileData + title + " has " + rating + " comment" + "\n";
                 }
+                
              var li = document.createElement("li");
              li.classList.add("w3-display-container");
              li.innerHTML=title;

@@ -19,32 +19,54 @@ function getUsers(){
               var name = users[i].username;
               var id = users[i].id;
               var admin = users[i].admin;
+              console.log(id);
 
               var li = document.createElement("li");
               li.classList.add("w3-display-container");
               li.innerHTML=name;
               li.style.border="2px solid black";
 
-              var form=document.createElement("form");
-              form.setAttribute("action","../../Php/api/deleteUser.php");
-              form.setAttribute("method","post");
-              form.setAttribute("id" , "delete-form");
 
-              var button = document.createElement("button");
-              button.setAttribute("type","submit");
-              button.setAttribute("name","id");
-              button.setAttribute("value",id);
-              button.classList.add("w3-button","w3-transparent","w3-display-right");
-              button.innerHTML="&times;";
+              var makeAdmin=document.createElement("form");
+              makeAdmin.setAttribute("action","../../Html/admin/setAdmin.php");
+              makeAdmin.setAttribute("method","post");
 
-              form.appendChild(button);
-              li.appendChild(form);
+              var setButton=document.createElement("button");
+              setButton.setAttribute("type","submit");
+              setButton.setAttribute("name","id");
+              setButton.setAttribute("value",id);
+              setButton.classList.add("w3-button","w3-transparent","w3-display-right");
+              setButton.style.marginRight="35px";
+              setButton.innerHTML="Make Admin";
+
+              makeAdmin.appendChild(setButton);
+
+              var deleteForm=document.createElement("form");
+              deleteForm.setAttribute("action","../../Php/api/deleteUser.php");
+              deleteForm.setAttribute("method","post");
+              deleteForm.setAttribute("id" , "delete-form");
+
+              var deleteButton = document.createElement("button");
+              deleteButton.setAttribute("type","submit");
+              deleteButton.setAttribute("name","id");
+              deleteButton.setAttribute("value",id);
+              deleteButton.classList.add("w3-button","w3-transparent","w3-display-right");
+              deleteButton.innerHTML="&times;";
+
+              deleteForm.appendChild(deleteButton);
+
+              
               if(admin == 1)
               {
+                
+                li.appendChild(deleteForm);
                 listAdmins.appendChild(li);
               }
               else{
+                li.appendChild(makeAdmin);
+                li.appendChild(deleteForm);
                 listUsers.appendChild(li);
+                
               }
               
 

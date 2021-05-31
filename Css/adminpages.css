@@ -445,3 +445,17 @@ body {
     font-size: 20px;
     cursor: pointer;
   }
+  .everything-score .title {
+    padding-top: 30%;
+  }
+
+  .button2{
+    width: 80%;
+  color:rgb(233, 230, 227);
+  background-color: #555;
+  position: relative;
+  margin-left: 9%;
+  margin-top: 2%;
+  font-size: 20px;
+  cursor: pointer;
+  }
