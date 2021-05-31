@@ -27,12 +27,9 @@
     </div>
 
     <div class="dropdown">
-      <button class="dropbtn">Sort</button>
-    <div class="dropdown-content sort">
-      <button class="btn" onclick="sortByName(0)"> by name asc</button>
-      <button class="btn" onclick="sortByName(1)"> by name desc</button>
-      <button class="btn" onclick="sortByRating(0)"> by rating asc</button>
-      <button class="btn" onclick="sortByRating(1)"> by rating desc</button>
+      <button class="dropbtn">Age</button>
+    <div class="dropdown-content " id="user_pegi_age">
+      <button class="btn" onclick="filterAge('all')"> ShowAll</button>
     </div>
     </div>
 
@@ -59,12 +56,9 @@
         <button onclick = "location.href ='../Html/statistics/game_rankings.php'" class="dropbtn">Statistics</button>
       </div>
       <div class="dropdown">
-        <button class="dropbtn">Sort</button>
-      <div class="dropdown-content">
-        <button class="btn" onclick="sortbyName(0)"> by name asc</button>
-        <button class="btn" onclick="sortByName(1)"> by name desc</button>
-        <button class="btn" onclick="sortByRating(0)"> by rating asc</button>
-        <button class="btn" onclick="sortByRating(1)"> by rating desc</button>
+        <button class="dropbtn">Age</button>
+      <div class="dropdown-content " id="all_pegi_age">
+        <button class="btn" onclick="filterAgeAll('all')"> ShowAll</button>
       </div>
       </div>
       
@@ -94,7 +88,10 @@
 
   <div class="content" id="usergames">
     <div class="left_button">
-      <a href="../Html/next_page_play.html"><img id="image" src="../Poze/left_arrow.png" alt = "Left Arrow"></a>
+      <a style="text-align: center;" href="../Html/next_page_play.html"><img id="image" src="../Poze/left_arrow.png" alt = "Left Arrow"></a>
+      <p style="text-align: center;">Go To</p>
+      <p style="text-align: center;">tournaments</p>
+      <p style="text-align: center;">account</p>
    </div>
   <div class="games_gallery">
   </div>
