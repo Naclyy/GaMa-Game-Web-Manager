@@ -19,6 +19,11 @@ function getComments(current_game_id)
                  if(comment != null && id_game == current_game_id){
                         var li = document.createElement("li");
                         li.innerHTML=comment;
+
+                        var p = document.createElement("p"); 
+                        getUserName(comment_list.user_id,p);
+                        
+                        list.appendChild(p);
                         list.appendChild(li);
                         number = 1;
                          }
@@ -190,3 +195,43 @@ function getGameSlide5(current_game_id)
 
 }
 
+function getGameSlide5(current_game_id)
+{  
+    var method = "POST";
+    var url="../Php/api/getGameInfo.php";
+    id = current_game_id;
+    $.ajax({
+        url : url,
+        type : method,
+        data : {id : id},
+        success: function (resp){
+            var poza=document.getElementById("slide5");
+            var imagine = document.createElement("VIDEO");
+            imagine.setAttribute("src",resp.game_video_src);
+            imagine.setAttribute("controls","controls");
+            poza.appendChild(imagine);
+
+        }
+    });
+}
+
+    
+    function getUserName(user_id,p){
+        var method = "POST";
+        var url = "../Php/api/getUserFromReview.php";
+        console.log(user_id);
+        $.ajax({
+            url : url,
+            type : method,
+            data : {user_id: user_id},
+            success: function (res){
+                var users = res;
+                for(var i=0;i<users.length;i++){
+                    var user = users[i];
+                    if(user.id == user_id)
+                        p.innerHTML=user.username;
+                }
+                
+            }
+        });
+    }

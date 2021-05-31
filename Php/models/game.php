@@ -48,6 +48,17 @@ class Game{
         return $stmt;
     }
 
+    public function getUserName(){
+
+        $query="Select user.id as id, username from user JOIN review ON review.user_id = user.id group by id";
+
+        $stmt=$this->conn->prepare($query);
+ 
+        $stmt->execute();
+ 
+        return $stmt;
+    }
+
 
     public function getGamesByRatingNumber(){
 
