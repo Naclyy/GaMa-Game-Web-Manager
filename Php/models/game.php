@@ -72,11 +72,11 @@ class Game{
     }
 
 
-    public function addGame($title,$url,$category)
+    public function addGame($title,$url,$category,$pegi_age)
    {
     if($title != null && $url != null)
     {
-    $query="INSERT INTO " . $this->table . " (title,url,category) values('" . $title . "','" . $url . "','" . $category . "')";
+    $query="INSERT INTO " . $this->table . " (title,url,category,pegi_age) values('" . $title . "','" . $url . "','" . $category . "','" . $pegi_age . "')";
 
     $stmt=$this->conn->prepare($query);
 
