@@ -28,10 +28,10 @@ class User{
        return $stmt;
    }
 
-   public function createaccount($username,$password,$firstname,$lastname,$emailaddress)
+   public function createaccount($username,$password,$firstname,$lastname,$emailaddress,$admin)
    {
     if($username != null && $password != null && $firstname != null && $lastname != null && $emailaddress != null)
-    {$query="INSERT INTO " . $this->table . " (username,password,firstname,lastname,emailaddress) values('" . $username . "','" . $password . "','" . $firstname . "','" . $lastname . "','" . $emailaddress . "')" ;
+    {$query="INSERT INTO " . $this->table . " (username,password,firstname,lastname,emailaddress,admin) values('" . $username . "','" . $password . "','" . $firstname . "','" . $lastname . "','" . $emailaddress . "','" . $admin . "')" ;
 
     $stmt=$this->conn->prepare($query);
 

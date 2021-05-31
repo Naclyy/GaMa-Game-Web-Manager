@@ -23,7 +23,7 @@ $result = $user->getUsers();
 
 $num = $result->rowCount();
 $all_users= array();
-  // Check if any posts
+
 if($num > 0) {
     
 
@@ -36,7 +36,8 @@ if($num > 0) {
         'password' => $password,
         'firstname' => $firstname,
         'lastname' => $lastname,
-        'emailaddress' => $emailaddress
+        'emailaddress' => $emailaddress,
+        'admin' => $admin
       );
 
       array_push($all_users,$post_item);

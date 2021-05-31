@@ -225,7 +225,7 @@ body {
     z-index: 1; /* Sit on top */
     left: -1px;
     top: 25%;
-    width: 689px; /* Full width */
+    width: 720px; /* Full width */
     height: 540px;
     overflow-y: scroll;
     background-color: rgb(0,0,0); /* Fallback color */
@@ -332,4 +332,107 @@ body {
   
   .content .everything-score input[type=submit]:hover {
     background-color: #45a049;
+  }
+
+  .content .everything .addAdminModal input[type=text],input[type=password]{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* Add a background color when the inputs get focus */
+.content .everything .addAdminModal input[type=text]:focus,input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for all buttons */
+.content .everything .addAdminModal button {
+    background-color: #262626;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+.content .everything .addAdminModal button:hover {
+    opacity:1;
+  }
+
+  
+  
+  /* Extra styles for the cancel button */
+.content .everything .addAdminModal .cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+  }
+  
+  /* Float cancel and signup buttons and add an equal width */
+.content .everything .addAdminModal .cancelbtn, .enterbtn {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Add padding to container elements */
+.content .everything .addAdminModal .container {
+    padding: 16px;
+    
+    
+  }
+  
+  /* The Modal (background) */
+.content .everything .addAdminModal{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: -1px;
+    top: 25%;
+    width: 720px; /* Full width */
+    height: 540px;
+    overflow-y: scroll;
+    background-color: rgb(0,0,0); /* Fallback color */
+    
+  }
+  
+  /* Modal Content/Box */
+.content .everything .addAdminModal .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* Style the horizontal ruler */
+.content .everything .addAdminModal hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+   
+  /* The Close Button (x) */
+.content .everything .addAdminModal .close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+  }
+  
+.content .everything .addAdminModal .close:hover,
+.content .everything .addAdminModal .close:focus {
+    color: #f44336;
+    cursor: pointer;
+  }
+  
+  /* Clear floats */
+.content .everything .addAdminModal .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
   }

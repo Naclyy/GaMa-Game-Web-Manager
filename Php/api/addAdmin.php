@@ -15,7 +15,7 @@ $db = $database->connect();
 
 $user = new User($db);
 
-$result = $user->createaccount($_POST["username"],$_POST["password"],$_POST["firstname"],$_POST["lastname"],$_POST["email"],0);
+$result = $user->createaccount($_POST["username"],$_POST["password"],$_POST["firstname"],$_POST["lastname"],$_POST["email"],1);
 
 if($result)
 {
