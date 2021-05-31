@@ -92,7 +92,7 @@ function getComments(){
 
             var there = document.getElementById("comment_number");
 
-            there.innerHTML=number;
+            there.innerHTML = number;
 
     
          }

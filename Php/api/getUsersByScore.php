@@ -5,6 +5,8 @@ if(!isset($_SESSION))
 { 
     session_start(); 
 } 
+header('Acces-Control-Allow-Origin: *');
+header('Content-Type: application/json');
 
 
 include_once dirname(__FILE__) . '/../config/database.php';
@@ -21,7 +23,7 @@ $users = new User_tournament($db);
 $result = $users->getUsersScore();
 
 $num = $result->rowCount();
-$_SESSION['all_users_score']= array();
+$all_users_score= array();
    // Check if any posts
    if($num > 0) {
     
@@ -34,11 +36,11 @@ $_SESSION['all_users_score']= array();
         'scores' => $scores
       );
 
-      array_push($_SESSION['all_users_score'],$post_item);
+      array_push($all_users_score,$post_item);
     }
       
 
-    // header("Location: ../../Html/main_page_play.php", true, 301);
+     echo json_encode($all_users_score);
 
   } 
 
