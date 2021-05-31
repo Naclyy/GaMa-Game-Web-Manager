@@ -36,7 +36,7 @@ if($num == 1) {
          
       }
 
-      echo $_SESSION['user_id'];
+      echo $admin;
     } 
     else {
       return false;

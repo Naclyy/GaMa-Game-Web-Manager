@@ -10,6 +10,22 @@ function getTournamentInfo(tournament_id)
         type : method,
         data : {tournament_id:tournament_id},
         success: function (response){
+
+
+            var form1 = document.createElement("form");
+            form1.setAttribute("action","../Html/TournamentScrapePage.php");
+            form1.setAttribute("method","post");
+            form1.setAttribute("name","form1");
+            form1.style.display="none";
+
+            var input1= document.createElement("input");
+            input1.setAttribute("type","hidden");
+            input1.setAttribute("name","tournament_id");
+            input1.setAttribute("value",tournament_id);
+
+            form1.appendChild(input1);
+            document.getElementsByClassName("disk_opened_left")[0].appendChild(form1);
+
             var tournament=response;
             var content = document.getElementsByClassName("content")[0];
             var title=content.getElementsByClassName("title")[0];
@@ -169,7 +185,7 @@ $('form.register').on('submit',function(){
         success: function (response){
                 if(response==1)
                 {
-                 window.location.href = "../Html/TournamentScrapePage.php";
+                 document.form1.submit();
                 }
                 else{
                     
