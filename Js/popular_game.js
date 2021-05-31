@@ -1,4 +1,5 @@
 var csvFileData="'\u0022'";
+var xmlFileData = "";
 function getGameRank()
 {  
     var ajax = new XMLHttpRequest();
@@ -27,6 +28,18 @@ function getGameRank()
                      csvFileData = csvFileData + "," + '\u0022' + title + '\u0022' + "," + number;
                 }
 
+                if(number != 1){
+                    xmlFileData = xmlFileData + "Only " + number + " users have " + title + " in their inventory" + "\n";
+                    }
+                    else{
+                        if(number == 0){
+                            xmlFileData = xmlFileData + "No users have " + title + " in their inventory" + "\n";
+                        }
+                        else{
+                            xmlFileData = xmlFileData + "Only " + number + " user has " + title + " in their inventory" + "\n";
+                        }
+                    }
+
              var li = document.createElement("li");
              li.classList.add("w3-display-container");
              li.innerHTML=title;
@@ -51,4 +64,15 @@ function csvFunction() {
     hiddenElement.download = 'sample.csv';  
     hiddenElement.click();  
 }  
+function docBookFunction(){
+    //define the heading for each row of the data  
+    var hiddenElement = document.createElement('a');  
+    hiddenElement.href = 'data:xml;charset=utf-8,' + encodeURI(xmlFileData);  
+    hiddenElement.target = '_blank';
+     
+    //provide the name for the CSV file to be downloaded  
+    hiddenElement.download = 'sample.xml';  
+    hiddenElement.click();  
+}
+
 getGameRank();

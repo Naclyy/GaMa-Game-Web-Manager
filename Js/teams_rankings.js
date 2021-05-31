@@ -1,4 +1,5 @@
 var csvFileData="'\u0022'";
+var xmlFileData = "";
 function getGameRank()
 {  
     var ajax = new XMLHttpRequest();
@@ -27,6 +28,13 @@ function getGameRank()
                      csvFileData = csvFileData + "," + '\u0022' + team_name + '\u0022' + "," + score;
                 }
 
+                if(score  != 1){
+                    xmlFileData = xmlFileData + team_name + " has the score of " + score + " points" + "\n";
+                    }
+                    else{
+                        xmlFileData = xmlFileData + team_name + " has the score of " + score + " point" + "\n";
+                    }    
+
              var li = document.createElement("li");
              li.classList.add("w3-display-container");
              li.innerHTML=team_name;
@@ -51,4 +59,15 @@ function csvFunction() {
     hiddenElement.download = 'sample.csv';  
     hiddenElement.click();  
 }  
+function docBookFunction(){
+    //define the heading for each row of the data  
+    var hiddenElement = document.createElement('a');  
+    hiddenElement.href = 'data:xml;charset=utf-8,' + encodeURI(xmlFileData);  
+    hiddenElement.target = '_blank';
+     
+    //provide the name for the CSV file to be downloaded  
+    hiddenElement.download = 'sample.xml';  
+    hiddenElement.click();  
+}
+
 getGameRank();
