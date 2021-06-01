@@ -48,6 +48,7 @@ $num = $result->rowCount();
     $_SESSION['game_info'] = $info;
     $_SESSION['game_video_src'] = $video;
     $_SESSION['game_system_req'] = $system;
+    $_SESSION['pegi_age'] = $pegi_age;
     $_SESSION['game_screenshots_src'] = array();
 
     foreach($html->find('.highlight_player_item.highlight_screenshot') as $a)
@@ -67,6 +68,7 @@ $num = $result->rowCount();
     'game_info' => $info,
     'game_video_src' => $video,
     'game_system_req' => $system,
+    'pegi_age' => $pegi_age,
     'game_screenshots_src' =>  $_SESSION['game_screenshots_src']
     );
   

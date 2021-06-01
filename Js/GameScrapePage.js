@@ -76,20 +76,31 @@ function getGameInfo(current_game_id)
             p.innerHTML=resp.game_info;
             var p2 = document.createElement("p");
             p2.innerHTML=resp.game_system_req;
+            var p3 = document.createElement("h2");
+            p3.classList.add("Rating");
+            p3.style.marginTop="50px";
+            console.log(resp.pegi_age);
+            if(resp.pegi_age > 0)
+                p3.innerHTML="Only "+ resp.pegi_age + "+ can play the game";
+            else p3.innerHTML="Everyone can play the game";
+            console.log(p3);
             var br0 = document.createElement("br");
             var br1 = document.createElement("br");
             var br2 = document.createElement("br");
             var br3 = document.createElement("br");
             var br4 = document.createElement("br");
             var br5 = document.createElement("br");
+            var br6 = document.createElement("br");
             test.appendChild(br0);
             test.appendChild(p);
             test.appendChild(br1);
             test.appendChild(br2);
             test.appendChild(br3);
             test.appendChild(br4);
-            test.appendChild(br5);
             test.appendChild(p2);
+            test.appendChild(br5);
+            test.appendChild(br6);
+            test.appendChild(p3);
             
         }
     });
@@ -229,7 +240,7 @@ function getGameSlide5(current_game_id)
                 for(var i=0;i<users.length;i++){
                     var user = users[i];
                     if(user.id == user_id)
-                        p.innerHTML=user.username;
+                        p.innerHTML= "&#128587; " + user.username;
                 }
                 
             }

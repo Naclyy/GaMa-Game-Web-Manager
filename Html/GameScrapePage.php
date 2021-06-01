@@ -3,7 +3,7 @@
   { 
     session_start(); 
   }
-  if(!isset($_SESSION['game_id']))
+  if(isset($_POST['id']))
   {
   $_SESSION['game_id'] = $_POST['id'];
   }
@@ -90,7 +90,7 @@
 
 
 
-
+          <h2 class = "Rating" id = "game_rating"> Rating: 5 	&#9734;</h2>
 
             <br>
           <h2 class = "Rating"> Comments from Users </h2>

@@ -367,3 +367,7 @@ h2.Gameplay{
   text-align: center;
 }
 
+.box p{
+    font-size: 20px;
+    margin-left: -30px;
+}
