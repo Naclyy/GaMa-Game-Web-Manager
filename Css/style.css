@@ -181,12 +181,10 @@
 .disk_opened_right .content .left_button a
 {
   float:left;
-}
-.disk_opened_right .content .left_button a #image
-{
   width: 80%;
+  content: url("../Poze/left_arrow.png");
 }
-.disk_opened_right .content .left_button a #image:hover
+.disk_opened_right .content .left_button a:hover
 {
   content: url("../Poze/left_arrow_hover.png");
 }
