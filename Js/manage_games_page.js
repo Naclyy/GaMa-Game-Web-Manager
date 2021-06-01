@@ -25,6 +25,22 @@ function getGames(){
              li.innerHTML=title;
              li.style.border="2px solid black";
 
+
+              var editComment=document.createElement("form");
+              editComment.setAttribute("action","../../Html/admin/editComment.php");
+              editComment.setAttribute("method","post");
+
+              var setButton=document.createElement("button");
+              setButton.setAttribute("type","submit");
+              setButton.setAttribute("name","id");
+              setButton.setAttribute("value",id);
+              setButton.classList.add("w3-button","w3-transparent","w3-display-right");
+              setButton.style.marginRight="35px";
+              setButton.innerHTML="Edit Comments";
+
+              editComment.appendChild(setButton);
+
+
              var form=document.createElement("form");
              form.setAttribute("action","../../Php/api/deleteGame.php");
              form.setAttribute("method","post");
@@ -38,6 +54,7 @@ function getGames(){
              button.innerHTML="&times;";
 
              form.appendChild(button);
+             li.appendChild(editComment);
              li.appendChild(form);
              list.appendChild(li);
 

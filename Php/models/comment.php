@@ -49,6 +49,13 @@ public function exists($user_id , $game_id)
 
     return $stmt;
 }
+public function deleteComment($id)
+{
+ $query="DELETE FROM " . $this->table . " WHERE id =" . $id;
+ $stmt=$this->conn->prepare($query);
+
+ $stmt->execute();
+}
 
 }
 
