@@ -41,6 +41,30 @@ function getComments(current_game_id)
 
 }
 
+function getRating(current_game_id)
+{
+    var method = "POST";
+    var url="../Php/api/getRating.php";
+    id = current_game_id;
+    $.ajax({
+        url : url,
+        type : method,
+        data : {id : id},
+        success: function (resp){
+              
+            var h2 = document.getElementById("game_rating");
+            if(resp == null)
+            {
+                h2.innerHTML="No rating yet";
+            }
+            else{
+                h2.innerHTML="Rating : " + resp + "&#9734;";
+            }
+            
+        }
+    });
+}
+
 function getPoza(current_game_id)
 {  
    

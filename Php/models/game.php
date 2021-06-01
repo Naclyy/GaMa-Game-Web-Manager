@@ -139,6 +139,16 @@ class Game{
     
 
     }
+
+    public function getGameRating($id)
+    {
+        $query = "SELECT rating FROM " . $this->table . " WHERE id=" . $id;
+        $stmt=$this->conn->prepare($query);
+ 
+        $stmt->execute();
+ 
+        return $stmt;
+    }
     
 }
 

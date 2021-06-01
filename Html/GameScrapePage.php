@@ -90,7 +90,7 @@
 
 
 
-          <h2 class = "Rating" id = "game_rating"> Rating: 5 	&#9734;</h2>
+          <h2 class = "Rating" id = "game_rating"></h2>
 
             <br>
           <h2 class = "Rating"> Comments from Users </h2>
@@ -122,9 +122,11 @@
                   <div class="btn">
                     <button type="submit">Post</button>
                   </div>
+                  </div>
                   </form>
               </div>
             </div>
+            
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
             
@@ -161,6 +163,7 @@
    getGameSlide5(<?php echo $_SESSION['game_id'] ?>);
    getPoza(<?php echo $_SESSION['game_id'] ?>);  
    alreadyRegistered(<?php echo $_SESSION['game_id'] ?>);
+   getRating(<?php echo $_SESSION['game_id'] ?>);
   </script>
     </body>
 </html>
