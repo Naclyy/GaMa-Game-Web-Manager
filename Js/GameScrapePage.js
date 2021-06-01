@@ -291,6 +291,22 @@ function getGameSlide5(current_game_id)
 
                container.appendChild(h3);
 
+               var newForm=document.createElement("form");
+               newForm.style.textAlign="center";
+               newForm.setAttribute("method","post");
+               newForm.setAttribute("action","../Php/api/deleteRating.php");
+
+               var button=document.createElement("button");
+               button.style.backgroundColor="transparent";
+               button.style.cursor="pointer";
+               button.style.fontSize="15px";
+               button.setAttribute("type","submit");
+               button.innerHTML="DELETE"; 
+
+               newForm.appendChild(button);
+
+               container.appendChild(newForm);
+
 
             }
             else

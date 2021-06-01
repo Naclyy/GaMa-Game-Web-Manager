@@ -57,6 +57,9 @@ $allgames= array();
  
 
   } 
+else{
+  echo json_encode(0);
+}
 
 ?>
 

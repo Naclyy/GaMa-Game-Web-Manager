@@ -24,6 +24,6 @@ $game_id=$_POST['game_id'];
 
 $result = $tournament->addTournament($name,$email,$phone,$organizer,$begin_date,$end_date,$game_id);
 
-header('Location: ../../Html/admin/manage_tournaments_page.php', true, 301);
+header('Location: ../../Html/admin/manage_tournaments_page.html', true, 301);
 
 ?>

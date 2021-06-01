@@ -57,6 +57,15 @@ public function deleteComment($id)
  $stmt->execute();
 }
 
+public function deleteRating($user_id , $game_id)
+{
+    $query="DELETE FROM " . $this->table . " WHERE game_id= " . $game_id . " and user_id= " . $user_id ;
+    
+    $stmt=$this->conn->prepare($query);
+
+    $stmt->execute();
+}
+
 }
 
 ?>
