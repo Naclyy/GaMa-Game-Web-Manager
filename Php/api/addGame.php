@@ -13,6 +13,8 @@ $database = new Database();
 $db = $database->connect();
 
 $game = new Game($db);
+if(!($game->exists($_POST['url'])))
+{
 $html=file_get_html($_POST['url']);
 $category=$html->find(".glance_tags.popular_tags",0)->first_child()->plaintext;
 $category = preg_replace("/\s+/", "", $category);
@@ -33,5 +35,5 @@ else
 $result = $game->addGame($title,$url,$category,$pegi_age);
 
 echo json_encode($result);
-
+}
 ?>

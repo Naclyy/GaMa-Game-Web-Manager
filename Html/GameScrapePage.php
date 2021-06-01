@@ -21,7 +21,7 @@
         <!-- It will show in the search engine the Author name.-->
         <link rel="shortcut icon" href="Icon.ico" type="image/x-icon">
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-        <title>play? - Apex</title>
+        <title>play? - Game</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
     </head>

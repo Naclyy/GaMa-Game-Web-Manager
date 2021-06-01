@@ -150,6 +150,21 @@ class Game{
         return $stmt;
     }
     
+    public function exists($url)
+    {
+        $query = "SELECT * FROM " . $this->table . " WHERE url='" . $url . "'";
+        $stmt=$this->conn->prepare($query);
+ 
+        $stmt->execute();
+ 
+        if($stmt->rowCount() > 0)
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 }
 
 ?>
