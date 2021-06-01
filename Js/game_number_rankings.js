@@ -41,7 +41,12 @@ function getGameRank()
              li.style.border="2px solid black";
              var p = document.createElement("p");
              p.classList.add("w3-button","w3-transparent","w3-display-right");
-             p.innerHTML=rating;
+             if(rating > 0){
+                p.innerHTML=rating;
+             }
+                else {
+                    p.innerHTML=0;
+                }
              li.appendChild(p);
              list.appendChild(li);
             }

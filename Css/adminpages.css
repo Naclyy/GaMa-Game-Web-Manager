@@ -136,7 +136,6 @@ body {
   .content .everything .list{
     display: inline;
     overflow-y: scroll;
-    height: 500px;
   
   }
 
@@ -445,6 +444,8 @@ body {
     font-size: 20px;
     cursor: pointer;
   }
+
+  /*
   .everything-score .title {
     padding-top: 30%;
   }
@@ -459,3 +460,4 @@ body {
   font-size: 20px;
   cursor: pointer;
   }
+  */

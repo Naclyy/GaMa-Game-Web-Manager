@@ -92,11 +92,11 @@ body {
   padding: 16px;
 }
 
-.disk .borders span.psw {
+.disk .borders .psw {
   float: right;
   padding-top: 16px;
 }
-.disk .borders span.password{
+.disk .borders .password{
   float: right;
   padding-top: 16px;
 }

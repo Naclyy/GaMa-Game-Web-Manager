@@ -135,13 +135,14 @@ body {
 
 
 .content .everything .cardBox{
-    position:relative;
-    width: 100%;
-    padding: 30px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-gap:20px;
+    position:relative;
+    width: 100%;
+    padding: 30px;
 }
+
 .content .everything .cardBox .card{
     position: relative;
     background-color: #555; 
@@ -156,7 +157,7 @@ body {
   font-size:  30px;
   font-weight: 500;
   padding-top: 10px;
-  padding-left: 0px;
+  padding-left: 0;
   color:rgb(245, 240, 234);
 }
 .content .everything .cardBox .card .cardName{

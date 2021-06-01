@@ -152,7 +152,7 @@ input:focus, textarea:focus, select:focus{
 
 .disk_opened_left .topnav {
     overflow: hidden;
-    margin: 26px 0px 0px 16px;
+    margin: 26px 0 0 16px;
     background-color: black;
   }
   
@@ -172,7 +172,7 @@ input:focus, textarea:focus, select:focus{
     color: white;
   }
   
-  .disk_opened_left .topnav a.active {
+  .disk_opened_left .topnav .active {
     background-color: gray;
     color: white;
   }
