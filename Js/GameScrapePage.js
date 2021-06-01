@@ -246,3 +246,36 @@ function getGameSlide5(current_game_id)
             }
         });
     }
+
+    function alreadyRegistered(current_game_id)
+{
+    var method = "POST";
+    var url="../Php/api/alreadyCommented.php";
+    
+    $.ajax({
+        url : url,
+        type : method,
+        data : {id:current_game_id},
+        success: function (response){
+            if(response == 1)
+            {  var container=document.getElementById("rating_container");
+               var form = document.getElementById("rating_form");
+               form.style.display="none";
+
+               var h3=document.createElement("h3");
+               h3.innerHTML="You already gave a review";
+
+               container.appendChild(h3);
+
+
+            }
+            else
+            {
+
+            }
+
+        }
+        
+    });
+
+}

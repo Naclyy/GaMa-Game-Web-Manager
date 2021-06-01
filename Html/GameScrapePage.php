@@ -101,8 +101,8 @@
 
               <br>
             <h2 class = "Rating">Give a rating</h2>
-            <div class = "container">
-              <form action="../Php/api/addComment.php" method="post"> 
+            <div class = "container" id="rating_container">
+              <form action="../Php/api/addComment.php" method="post" id="rating_form"> 
               <div class="star-widget">
                 <input type="radio" name="rate" id="rate-5" value = "5">
                 <label for="rate-5" class="fas fa-star"></label>
@@ -160,6 +160,7 @@
    getGameSlide4(<?php echo $_SESSION['game_id'] ?>);
    getGameSlide5(<?php echo $_SESSION['game_id'] ?>);
    getPoza(<?php echo $_SESSION['game_id'] ?>);  
+   alreadyRegistered(<?php echo $_SESSION['game_id'] ?>);
   </script>
     </body>
 </html>
