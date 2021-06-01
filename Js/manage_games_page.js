@@ -13,8 +13,9 @@ function getGames(){
         if(this.readyState==4 && this.status==200)
         {   var list=document.getElementsByClassName("w3-ul","w3-card-4")[0];
             var games = JSON.parse(this.responseText);
+            console.log(games);
             if(games != 0)
-            for(var i=0;i< games.length;i++)
+            for(var i=0;i<games.length;i++)
             { 
              var title = games[i].title;
              var id = games[i].id;
