@@ -88,14 +88,15 @@
 .disk_opened_left .right_button a
 {
   float:left;
-}
-.disk_opened_left .right_button a #image
-{
+  text-align: center;
+  content: url("../Poze/right_arrow.png");
   width: 80%;
 }
-.disk_opened_left .right_button a #image:hover
+.disk_opened_left .right_button a:hover
 {
+  float:left;
   content: url("../Poze/right_arrow_hover.png");
+  width: 80%;
 }
 
 input:focus, textarea:focus, select:focus{
