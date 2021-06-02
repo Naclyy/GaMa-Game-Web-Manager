@@ -25,7 +25,7 @@ function getGameRank()
                     csvFileData = '\u0022' + team_name + '\u0022' + "," + score;
                 }
                 else {
-                     csvFileData = csvFileData + "," + '\u0022' + team_name + '\u0022' + "," + score;
+                     csvFileData = csvFileData + "\n" + '\u0022' + team_name + '\u0022' + "," + score;
                 }
 
                 if(score  != 1){
@@ -56,7 +56,7 @@ function csvFunction() {
     hiddenElement.target = '_blank';
      
     //provide the name for the CSV file to be downloaded  
-    hiddenElement.download = 'sample.csv';  
+    hiddenElement.download = 'statistics_by_score.csv';  
     hiddenElement.click();  
 }  
 function docBookFunction(){
@@ -66,7 +66,7 @@ function docBookFunction(){
     hiddenElement.target = '_blank';
      
     //provide the name for the CSV file to be downloaded  
-    hiddenElement.download = 'sample.xml';  
+    hiddenElement.download = 'statistics_by_score.xml';  
     hiddenElement.click();  
 }
 

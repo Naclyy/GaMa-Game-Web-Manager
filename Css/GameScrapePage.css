@@ -251,7 +251,7 @@ p{
 }
 
   h2{
-    color:rgb(212, 75, 75);
+    color:rgb(75, 180, 212);
     padding: 0 0 10px 0;
   }
   h3{
@@ -263,7 +263,7 @@ p{
 
 .back{
     color:white;
-    background: rgb(187, 70, 70);
+    background: rgb(75, 180, 212);
 }
 .lista{
     position:relative;

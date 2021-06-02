@@ -3,6 +3,6 @@ function screenshot(){
         var imgdata = canvas.toDataURL('image/png');
         var doc = new jsPDF();
         doc.addImage(imgdata,'PNG',10,10);
-        doc.save("sample.pdf")
+        doc.save("statistics_by_popular_game.pdf")
     });
 }

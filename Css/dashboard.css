@@ -161,19 +161,19 @@ body {
   color:rgb(245, 240, 234);
 }
 .content .everything .cardBox .card .cardName{
-  color:bisque;
+  color:rgb(217, 233, 238);
   padding-bottom: 10px;
   font-size: 20px;
 }
 .content .everything .cardBox .card .iconBox{
-  color: rgb(137, 247, 247);
+  color: lightblue;
   font-size: 30px;
   padding-top: 15px;
   padding-right: 15px;
 }
 .content .everything .button{
   width: 80%;
-  color:bisque;
+  color:rgb(217, 233, 238);
   background-color: #555;
   position: relative;
   margin-left: 9%;

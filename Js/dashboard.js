@@ -18,7 +18,7 @@ function getUsers(){
             
             var number = users.length;
 
-            csvFileData = csvFileData + "Users," + number + ",";
+            csvFileData = csvFileData + "Users," + number + "\n";
 
             xmlFileData = xmlFileData + "Users number: " + number + "\n";
 
@@ -46,7 +46,7 @@ function getTournaments(){
             
             var number = tournaments.length;
 
-            csvFileData = csvFileData + "Tournaments," + number + ",";
+            csvFileData = csvFileData + "Tournaments," + number + "\n";
 
             xmlFileData = xmlFileData + "Tournaments number: " + number + "\n";
 
@@ -74,7 +74,7 @@ function getGames(){
             
             var number =games.length;
 
-            csvFileData = csvFileData + "Games," + number + ",";
+            csvFileData = csvFileData + "Games," + number + "\n";
 
             xmlFileData = xmlFileData + "Games number: " + number + "\n";
 
@@ -104,7 +104,7 @@ function getComments(){
             
             var number =comments.length;
 
-            csvFileData = csvFileData + "Comments," + number;
+            csvFileData = csvFileData + "Comments," + number + "\n";
 
             xmlFileData = xmlFileData + "Comments number: " + number;
 
@@ -125,7 +125,7 @@ function csvFunction() {
     hiddenElement.target = '_blank';
      
     //provide the name for the CSV file to be downloaded  
-    hiddenElement.download = 'sample.csv';  
+    hiddenElement.download = 'dashboard.csv';  
     hiddenElement.click();      
 }  
 
@@ -137,7 +137,7 @@ function docBookFunction(){
      hiddenElement.target = '_blank';
       
      //provide the name for the CSV file to be downloaded  
-     hiddenElement.download = 'sample.xml';  
+     hiddenElement.download = 'dashboard.xml';  
      hiddenElement.click();  
 }
 

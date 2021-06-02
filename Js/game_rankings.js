@@ -26,7 +26,7 @@ function getGameRank()
                     csvFileData = '\u0022' + title + '\u0022' + "," + rating;
                 }
                 else {
-                     csvFileData = csvFileData + "," + '\u0022' + title + '\u0022' + "," + rating;
+                     csvFileData = csvFileData + "\n" + '\u0022' + title + '\u0022' + "," + rating;
                 }
 
                 if(rating  != 1){
@@ -63,7 +63,7 @@ function csvFunction() {
     hiddenElement.target = '_blank';
      
     //provide the name for the CSV file to be downloaded  
-    hiddenElement.download = 'sample.csv';  
+    hiddenElement.download = 'statistics_by_stars.csv';  
     hiddenElement.click();  
 }  
 function docBookFunction(){
@@ -73,7 +73,7 @@ function docBookFunction(){
     hiddenElement.target = '_blank';
      
     //provide the name for the CSV file to be downloaded  
-    hiddenElement.download = 'sample.xml';  
+    hiddenElement.download = 'statistics_by_stars.xml';  
     hiddenElement.click();  
 }
 getGameRank();
