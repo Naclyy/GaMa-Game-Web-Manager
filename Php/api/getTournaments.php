@@ -48,4 +48,8 @@ $all_tournaments= array();
     echo json_encode($all_tournaments);
 
   }
+  else
+  {
+    echo json_encode(0);
+  }
 

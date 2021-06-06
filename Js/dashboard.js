@@ -43,7 +43,9 @@ function getTournaments(){
     
         if(this.readyState==4 && this.status==200)
         {   var tournaments = JSON.parse(this.responseText);
-            
+            if(tournaments==0)
+            var number = 0;
+            else
             var number = tournaments.length;
 
             csvFileData = csvFileData + "Tournaments," + number + "\n";
