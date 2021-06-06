@@ -97,7 +97,7 @@ ajax.onreadystatechange = function(){
         var games = JSON.parse(this.responseText);
         for(var i=0;i< games.length;i++)
         { 
-         var title = games[i].title;
+         var title = games[i].title.toLowerCase();
          var id = games[i].id;
          var category = games[i].category;
          var age = games[i].pegi_age;
@@ -168,7 +168,7 @@ ajax.onreadystatechange = function(){
         var games = JSON.parse(this.responseText);
         for(var i=0;i< games.length;i++)
         { 
-         var title = games[i].title;
+         var title = games[i].title.toLowerCase();
          var id = games[i].id;
          var category = games[i].category;
          var age = games[i].pegi_age;
@@ -290,4 +290,65 @@ getGamesCategories();
 getGamesAge();
 filterSelectionAll("all");
 filterSelection("all");  
+
+const searchBar=document.getElementById("myInput");
+const allSearchBar=document.getElementById("myInput2");
+
+searchBar.addEventListener('keyup' , (e) => {
+  var value=e.target.value.toLowerCase();
+
+ $(".game.Filter").each(function() {
+  if(value=="")
+  {
+    if(!($(this).is('[class*="show"]')))
+    {
+     $(this).addClass("show");
+    }
+  }
+  else{
+   if(!($(this).is('[id^="' + value + '"]')) && $(this).is('[class*="show"]'))
+   {
+     $(this).removeClass("show");
+   }
+   else{
+     if(!($(this).is('[class*="show"]')) && $(this).is('[id^="' + value + '"]'))
+     {
+      $(this).addClass("show");
+     }
+    
+   }
+  }
+ });
+});
+
+
+
+allSearchBar.addEventListener('keyup' , (e) => {
+
+  var value=e.target.value.toLowerCase();
+
+  $(".game.allFilter").each(function() {
+   if(value=="")
+   {
+     if(!($(this).is('[class*="show"]')))
+     {
+      $(this).addClass("show");
+     }
+   }
+   else{
+    if(!($(this).is('[id^="' + value + '"]')) && $(this).is('[class*="show"]'))
+    {
+      $(this).removeClass("show");
+    }
+    else{
+      if(!($(this).is('[class*="show"]')) && $(this).is('[id^="' + value + '"]'))
+      {
+       $(this).addClass("show");
+      }
+     
+    }
+   }
+  });
+  
+});
 

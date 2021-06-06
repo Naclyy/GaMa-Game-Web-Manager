@@ -24,7 +24,7 @@
 <div class="beforeload" id="beforeload">
   <div class="itemsbar">
     <div class="searchbox">
-      <input type="text" id="myInput" onkeyup="searchGameFilter()" placeholder="Search for game.." title="Type in a name">
+      <input type="text" id="myInput" placeholder="Search for game.." title="Type in a name">
     </div>
 
     <div class="dropdown">
@@ -51,7 +51,7 @@
     <span class="close">&times;</span>
     <div class="itemsbar">
       <div class="searchbox">
-        <input type="text" id="myInput2" onkeyup="searchGameFilter()" placeholder="Search for game.." title="Type in a name">
+        <input type="text" id="myInput2" placeholder="Search for game.." title="Type in a name">
       </div>
       <div class="ranking">
         <button onclick = "location.href ='../Html/statistics/game_rankings.html'" class="dropbtn">Statistics</button>
@@ -147,12 +147,14 @@
 <script src="../Js/main_page_play.js"></script>
 <script>
   // Wait for window load
-  $(window).ready(function() {
-    // Animate loader off screen
-    $("#preload").fadeOut(7000,function(){
-      $('#beforeload').fadeIn(1000);
+
+</script>
+<script>
+  $(function() {
+    $(".preload").fadeOut(7000, function() {
+        $(".beforeload").fadeIn(1000);        
     });
-  });
+});
 </script>
 </body>
 </html>
