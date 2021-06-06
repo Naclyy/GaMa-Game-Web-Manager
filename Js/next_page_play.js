@@ -13,7 +13,7 @@ function getTournaments(){
         if(this.readyState==4 && this.status==200)
         {   var gallery=document.getElementsByClassName("tournament_gallery")[0];
             var tournaments = JSON.parse(this.responseText);
-            for(var i=0;i< tournaments.length;i++)
+            for(var i=0;i<tournaments.length;i++)
             { 
               tournament=tournaments[i];
               var name=tournament.name;

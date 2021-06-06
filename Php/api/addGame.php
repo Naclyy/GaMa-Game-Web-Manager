@@ -36,4 +36,8 @@ $result = $game->addGame($title,$url,$category,$pegi_age);
 
 echo json_encode($result);
 }
+else
+{
+    echo json_encode(0);
+}
 ?>
