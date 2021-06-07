@@ -52,6 +52,25 @@ body {
 
 }
 
+.beforeload{
+  display:none;
+}
+
+.preload { 
+  background-image : url("../Poze/whiteloading.gif");
+  position: relative;
+  top: 30%; /* IMPORTANT */
+  left: 50%; /* IMPORTANT */
+  display: block;
+  width: 800px;
+  height: 600px;
+  margin-top: -300px; /* Half the height */
+  margin-left: -400px; /* Half the width */
+  transform : scale(0.75);
+  background-repeat: no-repeat;
+
+  }
+  
 .content .logo{
     
     background-image: url("../Poze/big_logo.png");
