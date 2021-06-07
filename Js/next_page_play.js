@@ -50,7 +50,7 @@ function getTournaments(){
            
         }
         $(function() {
-            $(".preload").fadeOut(1000, function() {
+            $(".preload").fadeOut(3000, function() {
                 $(".beforeload").fadeIn(1000);        
             });
         });
