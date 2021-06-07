@@ -34,6 +34,8 @@
             <button onclick = "location.href ='../Html/main_page_play.html'" class="back" >Back to inventory</button>
             <!-- back button-->
         </header>
+        <div class="preload" id="preload" style="margin-top:+250px; background-size:350px;left:53%; margin-left:-300px"> </div>
+        <div class = "beforeload">
 
         <div class = "poza" id = "poza"> </div>
                   
@@ -126,6 +128,7 @@
                   </form>
               </div>
             </div>
+         </div>
             
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">^</button>

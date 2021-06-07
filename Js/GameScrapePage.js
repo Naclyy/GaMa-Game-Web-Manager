@@ -224,7 +224,7 @@ function getGameSlide5(current_game_id)
             imagine.setAttribute("src",resp.game_video_src);
             imagine.setAttribute("controls","controls");
             poza.appendChild(imagine);
-
+            
         }
     });
 
@@ -309,10 +309,11 @@ function getGameSlide5(current_game_id)
 
 
             }
-            else
-            {
-
-            }
+            $(function() {
+                $(".preload").fadeOut(1000, function() {
+                    $(".beforeload").fadeIn(1000);        
+                });
+            });
 
         }
         

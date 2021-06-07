@@ -56,6 +56,7 @@ function getTournaments(){
 
             there.innerHTML=number;
         }
+        
     }
 }
 
@@ -116,6 +117,11 @@ function getComments(){
 
     
          }
+         $(function() {
+            $(".preload").fadeOut(1000, function() {
+                $(".beforeload").fadeIn(1000);        
+            });
+        });
     }
 }
 

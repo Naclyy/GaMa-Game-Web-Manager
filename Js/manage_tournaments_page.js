@@ -56,6 +56,7 @@ function getTournaments(){
              
             }
         }
+        
     }
 }
 
@@ -87,7 +88,13 @@ function getGames(){
     
             }
         }
+        $(function() {
+            $(".preload").fadeOut(1000, function() {
+                $(".beforeload").fadeIn(1000);        
+            });
+        });
     }
+    
 }
 
 
