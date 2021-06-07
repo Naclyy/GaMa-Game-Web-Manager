@@ -220,6 +220,7 @@ input:focus, textarea:focus, select:focus{
   float:left;
   width: 256px;
   height: 144px;
+  font-weight: bold;
 
 }
 .disk_opened_left .content .tournament_gallery .tournament img{

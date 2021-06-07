@@ -218,6 +218,12 @@ ajax.onreadystatechange = function(){
 
 
         }
+
+        $(function() {
+          $(".preload").fadeOut(1000, function() {
+              $(".beforeload").fadeIn(1000);        
+          });
+      });
     }
 }
 }
@@ -284,10 +290,11 @@ function filterAge(c) {
 }
 
 
-getGames();
+
 getUserGames();
 getGamesCategories();
 getGamesAge();
+getGames();
 filterSelectionAll("all");
 filterSelection("all");  
 

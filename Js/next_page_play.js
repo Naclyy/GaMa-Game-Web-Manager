@@ -47,7 +47,13 @@ function getTournaments(){
               
               getTournamentImage(tournament.game_id,img);
             }
+           
         }
+        $(function() {
+            $(".preload").fadeOut(1000, function() {
+                $(".beforeload").fadeIn(1000);        
+            });
+        });
     }
 }
 
