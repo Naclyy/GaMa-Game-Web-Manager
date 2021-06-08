@@ -13,7 +13,11 @@ ajax.onreadystatechange = function(){
     if(this.readyState==4 && this.status==200)
     {   
         var categories = JSON.parse(this.responseText);
-        for(var i=0;i< categories.length;i++)
+
+        n=categories.length;
+        if(n > 6)
+        n=6;
+        for(var i=0;i<n;i++)
         { 
          var category=categories[i];
          var categoryDropdownAll=document.getElementById("allcategories");

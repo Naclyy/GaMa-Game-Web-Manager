@@ -51,7 +51,19 @@ $all_user_games= array();
           extract($row);
     
           $html = file_get_html($url);
-          $postDiv=$html->find('.game_header_image_full',0);
+          if($html->find(".game_header_image_full",0) == null)
+          {
+              $ch = curl_init();
+              curl_setopt($ch, CURLOPT_HTTPHEADER, array("Cookie: birthtime=943999201 wants_mature_content=1 lastagecheckage=1-0-2000"));
+              curl_setopt_array($ch, array(
+                  CURLOPT_RETURNTRANSFER => 1,
+                  CURLOPT_URL => $url
+              ));
+              $str = curl_exec($ch);
+              $html = new simple_html_dom();
+              $html->load($str);
+              curl_close($ch);
+          }       $postDiv=$html->find('.game_header_image_full',0);
           $src=$postDiv->attr['src'];
           if($pegi_age==null)
           $pegi_age="0";
