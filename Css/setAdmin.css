@@ -1,0 +1,13 @@
+.title{
+    padding-top:200px;
+}
+.button2{
+    width: 80%;
+    color:rgb(217, 233, 238);
+    background-color: #555;
+    position: relative;
+    margin-left: 9%;
+    margin-top: 2%;
+    font-size: 20px;
+    cursor: pointer;
+}

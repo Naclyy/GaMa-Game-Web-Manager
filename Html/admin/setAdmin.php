@@ -15,6 +15,7 @@
 <link rel="icon" href="../../Poze/logo.png" type="image/x-icon" sizes="16x16">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href = "../../Css/adminpages.css" rel = "stylesheet">
+<link href = "../../Css/setAdmin.css" rel = "stylesheet">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 </head>
