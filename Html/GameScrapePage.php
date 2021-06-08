@@ -35,6 +35,7 @@
             <!-- back button-->
         </header>
         <div class="preload" id="preload" style="margin-top:+250px; background-size:350px;left:53%; margin-left:-300px"> </div>
+        
         <div class = "beforeload">
 
         <div class = "poza" id = "poza"> </div>

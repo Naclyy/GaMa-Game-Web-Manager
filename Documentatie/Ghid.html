@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link href = "../Documentatie/Documentatie.css" rel = "stylesheet">
+    <title>GaMa</title>
+    
+</head>
+
+<body>
+    <header>
+        <h1>GaMa - Ghid de utilizare</h1>
+    </header>
+    <div role =" contentinfo">
+        <p>
+            O descriere pentru hyper link-uri
+        </p>
+        <ol role="directory">
+            <li>
+                <a href="#proiect">
+                    <span>1. </span>
+                    Introducere
+                </a>
+            </li>
+            <li>
+                <a href="#2">
+                    <span>2. </span>
+                    Login Page
+                </a>
+            </li>
+            <li>
+                <a href="#3">
+                    <span>3. </span>
+                    Register Page
+                </a>
+            </li>
+            <li>
+                <a href="#4">
+                    <span>4. </span>
+                    Admin Page
+                </a>
+            </li>
+            <li>
+                <a href="#5">
+                    <span>5. </span>
+                    User
+                </a>
+            </li>
+            <li>
+                <a href="#6">
+                    <span>6. </span>
+                    Final
+                </a>
+            </li>
+        </ol>
+    </div>
+    <section id="proiect">
+        <h2><span>1. </span>Introducere</h2>
+        <p>
+            GaMa este o pagina Web care ofera pasionatilor de jocuri video oportunitatea de a participa sau crea tournamente. 
+            Totodata site-ul ofera si o platforma de inventariere si rating a jocurilor. 
+            <!-- descriere scurta -->
+        </p>
+    </section>
+
+    <section id="2">
+        <h2><span>2. </span>Login Page</h2>
+        <p>
+            Pagina de inceput a site-ului este chiar ce Login. Pe aceasta pagina se triaza accesul la aplicatie (accesul unui utilizator normal/ accesul unui admin). 
+            Astfel, adminul va fi redirectionat pe alte pagini fata de utilizatorul normal, pagini care au rolul de a oferi un management al site-ului.
+            Utilizatorul de rand pe de alta parte va fi redirectionat pe pagina Home a aplicatiei, care va fi detaliata mai jos.
+        </p>
+        <p>
+        Pentru a accesa contul dumneavoastra, este nevoie sa introduceti username-ul si parola contului.
+        In caz ca nu aveti cont pe platforma noastra, puteti sa va duceti la formularul de inregistrare, apasand butonul <i>Sing up</i>.
+        </p>
+        <!-- detalii loginr -->
+    </section>
+
+    <section id="3">
+        <h2><span>3. </span>Register Page</h2>
+        <p>
+            Mentionata anterior, aici puteti observa un formular pentru a creea un cont pentru aplicatia noastra.
+            Acesta va trebui sa contina numele si prenumele dumneavoastra , o adresa de mail la care va putem contacta , un username pentru a putea fi folosit in aplicatie si o parola pentru a accesa contul dumneavoastra 
+        </p>
+        <!-- detalii register -->
+    </section>
+
+    <section id="4">
+        <h2><span>4. </span>Admin Page</h2>
+        Daca credentialele folosite la login sunt cele ale unui cont de tip admin, atunci veti fi redirectionati catre paginile strict accesibile adminilor cu rolul de gestionare a site-ului care pot fi navigate cu ajutorul navbarului intuitiv.
+        <section id="4.1">
+            <h3><span>4.1 </span>Home Page</h3>
+            <p>
+               Aceasta pagina este destinata intampinarii adminului.
+            </p>
+        </section>
+
+
+        <section id="4.2">
+            <h3><span>4.2 </span>Manage Games Page</h3>
+            <p>
+                Pe aceasta pagina se vor afisa toate jocurile din baza de date a aplicatiei intr-o lista. Totodata in dreapta lor veti observa doua butoane: <i>Edit Comments</i> si un button <i>X</i>.
+            </p>
+            <p>
+                Astfel daca apasati pe butonul de <i>Edit Comments</i> veti fi redirectionati pe o pagina noua in care vi se vor afisa toate comenturile lasate de utilizatori pentru jocul respectiv.
+                In dreptul comentariilor veti observa din nou un buton <i>X</i>. Rostul acestui buton este de a sterge comentariul respectiv.
+                In coltul de stanga sus veti observa un buton de back cu care va veti putea intoarce inapoi la pagian de Manage Games.
+            </p>
+            <p>
+                Butonul <i>X</i> din dreptul numelui jocurilor are un rol asemanator cu cel de la comentarii, mai exact sterge jocul din baza de date.
+            </p>
+            <p>
+                Totodata veti remarca un buton mare in partea de jos a chenarului intitulat <i>Add game</i>.
+                Daca apasati acest buton se va deschide un formular pentru a adauga un joc in baza de data. Astfel in acest formular trebuie sa introduceti numele jocului si URL-ul paginii sale de pe Steam.
+            </p>
+
+        </section>
+
+        <section id="4.3">
+            <h3><span>4.3 </span>Manage Tournaments Page</h3>
+            <p>
+                Pe aceasta pagina se vor afisa toate turnamentele din baza de date a aplicatiei. In dreapta numelor turneelor veti putea observa doua butoane: <i>Set Scores</i> si <i>X</i>.
+            </p>
+            <p>
+                Asemanator cu butonul <i>X</i> de la Manage Games Page, acesta are rolul de a sterge turneul din baza de date.
+            </p>
+            <p>
+                Butonul <i>Set Scores</i> are rolul de redirectiona catre o noua pagina in care se vor vedea toate echipele care participa la turneul respectiv. 
+                Pe aceasta pagina se vor putea seta scorul echipei respective prin completarea chenarului si apasarii butonului de <i>Submit</i>.
+                In coltul de stanga sus se remarca un buton de back care te redirectioneaza inapoi catre pagina de Manage Tournaments.
+            </p>
+            <p>
+                Totodata veti remarca un buton mare in partea de jos a chenarului intitulat <i>Add Tournament</i>.
+                Daca apasati acest buton se va deschide un formular pentru a adauga un turneu in baza de data. 
+                Astfel in acest formular trebuie sa introduceti numele turneului,  email, telefonul si numele organizatorului, data la care incepe si se termina turneul si trebuie selectat un joc din cele valide pentru crearea turneelor.
+                Apoi daca apasati butonul de enter toate datele acestea vor fi introduse in baza de date, iar daca apasati cancel sau pe marginiile negre ale formularului veti fi redirectionati inapoi pe pagina de Manage Tournaments fara a vi se fi salvat datele introduse.
+            </p>
+        </section>
+
+        <section id="4.4">
+            <h3><span>4.4 </span>Manage Users</h3>
+            <p>
+                Pe aceasta pagina se vor afisa toti utilizatorii (atat utilizatorii normali cat si cei admini). In dreptul ambelor tipuri de utilizatori veti observa butonul clasic <i>X</i>. Astfel prin apasarea acestui buton se vor sterge utilizatorii respectivi din baza de date.
+            </p>
+            <p>
+                Interesant este faptul ca utilizatorii normali au un buton in plus fata de admini. Acest buton este cel de <i>Make Admin</i>. Astfel veti fi redirectionati catre o noua pagina pe care trebuie sa confirmati ca sunteti 100% siguri ca vreti sa ii oferiti utilizatorului respectiv drepturile de admin.Totodata in coltul de stanga sus este butonul de back cu care va intoarceti la pagina de Manage Users.
+            </p>
+            <p>
+                Totodata veti remarca un buton mare in partea de jos a chenarului intitulat <i>Add Admin</i>.
+                Daca apasati acest buton se va deschide un formular pentru a adauga un nou admin in baza de data. Astfel, in acest formular va trebui sa introduceti aceleasi date ca si la Register, doar ca contul acesta va avea drepturile de admin.
+            </p>
+        </section>
+        <section id="4.5">
+            <h3><span>4.5 </span>DashBoard</h3>
+            <p>
+                Aceasta pagina este utilizata strict pentru a remarca statistici legate de site.
+                Astfel, putem observa statistici updatate real time pentru numarul de utilizatori al site-ului, numarul de jocuri adaugate, numarul de turnamente create si numarul de comenturi lasate la jocuri.
+                Totodata se pot remarca trei butoane mari de download care ofera posibilitatea de a descarca aceste statistici in formatul: PDF, CSV sau DocBook.
+            </p>
+        </section>
+        <section id="4.6">
+            <h3><span>4.6 </span>X - Button</h3>
+            <p>
+                Daca apasati acest buton din navbar veti fi redirectionati catre pagina de Login.
+            </p>
+        </section>
+    </section>
+<!-- trebuie pentru fiecare pagina -->
+
+
+
+<section id="5">
+    <h2><span>5. </span>User</h2>
+    <section id="5.1">
+        <h3><span>5.1 </span>Home Page</h3>
+        <p>
+            Aceasta pagina are rolul de a ii crea utilizatorului suspans prin afisarea unei dischete de jocuri. Acesta trebuie sa apese pe butonul <i>open </i> pentru a ajunge pe pagina urmatoare sau poate sa mai ramana un timp pentru a admira design-ul site-ului.
+        </p>
+    </section>
+    <section id="5.2">
+      
+        <h3><span>5.2 </span>Main Page</h3>
+        <p>
+            Incepand cu aceasta pagina, discheta de joc se deschide. Astfel, cu pagina Main ne aflam pe partea dreapta a dischetei. 
+            Pentru un utilizator nou, aceasta pagina este goala deoarece inventarul sau cu jocuri este gol.
+            Insa observam trei butoane in partea de stanga sus: <i>Add Game</i>, <i>Age</i> si <i>Category</i> pe care le voi explica pe rand de la coada la cap.
+        </p>
+        <p>
+            Daca faceti hover pe butonul  <i>Category</i> veti observa o lista cu categori de jocuri. Default-ul este ShowAll dar utilizatorul poate selecta sa afiseze jocurile din inventarul sau care respecta categoria selectata.
+        </p>
+        <p>
+            Daca faceti hover pe butonul <i>Age</i> veti observa o lista cu categori de varsta. La fel ca la <i>Category</i>, default-ul este ShowAll dar utilizatorul poate selecta sa afiseze jocurile din inventarul sau care respecta categoria de varsta selectata.
+        </p>
+        <p>
+            Daca apasati pe butonul de <i>Add Game</i> va aparea o lista cu jocurile din baza de date pe care veti putea sa le adaugati inventarului prin butonul <i>Add</i> care va aparea in dreptului jocului pe care doriti sa il adaugati prin hover la imaginea jocului.
+            Totodata va aparea si un buton de <i>Info</i> care va redirectioneaza catre o noua pagina care ofera informatii despre joc. Aceasta pagina ofera o scurta descriere a jocului, lista cu System Requirements, cine poate juca jocul respectiv, cateva poze si un video despre joc pentru a va putea face o idee despre gameplay, ratingul mediu oferit de utilizatorii platformei noastre cu tot cu comentariile de la useri, iar la final ofera oportunitatea de a oferi propiu dumneavoastra review a jocului.
+            Daca ati dat un review deja acestui joc, va aparea butonul de <i>DELETE</i> care va ofera posibilitatea de a va sterge review-ul pentru a crea unul nou. Totodata in coltul de dreapta jos veti observa un buton <i>^</i> intr-un chenar rosu care isi schimba culoarea la hover. Daca apasati pe acest buton veti fi redirectionati la inceputul paginii cu descrierea jocului, iar la inceputul paginii in coltul de sus veti observa un buton mare care va redirectioneaza, daca apasati, inapoi la pagina Main.
+        </p>
+        <p>
+            In acelasi timp veti remarca ca desi butonul de <i>Category</i> si <i>Age</i> raman neschimbate cand apasati pe butonul de <i>Add Game</i>, in locul butonului de <i>Add Game</i> va aparea un nou buton intitulat <i>Statistics</i>.
+            Acest buton va redirectioneaza pe paginiile pe care puteti vedea statistici legate de jocuri si turnee de pe platforma noastra.
+        </p>
+        <p>
+            Total intuitiv, cand adaugati un joc in inventar si faceti hover pe el vor aparea doua butoane. Un buton de <i>Info</i> care face exact acelasi lucru cu butonul de <i>Info</i> din <i>Add Game</i>, dar in loc de butonul de <i>Add</i> apare butonul de <i>Delete</i> care va sterge jocul din inventar.
+        </p>
+        <p>
+            Foarte folositor pentru utilizator este searchbar-ul care prin introducerea unui cuvant va afisa doar jocurile care incep cu cuvantul respectiv. Are aceasi functionalitate in inventar cand si cand apasam pe butonul de <i>Add Game</i>.
+        </p>
+        <br>
+        <p>
+            Cu ajutorul butonului in forma de sageata din stanga, veti putea naviga catre partea dreapta a dischetei, mai exact pe pagina de turnamente. 
+        </p>        
+    </section>
+
+    <section id="5.3">
+        <h3><span>5.3 </span>Statistics</h3>
+        <p>
+            Paginile de statistici au un format similar cu cele de la admin. Astfel navigarea pe paginiile respective se va face prin intermediul unui navbar intuitiv.
+        </p>
+        <p>
+            Toate paginile care urmeaza sa fie enumerate au un lucru in comun, sau mai bine spus trei lucruri in comun si mai exact trei butoane de download a statisticilor: cel PDF, cel CSV si cel DocBook. Aceste butoane descarca informatiile de pe paginile respective in formatele respective.
+        </p>
+        <h4><span>5.3.1 </span>Stars</h4>
+            <p>
+                Pe aceasta pagina utilizatorul poate vedea ranking-ul jocurilor dupa numarul mediu de stele obtinute de la review-urile utilizatorilor.
+            </p>
+        <h4><span>5.3.2 </span>Comments Number</h4>
+            <p>
+                Pe aceasta pagina utilizatorul poate vedea ranking-ul jocurilor dupa numarul de comenturi obtinute de la review-urile utilizatorilor.
+            </p>
+        <h4><span>5.3.3 </span>Teans Score</h4>
+            <p>
+                Pe aceasta pagina utilizatorul poate vedea ranking-ul echipelor dupa scorul obtinut de la turneele la care au participat.
+            </p>
+        <h4><span>5.3.4 </span>Popular Game</h4>
+            <p>
+                Pe aceasta pagina utilizatorul poate vedea ranking-ul jocurilor care au fost adaugate cel mai des in lista utilizatorilor.
+            </p>
+        <h4><span>5.3.5 </span>X</h4>
+            <p>
+                Daca apesi pe acest buton vei fi redirectionat pe pagina Main.
+            </p>
+        
+    </section>
+    <section id="5.4">
+        <h3><span>5.4 </span>Tournaments</h3>
+        <p>
+           Pe aceasta pagina, utilizatorul poate vedea toate turneele la care se poate inscrie de pe platforma noastra. Fiecare turneu este afisat printr-o poza sub care este scris numele turneului respectiv. Poza indica jocul turneului respectiv.
+           Astfel, daca dai hover pe imaginea turneului va aparea butonul de <i>Open</i>. Odata apasat veti fi redirectionati catre o noua pagina pe care veti putea vedea mai multe informatii legate de turneu si lista cu echipele inregistrare ordonate dupa scor. In partea de jos a acestei pagini veti observa un buton <i>Register</i>.
+        </p>
+        <p>
+            Daca apasati acest buton se va deschide un formular in care trebuie sa completati numele echipei, numele din joc, rank-ul echipei si numarul de telefon. Daca sunteti deja inregistrat la turneul respectiv in loc de butonul de register va aparea mesajul "Already Registerd". Nu puteti sa va inscrieti la acelasi turneu de mai multe ori.
+            Totodata in partea de stanga sus veti vedea butonul de back care va redirectioneaza inapoi la pagina cu turnee.
+        </p>
+        <p>
+            In coltul de dreapta sus a paginii de turnee apare un buton <i>Account</i>. Daca apasati pe acest buton veti fi redirectionati pe o noua pagina in care veti putea vedea informatii legate de contul dumneavoastra ( numele si email-ul) si veti avea posibilitatea de a va schimba parola prin completarea unui formular sau de a va da log out prin apasarea unui buton.
+        </p>
+        <p>
+            Importat de mentionat este butonul in forma de sageata care are rolul de a va redirectiona pe partea dreapta a dischetei catre pagina de inventar.
+        </p>
+
+    </section>
+</section>
+
+<section id="6">
+    <h2><span>6. </span>Summary</h2>
+    <p>
+        Acesta a fost ghidul de utilizare a site-ului creat de noi. Daca aveti mai multe intrebari nu ezitati sa ne contactati. Echipa formata din <a  href="https://github.com/irineltudor">Urma Tudor-Irinel </a> si <a  href="https://github.com/Naclyy">Zaharia Andrei-Lucian </a> va ureaza un gaming placut!!!
+    </p>
+</section>
+
+</body>
+
+</html>
