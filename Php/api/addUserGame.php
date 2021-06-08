@@ -4,6 +4,8 @@ if(!isset($_SESSION))
 { 
     session_start(); 
 } 
+header('Acces-Control-Allow-Origin: *');
+header('Content-Type: application/json');
 include_once dirname(__FILE__) . '/../config/database.php';
 include_once dirname(__FILE__) . '/../models/user_game.php';
 include_once dirname(__FILE__) . '/../HtmlParse/simple_html_dom.php';
@@ -21,8 +23,14 @@ $game_id=$_POST['id'];
 $result=$user_game->exists($user_id,$game_id);
 $num = $result -> rowCount();
 if($num == 0)
-$user_game->addGame($user_id,$game_id);
+{
+$result=$user_game->addGame($user_id,$game_id);
+echo json_encode(1);
+}
+else
+{
+    echo json_encode(0);
+}
 
-header('Location: ../../Html/main_page_play.html', true, 301);
 
 ?>

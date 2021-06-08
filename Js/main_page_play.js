@@ -126,7 +126,8 @@ ajax.onreadystatechange = function(){
          infobutton.appendChild(document.createTextNode("Info"));
      
         var deleteform=document.createElement("form");
-        deleteform.setAttribute("action","../Php/api/addUserGame.php");
+        deleteform.classList.add("delete");
+        deleteform.setAttribute("action","../Php/api/deleteUserGame.php");
         deleteform.setAttribute("method","post");
 
         var deletebutton = document.createElement("button");
@@ -146,8 +147,43 @@ ajax.onreadystatechange = function(){
 
          gallery.appendChild(div);
 
+         
 
         }
+        $('form.delete').on('submit',function(){
+          var that = $(this),
+          form=this,
+          url = that.attr('action'),
+          type = that.attr('method'),
+          data = {};
+      
+          that.find('[name]').each(function(index,value){
+              var that = $(this),
+              name = that.attr('name'),
+              value=that.val();
+              data[name]=value;
+          });
+      
+          $.ajax({
+              url : url,
+              type : type,
+              data : data,
+              success: function (response){
+
+                var game = form.parentNode;
+                if(game.parentNode != null)
+                game.parentNode.removeChild(game);
+
+
+                    
+                  
+              }
+          });
+          
+         return false;
+          
+      });
+
     }
 }
 }
@@ -196,6 +232,7 @@ ajax.onreadystatechange = function(){
          infobutton.appendChild(document.createTextNode("Info"));
      
         var addform=document.createElement("form");
+        addform.classList.add("add");
         addform.setAttribute("action","../Php/api/addUserGame.php");
         addform.setAttribute("method","post");
 
@@ -217,6 +254,7 @@ ajax.onreadystatechange = function(){
          gallery.appendChild(div);
 
 
+        
         }
 
         $(function() {
@@ -224,6 +262,131 @@ ajax.onreadystatechange = function(){
               $(".beforeload").fadeIn(1000);        
           });
       });
+
+
+      $('form.add').on('submit',function(){
+        var that = $(this),
+        form=this,
+        url = that.attr('action'),
+        type = that.attr('method'),
+        data = {};
+    
+        that.find('[name]').each(function(index,value){
+            var that = $(this),
+            name = that.attr('name'),
+            value=that.val();
+            
+            data[name]=value;
+        });
+    
+        $.ajax({
+            url : url,
+            type : type,
+            data : data,
+            success: function (response){
+             if(response == 1)
+             {
+              var modal = document.getElementById("AllGames");
+              modal.style.display="none";
+              
+              var game = form.parentNode;
+              var title = game.id;
+              var id = game.firstChild.nextSibling.firstChild.getAttribute('value');
+              var image_src = game.firstChild.getAttribute('src');
+              var gallery = document.getElementById("usergames").getElementsByClassName("games_gallery")[0];
+
+              var div = document.createElement("div");
+              div.classList= game.classList;
+              div.setAttribute("id",title);
+
+              var image = document.createElement("img");
+              image.setAttribute("src",image_src);
+              image.setAttribute("alt",title);
+
+              var infoform = document.createElement("form");
+              infoform.setAttribute("action","../Html/GameScrapePage.php");
+              infoform.setAttribute("method","post");
+
+              var infobutton = document.createElement("button");
+              infobutton.setAttribute("value",id);
+              infobutton.setAttribute("type","submit");
+              infobutton.setAttribute("name","id");
+              infobutton.classList.add("infobtn");
+              infobutton.appendChild(document.createTextNode("Info"));
+   
+               var deleteform=document.createElement("form");
+               deleteform.classList.add("delete");
+              deleteform.setAttribute("action","../Php/api/deleteUserGame.php");
+              deleteform.setAttribute("method","post");
+
+              var deletebutton = document.createElement("button");
+              deletebutton.setAttribute("value",id);
+              deletebutton.setAttribute("type","submit");
+              deletebutton.setAttribute("name","id");
+              deletebutton.classList.add("deletebtn");
+              deletebutton.appendChild(document.createTextNode("Delete"));
+
+
+              infoform.appendChild(infobutton);
+              deleteform.appendChild(deletebutton);
+       
+              div.appendChild(image);
+              div.appendChild(infoform);
+              div.appendChild(deleteform);
+
+              gallery.appendChild(div);
+
+              $('form.delete').on('submit',function(){
+                var that = $(this),
+                form=this,
+                url = that.attr('action'),
+                type = that.attr('method'),
+                data = {};
+            
+                that.find('[name]').each(function(index,value){
+                    var that = $(this),
+                    name = that.attr('name'),
+                    value=that.val();
+                    data[name]=value;
+                });
+            
+                $.ajax({
+                    url : url,
+                    type : type,
+                    data : data,
+                    success: function (response){
+                    
+                      var game = form.parentNode;
+                      if(game.parentNode != null)
+                      game.parentNode.removeChild(game);
+      
+      
+                          
+                        
+                    }
+                });
+                
+               return false;
+                
+            });
+                  
+                
+            }
+            else
+            { $(function() {
+                $("#error_text").fadeIn(2000);
+                $("#error_text").fadeOut(2000);
+              });
+          
+            }
+          }
+        });
+        
+       return false;
+        
+    });
+
+
     }
 }
 }

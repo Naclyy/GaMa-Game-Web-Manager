@@ -19,6 +19,5 @@ $id = $_POST["id"];
 
 $game->deleteGame($id);
 
-header('Location: ../../Html/admin/manage_games_page.html', true, 301);
 
 ?>
