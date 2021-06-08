@@ -118,8 +118,8 @@ function getTournamentTeams(tournament_id)
                     }
                 });
                 
-            
-                return false;
+               return false;
+                
             });
               
             }
