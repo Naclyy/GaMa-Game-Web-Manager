@@ -13,7 +13,35 @@
         <header>
             <h1>GaMa - Scholarly HTML Report</h1>
         </header>
-        <div role="contentinfo">
+        <div role =" contentinfo">
+            <ol role="directory">
+                <li>
+                    <a href="#1">
+                        
+                        Introduction
+                    </a>
+                </li>
+                <li>
+                    <a href="#2">
+                        
+                        Overall Description
+                    </a>
+                </li>
+                <li>
+                    <a href="#3">
+                       
+                        External Interface Requirements
+                    </a>
+                </li>
+                <li>
+                    <a href="#4">
+                        
+                        System Features
+                    </a>
+                </li>
+            </ol>
+        </div>
+        <div role="contentinfo" id ="1">
             <section role="doc-introduction">
                 <h2>1. Introduction</h2>
                 <section>
@@ -57,7 +85,7 @@
                     </ul>
                 </section>
             </section>
-            <section>
+            <section id = "2">
                 <h2>
                     2. Overall Description
                 </h2>
@@ -165,7 +193,7 @@
                     </p>
                 </section>
             </section>
-            <section role="presentation">
+            <section role="presentation" id = "3">
                 <h2>
                     3. External Interface Requirements
                 </h2>
@@ -639,7 +667,7 @@
                     Pentru a accesa si a utiliza datele, am folosit request-uri HTTP(GET si POST) via stilului arhitectural API REST , astfel : de fiecare data cand am avut de prelucrat o informatie introdusa de utilizator , controllerul respectiv trimite informatia la modelul corespunzator prin apeluri $_POST ale datelor introduse. Am folosit apeluri $_GET pentru a extrage diferite informatii din baza de date si le-am gestionat astfel incat sa fie afisate in modul dorit.
                 </p>
             </section>
-            <section role="doc-introduction">
+            <section role="doc-introduction" id = "4">
                 <h2>4. System Features</h2>
                 <section>
                     
@@ -808,7 +836,11 @@
                     <dl><dt></dt>
                         <dd>Am adaugat loading-ul care este prezent pana cand sunt adaugate toate informatiile pe pagina la toate paginile de la admin.</dd>
                     </dl>
-                    <h4>4.1.14 Notiuni care nu au mai prins lumina zilei</h4>
+                    <h4>4.1.14 Documentatie/Ghid</h4>
+                    <dl><dt></dt>
+                        <dd>Am realizat documentatia si ghid-ul</dd>
+                    </dl>
+                    <h4>4.1.15 Notiuni care nu au mai prins lumina zilei</h4>
                     <dl><dt></dt>
                         <dd>
                             Template-ul initial al jocurilor ( cele 20 de jocuri adaugate de mana &#128531;)
