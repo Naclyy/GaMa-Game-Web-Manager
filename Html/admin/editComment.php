@@ -37,13 +37,17 @@
 
                 <div class="everything">
                 
+                <div class="preload" style="margin-top: 0; top: 0%;">
+
+                </div>
+                <div class="beforeload">
                     <h1 style = "text-align:center;margin-bottom:50px" class="title"></h1>
                     <div class="w3-container" style="overflow-y: scroll;height: 300px;">
                         <ul class="w3-ul w3-card-4">
 
                         </ul>
                     </div>
-                
+                </div>
                 </div>
     </div>
 

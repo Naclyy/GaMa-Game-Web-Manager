@@ -27,7 +27,7 @@
                     <p>Formatul acestui document este <a href="https://w3c.github.io/scholarly-html/">Scholarly
                             HTML</a>, construit conform specificatiilor precizate in macheta <a href="https://github.com/rick4470/IEEE-SRS-Tempate">IEEE System Requirements Specification
                             Template</a> .
-                    <div></div><div></div></p>
+                    <div></div><div></div>
                 </section>
                 <section>
                     <h3>1.3 Intended Audience and Reading Suggestions </h3>
@@ -67,18 +67,18 @@
                         2.1 Product perspective
                     </h3>
                     <p>
-                        <!-- descriere a site-ului-->>
+                        <!-- descriere a site-ului-->
                     </p>
                     <figure typeof="sa:image">
-                        <img src="#" style="width: 650px;">
+                        <img src="../Poze/Poze_Documentatie/Diagrame/Application_Diagram.png" style="width: 1200px;">
                         <figcaption>Fig. 1 - Application Diagram</figcaption>
                     </figure>
                     <figure typeof="sa:image">
-                        <img src="#" style="width: 650px;">
+                        <img src="../Poze/Poze_Documentatie/Diagrame/UseCase.png" style="width: 1200px;">
                         <figcaption>Fig. 2 - UseCase Diagram</figcaption>
                     </figure>
                     <figure typeof="sa:image">
-                        <img src="#" style="width: 650px;">
+                        <img src="../Poze/Poze_Documentatie/Diagrame/Uml.png" style="width: 650px;">
                         <figcaption>Fig. 3 - UML Simple Diagram</figcaption>
                     </figure>
                     <!-- diagramele-->
@@ -95,8 +95,33 @@
                             Login
                         </li>
                         <li>
-                            Etc
+                            Add to Inventory
                         </li>
+                        <li>Delete from Inventory</li>
+                        <li>See game's information</li>
+                        <li>Sort using searchbar</li>
+                        <li>Sort using Age category</li>
+                        <li>Sort using Game category</li>
+                        <li>View Statistics</li>
+                        <li>Download Statistics as CSV</li>
+                        <li>Download Statistics as PDF</li>
+                        <li>Download Statistics as DockBook</li>
+                        <li>Register to Tournament</li>
+                        <li>View Tournament Information</li>
+                        <li>View Account informations</li>
+                        <li>Change account password</li>
+                        <li>Log Out</li>
+                        <li>Add Game to DB</li>
+                        <li>Delete Game from DB</li>
+                        <li>Add Admin to DB</li>
+                        <li>Delete Admin from DB</li>
+                        <li>Delete User from DB</li>
+                        <li>Add Tournament to DB</li>
+                        <li>Delete Tournament from DB</li>
+                        <li>Delete Comments from DB</li>
+                        <li>Make a user admin</li>
+                        <li>Set Score</li>
+                        <li>Register Tournament</li>
                        
                     </ul>
                 </section>
@@ -121,6 +146,7 @@
                         2.5 Design and Implementation Constraints
                     </h3>
                     <p>
+                        Nu avem limitari in contextul actual. 
                         <!-- Add games-ul, gen url-ul?-->
                     </p>
                 </section>
@@ -157,7 +183,7 @@
                     In functie de credentialele folosite, va redirectiona utilizatorul catre pagina de admin sau cea de user normal. 
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/Login.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/Login.png" style="width: 650px;">
                     <figcaption>Fig. 1 - Login Page</figcaption>
                 </figure>
 
@@ -168,7 +194,7 @@
                     Daca acesta in schimb apasa pe butonul de cancel sau pe marginea neagra, va fi redirectionat inapoi la Login.
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/Sign Up.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/Sign_Up.png" style="width: 650px;">
                     <figcaption>Fig. 1 - Sign Up</figcaption>
                 </figure>
                 <br>
@@ -180,7 +206,7 @@
                     Pentru a continua, utilizatorul trebuie sa apese pe butonul Open.
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/Home.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/Home.png" style="width: 650px;">
                     <figcaption>Fig. 1 - Home Page</figcaption>
                 </figure>
 
@@ -190,13 +216,13 @@
 
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/InventoryGol.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/InventoryGol.png" style="width: 650px;">
                     <figcaption>Fig. 1 - Inventory Empty</figcaption>
                 </figure>
 
                 <p>Dupa cum se poate observa in Fig. 2, utilizatorul are la dispozitie trei butoane si un searchbar pentru a interactiona cu jocurile.</p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/InventoryButoane.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/InventoryButoane.png" style="width: 650px;">
                     <figcaption>Fig. 2 - Inventory Buttons</figcaption>
                 </figure>
                 <p>
@@ -205,36 +231,36 @@
                     
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/SearchBar.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/SearchBar.png" style="width: 650px;">
                     <figcaption>Fig. 3 - Search Bar</figcaption>
                 </figure>
                 <p>
                     Butonul AddGame: Va deschide un modal in care utilizatorul va putea alege unul din jocurile din baza de date. (vezi Fig. 4)
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/AddGame.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/AddGame.png" style="width: 650px;">
                     <figcaption>Fig. 4 - AddGame</figcaption>
                 </figure>
                 <p>
                     Butonul Age: Daca faci hover la buton, va aparea un meniu dupa care sa poti sorta jocurile dupa categoria de varsta pe care le ai afisate in inventar sau in modalul cu toate jocurile. (vezi Fig. 5 si Fig. 6)
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/AgeCategory.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/AgeCategory.png" style="width: 650px;">
                     <figcaption>Fig. 5 - Age Button</figcaption>
                 </figure>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/AgeCategorySelected.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/AgeCategorySelected.png" style="width: 650px;">
                     <figcaption>Fig. 6 - Age Selection</figcaption>
                 </figure>
                 <p>
                     Butonul Category: La fel ca la butonul Age daca faci hover la buton, va aparea un meniu dupa care sa poti sorta jocurile dupa categoria lor (ex: FPS, Open-World) pe care le ai afisate in inventar sau in modalul cu toate jocurile. (vezi Fig. 7 si Fig. 8)
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/CategoryCategory.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/CategoryCategory.png" style="width: 650px;">
                     <figcaption>Fig. 7 - Category Button</figcaption>
                 </figure>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/CategorySelected.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/CategorySelected.png" style="width: 650px;">
                     <figcaption>Fig. 8 - Category Selection</figcaption>
                 </figure>
                 <p>
@@ -242,7 +268,7 @@
     
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/Arrow.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/Arrow.png" >
                     <figcaption>Fig. 9 - Next Page</figcaption>
                 </figure>
                 <p>
@@ -252,11 +278,11 @@
                     Butonul de info va redirectiona utilizatorul catre pagina cu informatia jocului respectiv ( vezi la ......), iar butonul add respectiv delete va adauga sau sterge un joc din inventar.
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/add_info_game.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/add_info_game.png" style="width: 650px;">
                     <figcaption>Fig. 10 - Info/Add </figcaption>
                 </figure>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/Info_Delete_game.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/Info_Delete_game.png" style="width: 650px;">
                     <figcaption>Fig. 11 - Info/Delete </figcaption>
                 </figure>
                 <p>
@@ -267,14 +293,14 @@
                     Observam ca fiecare pagina are un navbar intuitiv care asigura trecerea de la o pagina la alta. Butonul X din coltul din dreapta al navbar-ului redirectioneaza utilizatorul inapoi catre Main Page.(vezi Fig.12)
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/NavBar.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/NavBar.png" style="width: 650px;">
                     <figcaption>Fig. 12 - NavBar </figcaption>
                 </figure>
                 <p>
                     In acelasi timp, fiecare pagina de statistici are trei butone care permite utilizatorului sa descarce statisticile sub unul dintre cele trei formate oferi: CSV,PDF sau DocBook. (vezi Fig. 13)
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/DownloadButtons.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/DownloadButtons.png" style="width: 650px;">
                     <figcaption>Fig. 13 - Download Buttons </figcaption>
                 </figure>
                 <h4>3.1.5 Stars Page</h4>
@@ -282,7 +308,7 @@
                     Pe aceasta pagina utilizatorul poate vedea ranking-ul jocurilor dupa numarul mediu de stele obtinute de la review-urile utilizatorilor.(vezi Fig. 1)
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/Stars.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/Stars.png" style="width: 650px;">
                     <figcaption>Fig. 1 - Stars Page </figcaption>
                 </figure>
                 <h4>3.1.6 Comments Number Page</h4>
@@ -290,7 +316,7 @@
                     Pe aceasta pagina utilizatorul poate vedea ranking-ul jocurilor dupa numarul de comenturi obtinute de la review-urile utilizatorilor.(vezi Fig. 1)
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/Comment.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/Comment.png" style="width: 650px;">
                     <figcaption>Fig. 1 - Comments Number Page </figcaption>
                 </figure>
                 <h4>3.1.7 Teams Score</h4>
@@ -298,7 +324,7 @@
                     Pe aceasta pagina utilizatorul poate vedea ranking-ul echipelor dupa scorul obtinut de la turneele la care au participat.(vezi Fig. 1)
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/Score.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/Score.png" style="width: 650px;">
                     <figcaption>Fig. 1 - Teams Score </figcaption>
                 </figure>
                 <h4>3.1.8 Popular Game Page</h4>
@@ -306,7 +332,7 @@
                     Pe aceasta pagina utilizatorul poate vedea ranking-ul jocurilor care au fost adaugate cel mai des in lista utilizatorilor.(vezi Fig. 1)
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/Popular.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/Popular.png" style="width: 650px;">
                     <figcaption>Fig. 1 - Popular Game Page </figcaption>
                 </figure>
 
@@ -317,40 +343,40 @@
                     Pe aceasta pagina se vor afisa informatii legate de jocul selectat precum o mica descriere a jocului, system requirements si categoria de varsa(vezi Fig. 1)
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/GameScrape.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/GameScrape.png" style="width: 650px;">
                     <figcaption>Fig. 1 - Game Info Page </figcaption>
                 </figure>
                 <p>
                     Un slideshow cu poze si un video despre jocul respectiv(vezi Fig. 2 si Fig. 3)
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/pozaSlide.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/pozaSlide.png" style="width: 650px;">
                     <figcaption>Fig. 2 - Slide Picture</figcaption>
                 </figure>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/VideoSlide.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/VideoSlide.png" style="width: 650px;">
                     <figcaption>Fig. 3 - Slide Video </figcaption>
                 </figure>
                 <p>
                     Urmat ratingul jocului si de lista cu comenturi (vezi Fig. 4) si posibilitatea de a lasa un review (vezi Fig. 5).
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/CommentBox.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/CommentBox.png" style="width: 650px;">
                     <figcaption>Fig. 4 - Comment </figcaption>
                 </figure>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/ReviewBox.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/ReviewBox.png" style="width: 650px;">
                     <figcaption>Fig. 5 - Review </figcaption>
                 </figure>
                 <p>
                     Totodata se remarca doua butoane foarte importante, butonul de back to top care se afla in partea de dreapta jos a paginii (vezi Fig. 6) si butonul de back care se afla in partea de sus a paginii(vezi Fig. 7) care te va redirectiona inapoi la Main Page.
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/Top.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/Top.png" style="width: 650px;">
                     <figcaption>Fig. 6 - Back to Top Button </figcaption>
                 </figure>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/BackButton.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/BackButton.png" style="width: 650px;">
                     <figcaption>Fig. 7 - Back to Inventory </figcaption>
                 </figure>
 
@@ -359,14 +385,14 @@
                     Pe aceasta pagina se vor afisa toate turneele la care poate un utilizator participa.(vezi Fig. 1).
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/tournamentlist.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/tournamentlist.png" style="width: 650px;">
                     <figcaption>Fig. 1 - Next Page </figcaption>
                 </figure>
                 <p>
                     Daca dai hover pe poza de la turnament va aparea butonul open care te va redirectiona catre pagina turneului respectiv.(vezi Fig. 2)
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/hoverTournament.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/hoverTournament.png" style="width: 650px;">
                     <figcaption>Fig. 2 - Open Button </figcaption>
                 </figure>
                 <p>
@@ -379,7 +405,7 @@
                 (vezi Fig. 1)
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/tourne.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/tourne.png" style="width: 650px;">
                     <figcaption>Fig. 1 - Tournament </figcaption>
                 </figure>
                 <p>
@@ -387,7 +413,7 @@
 
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/registerTurneu.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/registerTurneu.png" style="width: 650px;">
                     <figcaption>Fig. 2 - Tournament Register </figcaption>
                 </figure>
                 <h4>3.1.12 Account Page</h4>
@@ -396,7 +422,7 @@
                     (vezi Fig. 1)Daca utilizatorul apasa butonul de Log Out acesta va fi redirectionat la pagina de login unde va trebui sa se logheze din nou.
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/Account.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/Account.png" style="width: 650px;">
                     <figcaption>Fig. 1 - Account Page </figcaption>
                 </figure>
 
@@ -409,7 +435,7 @@
                     Aceasta pagina are rolul de a intampina adminul dupa reusirea login-ului.(vezi Fig. 1)
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/Admin_page.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/Admin_page.png" style="width: 650px;">
                     <figcaption>Fig. 1 - Admin Page </figcaption>
                 </figure>
 
@@ -418,7 +444,7 @@
                     Pe aceasta pagina se vor afisa toate jocurile din baza de date a aplicatiei intr-o lista. Totodata in dreapta lor veti observa doua butoane: <i>Edit Comments</i> si un button <i>X</i>.(vezi Fig. 1)
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/manageGames.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/manageGames.png" style="width: 650px;">
                     <figcaption>Fig. 1 - Manage Games </figcaption>
                 </figure>
                 <p>
@@ -427,7 +453,7 @@
                     In coltul de stanga sus veti observa un buton de back cu care va veti putea intoarce inapoi la pagina de Manage Games.
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/editComments.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/editComments.png" style="width: 650px;">
                     <figcaption>Fig. 2 - Edit Comments </figcaption>
                 </figure>
                 <p>
@@ -438,7 +464,7 @@
                     Daca apasati acest buton se va deschide un formular pentru a adauga un joc in baza de data. Astfel in acest formular trebuie sa introduceti numele jocului si URL-ul paginii sale de pe Steam.(vezi Fig. 3)
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/addGame_formular.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/addGame_formular.png" style="width: 650px;">
                     <figcaption>Fig. 3 - Add Game </figcaption>
                 </figure>
 
@@ -449,7 +475,7 @@
                     Pe aceasta pagina se vor afisa toate turnamentele din baza de date a aplicatiei. In dreapta numelor turneelor veti putea observa doua butoane: <i>Set Scores</i> si <i>X</i>.(vezi Fig. 1)
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/manageTournaments.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/manageTournaments.png" style="width: 650px;">
                     <figcaption>Fig. 1 - Manage Tournaments </figcaption>
                 </figure>
                 <p>
@@ -461,7 +487,7 @@
                     In coltul de stanga sus se remarca un buton de back care te redirectioneaza inapoi catre pagina de Manage Tournaments.
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/setScore.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/setScore.png" style="width: 650px;">
                     <figcaption>Fig. 2 - Edit Score </figcaption>
                 </figure>
                 <p>
@@ -471,7 +497,7 @@
                     Apoi daca apasati butonul de enter toate datele acestea vor fi introduse in baza de date, iar daca apasati cancel sau pe marginiile negre ale formularului veti fi redirectionati inapoi pe pagina de Manage Tournaments fara a vi se fi salvat datele introduse.
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/addTournaments.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/addTournaments.png" style="width: 650px;">
                     <figcaption>Fig. 3 - Add Tournament </figcaption>
                 </figure>
 
@@ -481,14 +507,14 @@
                     Pe aceasta pagina se vor afisa toti utilizatorii (atat utilizatorii normali cat si cei admini). In dreptul ambelor tipuri de utilizatori veti observa butonul clasic <i>X</i>. Astfel prin apasarea acestui buton se vor sterge utilizatorii respectivi din baza de date.(vezi Fig. 1)
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/ManageUsers.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/ManageUsers.png" style="width: 650px;">
                     <figcaption>Fig. 1 - Manage Users </figcaption>
                 </figure>
                 <p>
                     Interesant este faptul ca utilizatorii normali au un buton in plus fata de admini. Acest buton este cel de <i>Make Admin</i>. Astfel veti fi redirectionati catre o noua pagina pe care trebuie sa confirmati ca sunteti 100% siguri ca vreti sa ii oferiti utilizatorului respectiv drepturile de admin.Totodata in coltul de stanga sus este butonul de back cu care va intoarceti la pagina de Manage Users.(vezi Fig. 2)
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/makeAdmin.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/makeAdmin.png" style="width: 650px;">
                     <figcaption>Fig. 2 - Make Admin </figcaption>
                 </figure>
                 <p>
@@ -496,7 +522,7 @@
                     Daca apasati acest buton se va deschide un formular pentru a adauga un nou admin in baza de data. Astfel, in acest formular va trebui sa introduceti aceleasi date ca si la Register, doar ca contul acesta va avea drepturile de admin.(vezi Fig. 3)
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/addUserFormular.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/addUserFormular.png" style="width: 650px;">
                     <figcaption>Fig. 3 - Add Admin </figcaption>
                 </figure>
                 
@@ -507,7 +533,7 @@
                     Totodata se pot remarca trei butoane mari de download care ofera posibilitatea de a descarca aceste statistici in formatul: PDF, CSV sau DocBook.
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Parcurgere Site/DashBoard.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Parcurgere_Site/DashBoard.png" style="width: 650px;">
                     <figcaption>Fig. 1 - DashBoard Page </figcaption>
                 </figure>
                 <h3>
@@ -521,15 +547,15 @@
                     Versiunea cea mai stabila este Google Chrome (browser-ul folosit de noi pentru debug), insa continutul ar trebui sa fie afisat in aceeasi maniera pentru fiecare tip de browser!
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Browser_Interaction/Microsoft.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Browser_Interaction/Microsoft.png" style="width: 650px;">
                     <figcaption>Fig. 1 - GaMa Page on Microsoft Edge</figcaption>
                 </figure>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Browser_Interaction/Chrome.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Browser_Interaction/Chrome.png" style="width: 650px;">
                     <figcaption>Fig. 2 - GaMa Page on Google Chrome</figcaption>
                 </figure>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Browser_Interaction/Mozila.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Browser_Interaction/Mozila.png" style="width: 650px;">
                     <figcaption>Fig. 3 - GaMa Page on Mozilla Firefox</figcaption>
                 </figure>
                 <h4>
@@ -539,38 +565,83 @@
                     Atunci cand am proiectat paginile, cu ajutorul optiunilor "Inspect Element" din browserul Chrome, am incercat pe cat posibil sa implementam elementele in asa fel incat sa se vada bine pe orice tip de device (fie smartphone, tableta, laptop, 4K)!<br>                    Iata cateva exemple, pentru pagina de Index, pe unele tipuri de display!
                 </p>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Reactive/Mobile.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Reactive/Mobile.png" style="width: 650px;">
                     <figcaption>Fig. 1 - Index Page on Mobile</figcaption>
                 </figure>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Reactive/tablet.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Reactive/tablet.png" style="width: 650px;">
                     <figcaption>Fig. 2 - Index Page on Tablet</figcaption>
                 </figure>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Reactive/Laptop.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Reactive/Laptop.png" style="width: 650px;">
                     <figcaption>Fig. 3 - Index Page on Laptop</figcaption>
                 </figure>
                 <figure typeof="sa:image">
-                    <img src="../Poze/Poze Documentatie/Reactive/4k.png" style="width: 650px;">
+                    <img src="../Poze/Poze_Documentatie/Reactive/4k.png" style="width: 650px;">
                     <figcaption>Fig. 4 - Index Page on 4K</figcaption>
                 </figure>
                 <h3>
                     3.3 Software Interfaces
                 </h3>
-                
+                    Pentru implementarea Back-End a proiectului nostru, ne-am folosit de platforma XAMPP pentru a face legatura intre baza de date si aplicatie. Astfel am creat sase tabele pe care le voi enumera mai jos.
+                    <dl>
+                        <dt>
+                            game
+                        </dt>
+                        <dd>
+                            In acest tabel sunt stocate titlul jocului, url de pe care luam informatiile despre joc, categoria, numarul de rating-uri, media ratingului si categoria de varsta.
+                        </dd>
+                        <dt>
+                            review
+                        </dt>
+                        <dd>
+                            In acest tabel stocam id-ul jocului la care utilizatorul da review, id-ul utilizatorului, ratingul si comentariul pe care l-a oferit .
+                        </dd>
+                        <dt>
+                            tournaments
+                        </dt>
+                        <dd>
+                            In tabela tournaments avem numele turneului, email, telefonul si numele organizatorului precum si data la care incepe si se termina si id-ul jocului care o sa fie folosit la turneu.
+                        </dd>
+                        <dt>
+                            user_game
+                        </dt>
+                        <dd>
+                            Acest tabel retine id-ul utilizatorului si id-ul jocului pe care il are in inventar.
+                        </dd>
+                        <dt>
+                            user_tournaments
+                        </dt>
+                        <dd>
+                            In acest tabel se retine id-ul utilizatorului care a completat formular, id-ul turneului ales, numele echipe, IGN-ul, rank-ul, numarul de telefon si score-ul.
+                        </dd>
+                        <dt>
+                            user
+                        </dt>
+                        <dd>
+                            Acest tabel retine username-ul, parola, numele, prenumele, email-ul unui utilizator si daca acesta este admin sau nu.
+                        </dd>
+                    </dl>
+                    <p>
+                        Am folosit AJAX pentru a actualiza asincron majoritatea paginilor prin schimbul unor date cu serverul din culise.Acest lucru ne-a permis sa actualizam parti ale pagini web fara a reincarca intreaga pagina. 
+                        
+                    </p>
+                    <p>
+                        Am folosit curl pentru a transfera date ale jocurilor care necesitau o verificare a varstei, astfel cu ajutorul acestui instrument am putut sa accesam acea pagina de verificare a varstei si sa trecem peste ea cu ajutorul cookie-urilor. 
+                        
+                    </p>
+                    <p>
+                        Modelul aplicatie noastre este in felul urmator: pentru fiecare functie a modelului am creat un API aferent.
+                    </p>
                 <h3>
                     3.4 Communications Interfaces
                 </h3>
                 <p>
-                    Pentru a accesa si a utiliza datele, am folosit request-uri HTTP(GET si POST) via stilului arhitectural API REST , astfel : de fiecare data cand am avut de prelucrat o informatie introdusa de utilizator , controllerul respectiv trimite informatia la modelul corespunzator prin apeluri $_POST ale datelor introduse.
+                    Pentru a accesa si a utiliza datele, am folosit request-uri HTTP(GET si POST) via stilului arhitectural API REST , astfel : de fiecare data cand am avut de prelucrat o informatie introdusa de utilizator , controllerul respectiv trimite informatia la modelul corespunzator prin apeluri $_POST ale datelor introduse. Am folosit apeluri $_GET pentru a extrage diferite informatii din baza de date si le-am gestionat astfel incat sa fie afisate in modul dorit.
                 </p>
             </section>
             <section role="doc-introduction">
                 <h2>4. System Features</h2>
-                <section>
-                    <h3>4.0 Architecture</h3>
-                    
-                </section>
                 <section>
                     
                     <h3>4.1 Zaharia Andrei-Lucian's Contributions</h3>
@@ -587,16 +658,18 @@
                     <dl>
                        
                         <dt>All Games Modal</dt>
-                        <dt>Am adaugat functionalitatea la butonul de statistici ca sa te redirectioneze pe paginile respective</dt>
+                        <dd>Am adaugat functionalitatea la butonul de statistici ca sa te redirectioneze pe paginile respective</dd>
                     </dl>
 
                     <h4>4.1.2 Game Scrape Page</h4>
                     <h5>Front-End</h5>
                     <dl>
+                        <dt></dt>
                         <dd>Design-ul complet al paginii</dd>
                     </dl>
                     <h5>Back-End</h5>
                     <dl>
+                        <dt></dt>
                         <dd>Am realizat functionalitatea butonului de Back to Inventory</dd>
                         <dd>Am realizat functionalitatea de a afisa ratingul jocului</dd>
                         <dd>An realizat functionalitatea butonului de back to top</dd>
@@ -609,21 +682,25 @@
                     <h4>4.1.3 Manage Games page</h4>
                     <h5>Front-End</h5>
                     <dl>
+                        <dt></dt>
                         <dd>Am adaugat loading-ul care este prezent pana cand sunt adaugate toate informatiile pe pagina.</dd>
                         <dd>Am stilizat bara de navigatie + butonul de editare comentarii</dd>
                     </dl>
                     <h5>Back-End</h5>
                     <dl>
+                        <dt></dt>
                         <dd>Am adaugat functionalitatea butonului de editComments</dd>
                     </dl>
 
                     <h4>4.1.4 Edit Comments page</h4>
                     <h5>Front-End</h5>
                     <dl>
+                        <dt></dt>
                         <dd>Design-ul</dd>
                     </dl>
                     <h5>Back-End</h5>
                     <dl>
+                        <dt></dt>
                         <dd>Am adaugat loading-ul care este prezent pana cand sunt adaugate toate informatiile pe pagina.</dd>
                         <dd>Am adaugat functionalitatea butonului de x de a sterge comentul din baza de date</dd>
                     </dl>
@@ -632,6 +709,7 @@
 
                     <h5>Front-End</h5>
                     <dl>
+                        <dt></dt>
                         <dd>Am  stilizat bara de navigatie</dd>
                     </dl>
 
@@ -639,30 +717,36 @@
                     <h4>4.1.6 Manage Users page</h4>
                     <h5>Front-End</h5>
                     <dl>
+                        <dt></dt>
                         <dd>Am stilizat bara de navigatie + buton make admin</dd>
                     </dl>
                     <h5>Back-End</h5>
                     <dl>
+                        <dt></dt>
                         <dd>Am adaugat functionalitatea butonului make admin de a te redirectiona pe pagina respectiva</dd>
                     </dl>
 
                     <h4>4.1.7 Make Admin</h4>
                     <h5>Front-End</h5>
                     <dl>
+                        <dt></dt>
                         <dd>Design</dd>
                     </dl>
                     <h5>Back-End</h5>
                     <dl>
+                        <dt></dt>
                         <dd>Functionalitatea de a da update la un user de la utilizator de rand la admin</dd>
                     </dl>
 
                     <h4>4.1.8 DashBoard</h4>
                     <h5>Front-End</h5>
                     <dl>
+                        <dt></dt>
                         <dd>Design</dd>
                     </dl>
                     <h5>Back-End</h5>
                     <dl>
+                        <dt></dt>
                         <dd>Functionalitatea de a updata in timp real casuta de users,</dd>
                         <dd>Functionalitatea de a updata in timp real casuta de games</dd>
                         <dd>Functionalitatea de a updata in timp real casuta de tournaments </dd>
@@ -674,10 +758,11 @@
                     <h4>4.1.9 Ranking by Stars Page</h4>
                     <h5>Front-End</h5>
                     <dl>
+                        <dt></dt>
                         <dd>Design</dd>
                     </dl>
                     <h5>Back-End</h5>
-                    <dl>
+                    <dl><dt></dt>
                         <dd>preluarea informatiilor legate de numele jocului si numarul mediu de stelute asociate acestuia</dd>
                         <dd>Functionalitatea butonului de download PDF</dd>
                         <dd>Functionalitatea butonului de download CSV</dd>
@@ -685,11 +770,11 @@
                     </dl>
                     <h4>4.1.10 Ranking by Number of Comments Page</h4>
                     <h5>Front-End</h5>
-                    <dl>
+                    <dl><dt></dt>
                         <dd>Design</dd>
                     </dl>
                     <h5>Back-End</h5>
-                    <dl>
+                    <dl><dt></dt>
                         <dd>preluarea informatiilor legate de numele jocului si numarul de comentarii asociate acestuia</dd>
                         <dd>Functionalitatea butonului de download PDF</dd>
                         <dd>Functionalitatea butonului de download CSV</dd>
@@ -697,11 +782,11 @@
                     </dl>
                     <h4>4.1.11 Ranking by Team Score Page</h4>
                     <h5>Front-End</h5>
-                    <dl>
+                    <dl><dt></dt>
                         <dd>Design</dd>
                     </dl>
                     <h5>Back-End</h5>
-                    <dl>
+                    <dl><dt></dt>
                         <dd>preluarea informatiilor legate de numele echipei si scorul asociat acesteia</dd>
                         <dd>Functionalitatea butonului de download PDF</dd>
                         <dd>Functionalitatea butonului de download CSV</dd>
@@ -709,11 +794,11 @@
                     </dl>
                     <h4>4.1.12 Ranking by Most Popular Game Page</h4>
                     <h5>Front-End</h5>
-                    <dl>
+                    <dl><dt></dt>
                         <dd>Design</dd>
                     </dl>
                     <h5>Back-End</h5>
-                    <dl>
+                    <dl><dt></dt>
                         <dd>preluarea informatiilor legate de numele jocului si cati utilizatori au jocul respectiv in inventar</dd>
                         <dd>Functionalitatea butonului de download PDF</dd>
                         <dd>Functionalitatea butonului de download CSV</dd>
@@ -721,11 +806,11 @@
                     </dl>
 
                     <h4>4.1.13 Admin Pages</h4>
-                    <dl>
+                    <dl><dt></dt>
                         <dd>Am adaugat loading-ul care este prezent pana cand sunt adaugate toate informatiile pe pagina la toate paginile de la admin.</dd>
                     </dl>
                     <h4>4.1.14 Notiuni care nu au mai prins lumina zilei</h4>
-                    <dl>
+                    <dl><dt></dt>
                         <dd>
                             Template-ul initial al jocurilor ( cele 20 de jocuri adaugate de mana &#128531;)
                             
@@ -779,7 +864,7 @@
                         <dd>Am realizat stilizarea modalului ce contine toate jocurile din baza de date,al butoanelor,al search bar-ului</dd>
                     </dl>
                     <h5>Back-End</h5>
-                    <dl>
+                    <dl><dt></dt>
                         <dd>Am adaugat loading-ul care este prezent pana cand sunt adaugate toate informatiile pe pagina.</dd>
                         <dt>Game Inventory</dt>
                         <dd>Am realizat functionalitatea pentru aplicarea filtrelor ( category,age) si al search bar-ului.</dd>
@@ -792,30 +877,30 @@
 
                     <h4>4.2.4 Game Scrape Page</h4>
                     <h5>Back-End</h5>
-                    <dl>
+                    <dl><dt></dt>
                         <dd>Am realizat preluarea informatiilor jocului(text,poze,videouri,varsta) cu ajutorul linkului preluat din baza de date.</dd>
                         <dd>Am realizat functionalitatea de a nu lasa un utilizator sa adauge inca un review daca deja a adaugat unul si optiunea de a sterge review-ul(cu updatarea ratingului general al jocului).</dd>
                     </dl>
 
                     <h4>4.2.5 Tournaments Page</h4>
                     <h5>Front-End</h5>
-                    <dl>
+                    <dl><dt></dt>
                         <dd>Am adaugat loading-ul care este prezent pana cand sunt adaugate toate informatiile pe pagina.</dd>
                         <dd>Am realizat stilizarea intregii pagini.</dd>
                     </dl>
                     <h5>Back-End</h5>
-                    <dl>
+                    <dl><dt></dt>
                         <dd>Am realizat preluarea tournamentelor din baza de date si functionalitatea butonului open(la tournamente).</dd>
                     </dl>
 
 
                     <h4>4.2.6 Tournaments Scrape Page</h4>
                     <h5>Front-End</h5>
-                    <dl>
+                    <dl><dt></dt>
                         <dd>Am realizat stilizarea intregii pagini.</dd>
                     </dl>
                     <h5>Back-End</h5>
-                    <dl>
+                    <dl><dt></dt>
                         <dd>Am realizat preluarea informatiilor tournamentului din baza de date.</dd>
                         <dd>Am realizat preluarea echipelor participante la tournament.</dd>
                         <dd>Am realizat functionaliteatea butonului de inregistrare in tournament(daca utilizatorul este deja inregistrat nu ii mai este permisa o inregistrare).</dd>
@@ -825,28 +910,28 @@
 
                     <h4>4.2.7 Account Page</h4>
                     <h5>Front-End</h5>
-                    <dl>
+                    <dl><dt></dt>
                         <dd>Am realizat stilizarea intregii pagini.</dd>
                     </dl>
                     <h5>Back-End</h5>
-                    <dl>
+                    <dl><dt></dt>
                         <dd>Am realizat preluarea informatiilor din baza de date si functionalitatea schimbarii parolei cu eroare aferenta daca parola este gresita sau cele 2 parole noi nu se potrivesc.</dd>
                         <dd>Am realizat functionalitatea butonului de log out.</dd>
                     </dl>
 
                     <h4>4.2.8 Admin page</h4>
                     <h5>Front-End</h5>
-                    <dl>
+                    <dl><dt></dt>
                         <dd>Am realizat stilizarea paginii impreuna cu Andrei Zaharia(acesta a stilizat bara de navigatie)</dd>
                     </dl>
 
                     <h4>4.2.9 Manage Games page</h4>
                     <h5>Front-End</h5>
-                    <dl>
+                    <dl><dt></dt>
                         <dd>Am realizat stilizarea paginii impreuna cu Andrei Zaharia(acesta a stilizat bara de navigatie + butonul de editare comentarii)</dd>
                     </dl>
                     <h5>Back-End</h5>
-                    <dl>
+                    <dl><dt></dt>
                         <dd>Am realizat preluarea jocurilor din baza de date.</dd>
                         <dd>Am realizat functionaliteatea butonului 'x' care sterge jocurile din baza de date.</dd>
                         <dd>Am realizat functionalitatea formularului care adauga jocul in baza de date(daca nu este deja)</dd>
@@ -856,12 +941,12 @@
                     <h4>4.2.10 Manage Tournaments page</h4>
 
                     <h5>Front-End</h5>
-                    <dl>
+                    <dl><dt></dt>
                         <dd>Am realizat stilizarea paginii impreuna cu Andrei Zaharia(acesta a stilizat bara de navigatie)</dd>
                     </dl>
 
                     <h5>Back-End</h5>
-                    <dl>
+                    <dl><dt></dt>
                         <dd>Am realizat preluarea jocurilor din baza de date.</dd>
                         <dd>Am realizat functionaliteatea butonului 'x' care sterge tournamentele din baza de date.</dd>
                         <dd>Am realizat functionaliteatea butonului 'set scores' care te trimite pe pagina unde poti seta scorurile echipelor participante</dd>
@@ -871,35 +956,27 @@
                     <h4>4.2.11 Set Team Scores page</h4>
 
                     <h5>Front-End</h5>
-                    <dl>
+                    <dl><dt></dt>
                         <dd>Am realizat stilizarea paginii.</dd>
                     </dl>
 
                     <h5>Back-End</h5>
-                    <dl>
+                    <dl><dt></dt>
                         <dd>Am realizat preluarea echipelor(si scorul acestora) ce participa la tournament.</dd>
                         <dd>Am realizat functionalitatea setarii scorului nou pentru echipa dorita.</dd>
                     </dl>
 
                     <h4>4.2.12 Manage Users page</h4>
                     <h5>Front-End</h5>
-                    <dl>
+                    <dl><dt></dt>
                         <dd>Am realizat stilizarea paginii impreuna cu Andrei Zaharia(acesta a stilizat bara de navigatie + buton make admin)</dd>
                     </dl>
                     <h5>Back-End</h5>
-                    <dl>
+                    <dl><dt></dt>
                         <dd>Am realizat preluarea utilizatorilor si asezarea acestora in functie de rol(user sau administrator).</dd>
                         <dd>Am realizat functionalitatea butonul 'x' care sterge utilizatorii din baza de date.</dd>
                     </dl>
                 </section>
-            </section>
-            <section>
-                <h2>5. Other Nonfunctional Requirements</h2>
-                        <dl>
-                            <dd>
-                                Aplicatie nu iti permite sa adaugi jocuri de pe Steam daca acestea au un formular care verifica varsta inainte.
-                            </dd>
-                        </dl>
             </section>
         </div>
     </article>

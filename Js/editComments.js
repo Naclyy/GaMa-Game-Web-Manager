@@ -60,6 +60,11 @@ function getComments(current_game_id)
                         list.appendChild(li);
                          }
             }
+            $(function() {
+                $(".preload").fadeOut(1000, function() {
+                    $(".beforeload").fadeIn(1000);        
+                });
+            });
 
         }
     });
