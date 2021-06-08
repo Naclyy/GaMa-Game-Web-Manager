@@ -68,7 +68,7 @@
 
                               <label for="phonenumber"><b>Phone Number</b></label>
 
-                              <input id = "phonenumber" type="tel" name="phonenumber"
+                              <input id = "phonenumber" type="text" name="phonenumber"
                                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                                 required placeholder="Enter Phone Number">
                                 <small>Nubmer Format: 123-456-7890</small>
