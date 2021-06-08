@@ -103,11 +103,9 @@ function getGameInfo(current_game_id)
             var p3 = document.createElement("h2");
             p3.classList.add("Rating");
             p3.style.marginTop="50px";
-            console.log(resp.pegi_age);
             if(resp.pegi_age > 0)
                 p3.innerHTML="Only "+ resp.pegi_age + "+ can play the game";
             else p3.innerHTML="Everyone can play the game";
-            console.log(p3);
             var br0 = document.createElement("br");
             var br1 = document.createElement("br");
             var br2 = document.createElement("br");
@@ -254,7 +252,6 @@ function getGameSlide5(current_game_id)
     function getUserName(user_id,p){
         var method = "POST";
         var url = "../Php/api/getUserFromReview.php";
-        console.log(user_id);
         $.ajax({
             url : url,
             type : method,
