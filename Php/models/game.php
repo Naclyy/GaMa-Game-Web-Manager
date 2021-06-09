@@ -122,7 +122,7 @@ class Game{
     
     public function getGamesAge()
     {
-        $query="SELECT DISTINCT pegi_age from " . $this->table;
+        $query="SELECT DISTINCT pegi_age from " . $this->table . " order by 1 asc";
 
         $stmt=$this->conn->prepare($query);
  

@@ -61,6 +61,7 @@ function getGamesAge(){
            var age=ages[i];
            if(age==0)
            age="ForEveryone";
+           
            var ageDropdownAll=document.getElementById("all_pegi_age");
            var ageDropdownUser=document.getElementById("user_pegi_age");
   
